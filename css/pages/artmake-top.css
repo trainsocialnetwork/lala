@@ -501,7 +501,7 @@
 }
 
 .flow-step__number span {
-  font-size: var(--font-size-ss);
+  font-size: var(--font-size-sss);
   font-weight: 300;
 }
 
