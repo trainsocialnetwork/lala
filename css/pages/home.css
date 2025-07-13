@@ -57,16 +57,6 @@
   color: var(--color-text-light);
 }
 
-@media (min-width: 430px) {
-  .hero {
-    min-height: 70vh;
-  }
-  
-  .hero__content {
-    padding: var(--spacing-2xl) 0;
-  }
-}
-
 /* ===============================================
    サービスボタン
    =============================================== */
@@ -75,13 +65,6 @@
   flex-direction: column;
   gap: var(--spacing-sm);
   margin-top: var(--spacing-lg);
-}
-
-@media (min-width: 480px) {
-  .service-buttons {
-    flex-direction: row;
-    justify-content: center;
-  }
 }
 
 /* ===============================================
@@ -222,20 +205,6 @@
   margin-top: var(--spacing-lg);
 }
 
-@media (min-width: 430px) {
-  .access-content {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .access-content__map {
-    height: 400px;
-  }
-  
-  .hours-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 /* ===============================================
    ボイスカルーセル
    =============================================== */
@@ -258,17 +227,6 @@
 
 .voice-carousel .voice-card {
   flex: 0 0 280px;
-}
-
-@media (min-width: 430px) {
-  .voice-carousel__track {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
-  .voice-carousel .voice-card {
-    flex: none;
-  }
 }
 
 /* ===============================================
