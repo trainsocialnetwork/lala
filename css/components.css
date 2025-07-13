@@ -149,6 +149,8 @@
   /* デフォルトはアスペクト比で高さを決定 */
   height: auto;
   aspect-ratio: var(--hero-img-width) / var(--hero-img-height); /* 15:22 */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero__visual {
