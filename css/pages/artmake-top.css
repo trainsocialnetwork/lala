@@ -683,7 +683,7 @@
 .faq-item__answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height var(--transition-base);
+  transition: max-height 0.5s ease;;
   padding: 0 var(--spacing-md);
   display: flex;
   gap: var(--spacing-md);
