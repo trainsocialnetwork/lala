@@ -684,8 +684,7 @@
 .faq-item__answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;;
-  padding: 0 var(--spacing-md);
+  transition: max-height 0.5s ease;
 }
 
 .faq-item.is-open .faq-item__answer {
@@ -694,7 +693,6 @@
   display: flex;
   gap: var(--spacing-md);
   align-items: flex-start;
-  
 }
 
 .faq-item__content {
