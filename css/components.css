@@ -420,6 +420,8 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-lg);
+  max-width: var(--content-width-max);
+  margin: 0 auto;
 }
 
 .footer__section h4 {
@@ -467,6 +469,9 @@
 
 .footer__bottom-content {
   text-align: center !important;
+  max-width: var(--content-width-max);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
 }
 
 .footer__links {
