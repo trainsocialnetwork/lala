@@ -664,7 +664,7 @@
 
 .faq-item__a {
   background-color: var(--color-secondary);
-  margin: var(--spacing-md);
+  margin: var(--spacing-md) 0 0 var(--spacing-md) ;
 }
 
 .faq-item__text {
@@ -682,9 +682,13 @@
 }
 
 .faq-item__answer {
-  min-height: 0;
+  max-height: 0;
   overflow: hidden;
-  transition: min-height var(--transition-base);
+  transition: max-height var(--transition-base);
+}
+
+.faq-item.is-open .faq-item__answer {
+  max-height: 1000px;
 }
 
 .faq-item__content {
