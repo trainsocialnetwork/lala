@@ -592,7 +592,7 @@
 .artist-profile__certificate img {
   width: 100%;
   height: auto;
-  max-width: 400px;
+  max-width: 340px;
   margin: 0 auto;
   display: block;
   aspect-ratio: 1024 / 768;
