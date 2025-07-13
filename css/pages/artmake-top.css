@@ -415,6 +415,7 @@
 
 .removal-table th,
 .removal-table td {
+  font-size: var(--font-size-sm);
   padding: var(--spacing-md);
   text-align: left;
 }
@@ -685,14 +686,15 @@
   overflow: hidden;
   transition: max-height 0.5s ease;;
   padding: 0 var(--spacing-md);
-  display: flex;
-  gap: var(--spacing-md);
-  align-items: flex-start;
 }
 
 .faq-item.is-open .faq-item__answer {
-  max-height: 2000px;
+  max-height: 5000px;
   padding: var(--spacing-md);
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+  
 }
 
 .faq-item__content {
