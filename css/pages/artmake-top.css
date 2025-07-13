@@ -664,7 +664,8 @@
 
 .faq-item__a {
   background-color: var(--color-secondary);
-  margin: var(--spacing-md) 0 0 var(--spacing-md) ;
+  align-self: flex-start;
+  margin-top: var(--spacing-xs);
 }
 
 .faq-item__text {
@@ -685,15 +686,17 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height var(--transition-base);
+  display: flex;
 }
 
 .faq-item.is-open .faq-item__answer {
-  max-height: 1000px;
+  max-height: none;
 }
 
 .faq-item__content {
   padding: 0 var(--spacing-md) var(--spacing-md) calc(28px + var(--spacing-md) * 2);
   line-height: var(--line-height-loose);
+  flex: 1
 }
 
 /* ===============================================
