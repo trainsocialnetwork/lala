@@ -682,9 +682,9 @@
 }
 
 .faq-item__answer {
-  max-height: 0;
+  min-height: 0;
   overflow: hidden;
-  transition: max-height var(--transition-base);
+  transition: min-height var(--transition-base);
 }
 
 .faq-item__content {
