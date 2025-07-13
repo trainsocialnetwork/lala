@@ -3,27 +3,6 @@
    =============================================== */
 
 /* ===============================================
-   ヒーローセクション（アートメイク版）
-   =============================================== */
-.hero--artmake .hero__content {
-  background: linear-gradient(
-    to right,
-    rgba(248, 243, 239, 0.95) 0%,
-    rgba(248, 243, 239, 0.8) 100%
-  );
-}
-
-.hero__subtitle {
-  display: inline-block;
-  font-size: var(--font-size-sm);
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  color: var(--color-secondary);
-  margin-bottom: var(--spacing-sm);
-  text-transform: uppercase;
-}
-
-/* ===============================================
    キャンペーンセクション
    =============================================== */
 .section--campaign {
