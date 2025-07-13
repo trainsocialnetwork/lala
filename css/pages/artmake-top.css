@@ -663,7 +663,7 @@
 
 .faq-item__a {
   background-color: var(--color-secondary);
-  padding: var(--spacing-md);
+  margin: var(--spacing-md);
 }
 
 .faq-item__text {
@@ -686,12 +686,8 @@
   transition: max-height var(--transition-base);
 }
 
-.faq-item.is-open .faq-item__answer {
-  max-height: 500px;
-}
-
 .faq-item__content {
-  padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) calc(28px + var(--spacing-md) * 2);
+  padding: 0 var(--spacing-md) var(--spacing-md) calc(28px + var(--spacing-md) * 2);
   line-height: var(--line-height-loose);
 }
 
