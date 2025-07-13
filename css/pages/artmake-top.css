@@ -411,7 +411,6 @@
 
 .removal-table thead {
   background-color: var( --color-bg-light);
-  color: white;
 }
 
 .removal-table th,
