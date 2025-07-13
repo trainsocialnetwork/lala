@@ -37,6 +37,7 @@
   width: auto;
 }
 
+/* PCでもモバイルメニューを使用 */
 .header__nav {
   display: none !important;
 }
@@ -144,6 +145,7 @@
   align-items: center;
   overflow: hidden;
   margin-top: 60px; /* ヘッダーの高さ分 */
+  max-width: var(--content-width-max);
   /* デフォルトはアスペクト比で高さを決定 */
   height: auto;
   aspect-ratio: var(--hero-img-width) / var(--hero-img-height); /* 15:22 */
