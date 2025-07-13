@@ -59,72 +59,6 @@
 }
 
 /* ===============================================
-   サービスカード
-   使用箇所: index.html, artmake/index.html
-   =============================================== */
-.service-card {
-  background-color: var(--color-bg);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  transition: all var(--transition-base);
-}
-
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-}
-
-.service-card__image {
-  position: relative;
-  width: 100%;
-  padding-top: 75%; /* 4:3のアスペクト比 */
-  overflow: hidden;
-}
-
-.service-card__image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.service-card__content {
-  padding: var(--spacing-md);
-}
-
-.service-card__content h4 {
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  margin-bottom: var(--spacing-xs);
-  color: var(--color-primary);
-}
-
-.service-card__content p {
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-loose);
-  color: var(--color-text-light);
-  margin-bottom: var(--spacing-sm);
-}
-
-.service-card__link {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  font-size: var(--font-size-sm);
-  font-weight: 500;
-  color: var(--color-primary);
-  transition: gap var(--transition-base);
-}
-
-.service-card__link:hover {
-  gap: var(--spacing-sm);
-  opacity: 1;
-}
-
-/* ===============================================
    価格カード
    使用箇所: artmake/index.html, artmake/eyebrow.html
    =============================================== */
@@ -355,90 +289,11 @@
 }
 
 /* ===============================================
-   ニュース関連
-   使用箇所: index.html, artmake/index.html
-   =============================================== */
-.news-more {
-  text-align: center;
-}
-
-.link-more {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  font-size: var(--font-size-sm);
-  font-weight: 500;
-  color: var(--color-primary);
-  transition: gap var(--transition-base);
-}
-
-.link-more:hover {
-  gap: var(--spacing-sm);
-  opacity: 1;
-}
-
-/* ===============================================
-   グリッドレイアウト
-   使用箇所: 複数ページ
-   =============================================== */
-.service-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-md);
-}
-
-@media (min-width: 768px) {
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-  }
-}
-
-/* ===============================================
    背景色ユーティリティ（共通）
    使用箇所: 全ページ
    =============================================== */
 .bg-light {
   background-color: var(--color-bg-light);
-}
-
-/* ===============================================
-   ボタンバリエーション（共通）
-   使用箇所: 全ページ
-   =============================================== */
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-xs);
-  padding: var(--spacing-sm) var(--spacing-lg);
-  font-size: var(--font-size-base);
-  font-weight: 500;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  border: 2px solid transparent;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition: all var(--transition-base);
-  text-decoration: none;
-}
-
-.button--primary {
-  background-color: var(--color-primary);
-  color: white;
-  border-color: var(--color-primary);
-}
-
-.button--outline {
-  background-color: transparent;
-  color: var(--color-primary);
-  border-color: var(--color-primary);
-}
-
-.button--lg {
-  padding: var(--spacing-md) var(--spacing-xl);
-  font-size: var(--font-size-lg);
 }
 
 /* ===============================================
