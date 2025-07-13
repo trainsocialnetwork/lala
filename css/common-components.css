@@ -287,16 +287,3 @@
   font-size: var(--font-size-sm);
   vertical-align: top;
 }
-
-/* ===============================================
-   レスポンシブ対応
-   =============================================== */
-@media (min-width: 430px) {
-  .access-content {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .access-content__map {
-    height: 400px;
-  }
-}
