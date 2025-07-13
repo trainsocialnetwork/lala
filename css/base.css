@@ -164,11 +164,11 @@ h6 { font-size: var(--font-size-base); }
 }
 
 .pc-only {
-  display: none;
+  display: none !important;
 }
 
 .sp-only {
-  display: block;
+  display: block !important;
 }
 
 .sr-only {
