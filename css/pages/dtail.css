@@ -1,0 +1,660 @@
+/* ===============================================
+   Detail Page CSS - 詳細ページ固有スタイル
+   =============================================== */
+
+/* ===============================================
+   パンくずリスト
+   =============================================== */
+.breadcrumb {
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-sm) 0;
+  margin-top: 60px; /* ヘッダーの高さ分 */
+}
+
+.breadcrumb__list {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+}
+
+.breadcrumb__list li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb__list li::after {
+  content: '>';
+  margin-left: var(--spacing-xs);
+  color: var(--color-text-light);
+}
+
+.breadcrumb__list li:last-child::after {
+  display: none;
+}
+
+.breadcrumb__list li:last-child {
+  color: var(--color-text-light);
+}
+
+.breadcrumb__list a {
+  color: var(--color-primary);
+}
+
+.breadcrumb__list a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+/* ===============================================
+   ページヒーロー
+   =============================================== */
+.page-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    height: 40vh;
+    min-height: 300px;
+  }
+}
+
+.page-hero__visual {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.page-hero__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(
+    to right,
+    rgba(248, 243, 239, 0.95) 0%,
+    rgba(248, 243, 239, 0.8) 100%
+  );
+}
+
+.page-hero__title {
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 300;
+  line-height: var(--line-height-tight);
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+/* ===============================================
+   ページナビゲーション
+   =============================================== */
+.page-nav {
+  background-color: var(--color-bg);
+  position: sticky;
+  top: 60px; /* ヘッダーの高さ */
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.page-nav__list {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md) 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.page-nav__list::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .page-nav__list {
+    justify-content: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-md);
+  }
+}
+
+.page-nav__link {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+}
+
+.page-nav__link:hover,
+.page-nav__link.is-active {
+  background-color: var(--color-primary);
+  color: white;
+  opacity: 1;
+}
+
+/* ===============================================
+   コンテンツグリッド
+   =============================================== */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.content-grid__text {
+  order: 2;
+}
+
+.content-grid__image {
+  order: 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 768px) {
+  .content-grid__text {
+    order: 1;
+  }
+  
+  .content-grid__image {
+    order: 2;
+  }
+}
+
+.content-grid__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===============================================
+   サブセクション
+   =============================================== */
+.subsection {
+  margin-bottom: var(--spacing-xl);
+}
+
+.subsection:last-child {
+  margin-bottom: 0;
+}
+
+.subsection__title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+/* ===============================================
+   ベネフィットグリッド
+   =============================================== */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+}
+
+.benefit-card {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+  padding: var(--spacing-md);
+  transition: all var(--transition-base);
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.benefit-card__image {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.benefit-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.benefit-card__content h3 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-primary);
+}
+
+.benefit-card__content p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+}
+
+/* ===============================================
+   強みリスト
+   =============================================== */
+.strength-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.strength-item {
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.strength-item__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.strength-item__number {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.strength-item__header h3 {
+  flex: 1;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin: 0;
+}
+
+.strength-item__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .strength-item__content {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.strength-item__text {
+  line-height: var(--line-height-loose);
+}
+
+.strength-item__image,
+.strength-item__video {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.strength-item__image img,
+.strength-item__video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===============================================
+   症例ギャラリー
+   =============================================== */
+.cases-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .cases-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+}
+
+.case-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 1;
+}
+
+.case-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===============================================
+   技法カード
+   =============================================== */
+.technique-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .technique-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.technique-card {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.technique-card__image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.technique-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.technique-card__content {
+  padding: var(--spacing-lg);
+}
+
+.technique-card__content h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.technique-card__content p {
+  line-height: var(--line-height-loose);
+}
+
+/* ===============================================
+   タイプカード
+   =============================================== */
+.type-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.type-card {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.type-card--featured {
+  border: 2px solid var(--color-accent);
+}
+
+.type-card__badge {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  background-color: var(--color-accent);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  z-index: 1;
+}
+
+.type-card__header {
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.type-card__header h3 {
+  font-size: var(--font-size-xl);
+  margin: 0;
+  color: white;
+}
+
+.type-card__image {
+  height: 300px;
+  overflow: hidden;
+}
+
+.type-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.type-card__content {
+  padding: var(--spacing-lg);
+}
+
+.type-card__content > p {
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--spacing-lg);
+}
+
+.type-card__recommend {
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+.type-card__recommend h4 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-primary);
+}
+
+.type-card__recommend ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.type-card__recommend li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+}
+
+.type-card__recommend i {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+/* ===============================================
+   シンプル料金テーブル
+   =============================================== */
+.simple-pricing-table {
+  max-width: 600px;
+  margin: 0 auto var(--spacing-lg);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.simple-pricing-table table {
+  width: 100%;
+  background-color: var(--color-bg);
+}
+
+.simple-pricing-table thead {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.simple-pricing-table th {
+  padding: var(--spacing-md);
+  font-weight: 600;
+  text-align: left;
+}
+
+.simple-pricing-table th:last-child {
+  text-align: right;
+}
+
+.simple-pricing-table td {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.simple-pricing-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.simple-pricing-table .price {
+  text-align: right;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.price-button {
+  text-align: center;
+}
+
+/* ===============================================
+   CTAセクション
+   =============================================== */
+.section--cta {
+  background-color: var(--color-primary);
+  color: white;
+  text-align: center;
+  padding: var(--spacing-3xl) 0;
+}
+
+.section--cta .section__title-ja {
+  color: white;
+}
+
+.section--cta .section__lead {
+  color: white;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-lg);
+}
+
+/* ===============================================
+   アーティストプロフィール
+   =============================================== */
+.artist-profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.artist-profile__image {
+  margin: 0 auto;
+}
+
+.artist-profile__image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+}
+
+.artist-profile__content h3 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-xs);
+}
+
+.artist-profile__role {
+  font-size: var(--font-size-base);
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.artist-profile__qualification {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--spacing-md);
+}
+
+.artist-profile__comment {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-loose);
+  font-style: italic;
+  margin-bottom: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .artist-profile {
+    grid-template-columns: auto 1fr;
+    text-align: left;
+  }
+  
+  .artist-profile__image {
+    margin: 0;
+  }
+}

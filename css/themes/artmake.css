@@ -1,0 +1,20 @@
+/* ===============================================
+   Artmake Theme - アートメイクページ用テーマ
+   =============================================== */
+
+.theme-artmake {
+  /* カラーパレット（ブラウン系） */
+  --color-primary: #6B4F3C;
+  --color-secondary: #A1866F;
+  --color-accent: #D4A574;
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-bg: #FFFFFF;
+  --color-bg-light: #F8F3EF;
+  --color-border: #E8DDD5;
+  
+  /* グラデーション */
+  --gradient-primary: linear-gradient(135deg, #6B4F3C 0%, #A1866F 100%);
+  --gradient-light: linear-gradient(180deg, #FFFFFF 0%, #F8F3EF 100%);
+  --gradient-warm: linear-gradient(135deg, #D4A574 0%, #A1866F 100%);
+}
