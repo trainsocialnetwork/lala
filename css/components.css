@@ -140,11 +140,13 @@
 .hero {
   position: relative;
   width: 100%;
-  min-height: 60vh;
   display: flex;
   align-items: center;
   overflow: hidden;
   margin-top: 60px; /* ヘッダーの高さ分 */
+  /* デフォルトはアスペクト比で高さを決定 */
+  height: auto;
+  aspect-ratio: var(--hero-img-width) / var(--hero-img-height); /* 15:22 */
 }
 
 .hero__visual {
@@ -157,10 +159,11 @@
 }
 
 .hero__visual img {
+  display: block;
+  object-fit: contain; /* coverからcontainに変更 - 画像全体を表示 */
+  object-position: center top; /* 上部を基準に配置 */
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
 }
 
 .hero__content {
