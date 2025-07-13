@@ -1,0 +1,455 @@
+/* ===============================================
+   Common Components CSS - 複数ページで使用される共通コンポーネント
+   =============================================== */
+
+/* ===============================================
+   セクションタイトル
+   使用箇所: index.html, artmake/index.html, artmake/eyebrow.html
+   =============================================== */
+.section__title {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.section__title-en {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+}
+
+.section__title-ja {
+  display: block;
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  line-height: var(--line-height-tight);
+}
+
+/* サブタイトルバリエーション */
+.section__subtitle {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.section__subtitle-en {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+}
+
+.section__subtitle-ja {
+  display: block;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+}
+
+/* リード文 */
+.section__lead {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+  line-height: var(--line-height-loose);
+}
+
+/* ===============================================
+   サービスカード
+   使用箇所: index.html, artmake/index.html
+   =============================================== */
+.service-card {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-card__image {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3のアスペクト比 */
+  overflow: hidden;
+}
+
+.service-card__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-card__content {
+  padding: var(--spacing-md);
+}
+
+.service-card__content h4 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-primary);
+}
+
+.service-card__content p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-primary);
+  transition: gap var(--transition-base);
+}
+
+.service-card__link:hover {
+  gap: var(--spacing-sm);
+  opacity: 1;
+}
+
+/* ===============================================
+   価格カード
+   使用箇所: artmake/index.html, artmake/eyebrow.html
+   =============================================== */
+.price-card {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.price-card--featured {
+  border: 2px solid var(--color-accent);
+}
+
+.price-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-accent);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  z-index: 1;
+}
+
+.price-card__header {
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.price-card__image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.price-card__content {
+  padding: var(--spacing-md);
+}
+
+.price-card__price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+.price-card__price .price {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* ===============================================
+   フロータイムライン
+   使用箇所: artmake/index.html, artmake/eyebrow.html
+   =============================================== */
+.flow-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flow-step {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.flow-step::before {
+  content: '';
+  position: absolute;
+  left: 40px;
+  top: 80px;
+  bottom: -40px;
+  width: 2px;
+  background-color: var(--color-border);
+}
+
+.flow-step:last-child::before {
+  display: none;
+}
+
+.flow-step__number {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.flow-step__content {
+  flex: 1;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ===============================================
+   CTAセクション
+   使用箇所: artmake/eyebrow.html, 他の詳細ページ（予定）
+   =============================================== */
+.section--cta {
+  background-color: var(--color-primary);
+  color: white;
+  text-align: center;
+  padding: var(--spacing-3xl) 0;
+}
+
+.section--cta .section__title-ja {
+  color: white;
+}
+
+.section--cta .section__lead {
+  color: white;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-lg);
+}
+
+/* ===============================================
+   監修者情報
+   使用箇所: artmake/index.html, artmake/eyebrow.html
+   =============================================== */
+.supervisor-info {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.supervisor-info h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-light);
+}
+
+.supervisor-info h4 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-xs);
+}
+
+.supervisor-info__role {
+  font-size: var(--font-size-base);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+.supervisor-info__qualification {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+}
+
+/* ===============================================
+   インスタグラムリンク
+   使用箇所: artmake/index.html, artmake/eyebrow.html
+   =============================================== */
+.instagram-link {
+  text-align: center;
+}
+
+/* ===============================================
+   アクセス情報
+   使用箇所: index.html, artmake/index.html
+   =============================================== */
+.access-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+.access-content__map {
+  width: 100%;
+  height: 300px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.access-content__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.clinic-info {
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.info-table {
+  width: 100%;
+  margin-bottom: var(--spacing-lg);
+}
+
+.info-table th,
+.info-table td {
+  padding: var(--spacing-sm) 0;
+  font-size: var(--font-size-sm);
+  vertical-align: top;
+}
+
+/* ===============================================
+   ニュース関連
+   使用箇所: index.html, artmake/index.html
+   =============================================== */
+.news-more {
+  text-align: center;
+}
+
+.link-more {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-primary);
+  transition: gap var(--transition-base);
+}
+
+.link-more:hover {
+  gap: var(--spacing-sm);
+  opacity: 1;
+}
+
+/* ===============================================
+   グリッドレイアウト
+   使用箇所: 複数ページ
+   =============================================== */
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+}
+
+/* ===============================================
+   背景色ユーティリティ（共通）
+   使用箇所: 全ページ
+   =============================================== */
+.bg-light {
+  background-color: var(--color-bg-light);
+}
+
+/* ===============================================
+   ボタンバリエーション（共通）
+   使用箇所: 全ページ
+   =============================================== */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.button--outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.button--lg {
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-lg);
+}
+
+/* ===============================================
+   レスポンシブ対応
+   =============================================== */
+@media (min-width: 768px) {
+  .access-content {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .access-content__map {
+    height: 400px;
+  }
+}
