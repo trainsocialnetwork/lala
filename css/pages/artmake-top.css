@@ -170,7 +170,7 @@
   line-height: var(--line-height-loose);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .feature-item {
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-lg);
@@ -320,7 +320,7 @@
   margin-top: var(--spacing-xs);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .price-cards {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
@@ -438,7 +438,7 @@
   color: var(--color-text-light);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .lip-pricing {
     grid-template-columns: 2fr 1fr;
   }
@@ -660,7 +660,7 @@
   justify-content: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .staff-profile {
     grid-template-columns: auto 1fr;
     text-align: left;
@@ -837,7 +837,7 @@
   color: var(--color-text-light);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .news-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
