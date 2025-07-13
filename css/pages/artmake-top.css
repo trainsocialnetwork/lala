@@ -502,11 +502,12 @@
 
 .flow-step__number span {
   font-size: var(--font-size-sss);
+  margin-bottom: 8px;
   font-weight: 300;
 }
 
 .flow-step__number strong {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: 600;
 }
 
