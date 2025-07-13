@@ -108,7 +108,7 @@
     
     init() {
       // モバイルでのみ動作
-      if (window.innerWidth >= 768) return;
+      // if (window.innerWidth >= 768) return;
       
       // スナップスクロールの設定
       this.carousel.style.scrollSnapType = 'x mandatory';
