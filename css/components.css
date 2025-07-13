@@ -71,7 +71,7 @@
 }
 
 /* タブレット以上 */
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .header__nav {
     display: block;
   }
@@ -361,7 +361,7 @@
   gap: var(--spacing-md);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .service-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
@@ -458,7 +458,7 @@
   opacity: 0.6;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .footer__content {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -646,7 +646,7 @@
   gap: var(--spacing-md);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .features-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
