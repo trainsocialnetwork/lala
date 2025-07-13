@@ -57,7 +57,7 @@
   color: var(--color-text-light);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .hero {
     min-height: 70vh;
   }
@@ -222,7 +222,7 @@
   margin-top: var(--spacing-lg);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .access-content {
     grid-template-columns: 1fr 1fr;
   }
@@ -260,7 +260,7 @@
   flex: 0 0 280px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .voice-carousel__track {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
