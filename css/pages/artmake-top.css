@@ -585,6 +585,20 @@
   margin-bottom: var(--spacing-md);
 }
 
+.artist-profile__certificate {
+  margin: 0 var(--spacing-md) var(--spacing-md);
+}
+
+.artist-profile__certificate img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+  aspect-ratio: 1024 / 768;
+  object-fit: contain;
+}
+
 .artist-profile__comment {
   font-size: var(--font-size-base);
   line-height: var(--line-height-loose);
@@ -592,87 +606,11 @@
   margin-bottom: var(--spacing-md);
 }
 
-
-.staff-profile {
-  display: grid;
-  grid-template-columns: 1fr !important;
-  gap: var(--spacing-lg);
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: var(--color-bg-light);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
-}
-
-.staff-profile__image {
-  text-align: center !important;
-}
-
-.staff-profile__image img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: var(--shadow-md);
-}
-
-.staff-profile__content {
-  text-align: center !important;;
-}
-
-.staff-profile__content h3 {
-  font-size: var(--font-size-2xl);
-  margin-bottom: var(--spacing-xs);
-}
-
-.staff-profile__role {
-  font-size: var(--font-size-base);
-  color: var(--color-secondary);
-  margin-bottom: var(--spacing-sm);
-}
-
-.staff-profile__qualification {
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-loose);
-  margin-bottom: var(--spacing-md);
-}
-
-.staff-profile__certificate {
-  margin-bottom: var(--spacing-md);
-}
-
-.staff-profile__certificate img {
-  max-width: 300px;
-  height: auto;
-  margin: 0 auto;
-}
-
-.staff-profile__comment {
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-loose);
-  margin-bottom: var(--spacing-lg);
-  font-style: italic;
-}
-
-.staff-profile__links {
+.artist-profile__links {
   display: flex;
-  gap: var(--spacing-sm);
-  justify-content: center !important;
-}
-
-@media (min-width: 430px) {
-  .staff-profile {
-    grid-template-columns: auto 1fr;
-    text-align: left;
-  }
-  
-  .staff-profile__content {
-    text-align: left;
-  }
-  
-  .staff-profile__links {
-    justify-content: flex-start;
-  }
+  gap: var(--spacing-md);
+  justify-content: center;
+  align-items: center;
 }
 
 /* ===============================================
