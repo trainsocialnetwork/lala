@@ -340,12 +340,6 @@
   margin-top: var(--spacing-lg);
 }
 
-.guarantee-box__icon {
-  font-size: 48px;
-  color: var(--color-primary);
-  flex-shrink: 0;
-}
-
 .guarantee-box__content h4 {
   font-size: var(--font-size-xl);
   margin-bottom: var(--spacing-sm);
