@@ -693,14 +693,12 @@
 
 .faq-item.is-open .faq-item__answer {
   max-height: none;
-  padding: var(--spacing-xs) var(--spacing-md) var(--spacing-md);
+  padding: var(--spacing-md);
 }
 
 .faq-item__content {
   flex: 1;
   line-height: var(--line-height-loose);
-  padding-top: var(--spacing-xs);
-  padding-bottom: var(--spacing-sm);
 }
 
 /* ===============================================
