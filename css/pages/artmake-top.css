@@ -170,13 +170,6 @@
   line-height: var(--line-height-loose);
 }
 
-@media (min-width: 430px) {
-  .feature-item {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
-  }
-}
-
 /* ===============================================
    料金カード
    =============================================== */
@@ -206,7 +199,7 @@
 
 .price-cards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr !important;
   gap: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
 }
@@ -320,13 +313,6 @@
   margin-top: var(--spacing-xs);
 }
 
-@media (min-width: 430px) {
-  .price-cards {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
-  }
-}
-
 /* ===============================================
    保証ボックス
    =============================================== */
@@ -380,7 +366,7 @@
    =============================================== */
 .lip-pricing {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr !important;
   gap: var(--spacing-lg);
   background-color: var(--color-bg);
   border-radius: var(--radius-lg);
@@ -437,13 +423,6 @@
   font-size: var(--font-size-sm);
   color: var(--color-text-light);
 }
-
-@media (min-width: 430px) {
-  .lip-pricing {
-    grid-template-columns: 2fr 1fr;
-  }
-}
-
 /* ===============================================
    除去料金テーブル
    =============================================== */
