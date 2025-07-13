@@ -38,13 +38,13 @@
 }
 
 .header__nav {
-  display: none;
+  display: none !important;
 }
 
 .header__menu-toggle {
   width: 40px;
   height: 40px;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -68,34 +68,6 @@
 
 .header__menu-toggle.is-active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* タブレット以上 */
-@media (min-width: 430px) {
-  .header__nav {
-    display: block;
-  }
-  
-  .header__nav-list {
-    display: flex;
-    gap: var(--spacing-md);
-  }
-  
-  .header__nav-list a {
-    font-size: var(--font-size-sm);
-    font-weight: 500;
-    position: relative;
-    transition: color var(--transition-base);
-  }
-  
-  .header__nav-list a:hover {
-    color: var(--color-primary);
-    opacity: 1;
-  }
-  
-  .header__menu-toggle {
-    display: none;
-  }
 }
 
 /* ===============================================
@@ -357,17 +329,9 @@
    =============================================== */
 .service-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr !important;
   gap: var(--spacing-md);
 }
-
-@media (min-width: 430px) {
-  .service-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-  }
-}
-
 /* ===============================================
    フッターコンポーネント
    =============================================== */
@@ -441,11 +405,11 @@
 }
 
 .footer__bottom-content {
-  text-align: center;
+  text-align: center !important;
 }
 
 .footer__links {
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-xs) !important;
 }
 
 .footer__links a {
@@ -456,22 +420,6 @@
 .copyright {
   font-size: var(--font-size-sm);
   opacity: 0.6;
-}
-
-@media (min-width: 430px) {
-  .footer__content {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  
-  .footer__bottom-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .footer__links {
-    margin-bottom: 0;
-  }
 }
 
 /* ===============================================
@@ -644,11 +592,4 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-md);
-}
-
-@media (min-width: 430px) {
-  .features-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
-  }
 }
