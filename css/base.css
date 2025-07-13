@@ -184,7 +184,7 @@ h6 { font-size: var(--font-size-base); }
 }
 
 /* レスポンシブ（タブレット以上） */
-@media (min-width: 768px) {
+@media (min-width: 430px) {
   .pc-only {
     display: block;
   }
