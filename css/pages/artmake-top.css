@@ -487,8 +487,8 @@
 
 .flow-step__number {
   flex-shrink: 0;
-  width: 80px;
-  height: 80px;
+  width: 56px;
+  height: 56px;
   background-color: var(--color-primary);
   color: white;
   border-radius: 50%;
@@ -501,13 +501,13 @@
 }
 
 .flow-step__number span {
-  font-size: var(--font-size-sm);
-  font-weight: 400;
+  font-size: var(--font-size-ss);
+  font-weight: 300;
 }
 
 .flow-step__number strong {
-  font-size: var(--font-size-2xl);
-  font-weight: 700;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
 }
 
 .flow-step__content {
