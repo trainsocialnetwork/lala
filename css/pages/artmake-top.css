@@ -663,6 +663,7 @@
 
 .faq-item__a {
   background-color: var(--color-secondary);
+  padding: var(--spacing-md);
 }
 
 .faq-item__text {
@@ -690,7 +691,7 @@
 }
 
 .faq-item__content {
-  padding: 0 var(--spacing-md) var(--spacing-md) calc(28px + var(--spacing-md) * 2);
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) calc(28px + var(--spacing-md) * 2);
   line-height: var(--line-height-loose);
 }
 
