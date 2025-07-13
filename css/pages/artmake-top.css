@@ -592,7 +592,7 @@
 }
 
 .staff-profile__content {
-  text-align: center;
+  text-align: center !important;;
 }
 
 .staff-profile__content h3 {
