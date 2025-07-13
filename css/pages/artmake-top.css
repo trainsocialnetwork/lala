@@ -5,10 +5,6 @@
 /* ===============================================
    ヒーローセクション（アートメイク版）
    =============================================== */
-.hero--artmake {
-  background-color: var(--color-bg-light);
-}
-
 .hero--artmake .hero__content {
   background: linear-gradient(
     to right,
