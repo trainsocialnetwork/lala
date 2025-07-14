@@ -74,6 +74,7 @@
   padding: 0;
   overflow: visible; /* コンテナがはみ出せるように */
   height: 400px; /* 固定高さ */
+  max-width: 430px;
 }
 
 .section--instagram .instagram-video {
