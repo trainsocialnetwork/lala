@@ -89,7 +89,7 @@
 /* 動画部分 */
 .section--instagram .instagram-video {
   position: relative;
-  width: 85%;
+  width: 100%;
   height: 400px;
   margin-left: auto; /* 右寄せ */
   border-top-left-radius: var(--radius-lg);
