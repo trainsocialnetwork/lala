@@ -457,7 +457,7 @@
 
 .footer__contact {
   font-size: var(--font-size-sm);
-  text-align: left;
+  text-align: center;
 }
 
 .footer__address {
