@@ -97,7 +97,7 @@
 .section--instagram .container--bottom {
   position: absolute;
   bottom: -150px; /* 下にはみ出す */
-  left: 0;
+  right: var(--spacing-xs);
   width: 80%;
   background-color: var(--color-bg-light);
   padding: var(--spacing-md) var(--spacing-md);
