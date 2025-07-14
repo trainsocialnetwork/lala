@@ -314,13 +314,15 @@
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
+  height: 400px;
 }
 
 .strength-item__image img,
 .strength-item__video video {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* ===============================================
