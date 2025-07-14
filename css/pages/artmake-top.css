@@ -688,12 +688,17 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
-  padding: 0 var(--spacing-md);
 }
 
 .faq-item.is-open .faq-item__answer {
-  max-height: 5000px;
-  padding: var(--spacing-md);
+  max-height: 1000px;
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+}
+
+.faq-item__answer-inner {
+  padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
   display: flex;
   gap: var(--spacing-md);
   align-items: flex-start;
