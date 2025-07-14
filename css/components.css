@@ -425,11 +425,12 @@
   gap: var(--spacing-lg);
   max-width: var(--content-width-max);
   margin: 0 auto;
+  align: center;
 }
 
 .footer__section h4 {
   font-size: var(--font-size-base);
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: var(--spacing-sm);
   color: white;
 }
