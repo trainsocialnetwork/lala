@@ -463,14 +463,12 @@
 .footer__address {
   margin-bottom: var(--spacing-sm);
   line-height: var(--line-height-loose);
-  text-align: left;
 }
 
 .footer__hours {
   display: flex;
   align-items: center;
   gap: var(--spacing-xs);
-  text-align: left;
 }
 
 .footer__bottom {
