@@ -85,8 +85,8 @@
   width: 85%; /* 画面幅の85% */
   height: 100%;
   z-index: 0;
-  border-top-left-radius: var(--radius-lg); /* 左上角丸 16px */
-  border-bottom-right-radius: var(--radius-lg); /* 右下角丸 16px */
+  border-top-left-radius: 60px; /* 左上角丸 16px */
+  border-bottom-left-radius: 60px; /* 左下角丸 16px */
   overflow: hidden; /* 角丸を適用するために必要 */
 }
 
@@ -95,8 +95,8 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-top-left-radius: var(--radius-lg); /* 左上角丸 16px */
-  border-bottom-right-radius: var(--radius-lg); /* 右下角丸 16px */
+  border-top-left-radius: 60px; /* 左上角丸 16px */
+  border-bottom-left-radius: 60px; /* 左下角丸 16px */
 }
 
 /* 上部コンテナ - 上にはみ出す */
@@ -105,20 +105,21 @@
   top: -50px; /* 上にはみ出す */
   left: 0;
   width: 95%;
-  background-color: white;
+  background-color: var(--color-bg-light);
   padding: var(--spacing-lg);
   margin-left: var(--content-padding);
   z-index: 2;
   box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-lg);
 }
 
 /* 下部コンテナ - 下にはみ出す */
 .section--instagram .container--bottom {
   position: absolute;
-  bottom: -200px; /* 下にはみ出す */
+  bottom: -150px; /* 下にはみ出す */
   right: 0;
   width: 80%;
-  background-color: ;
+  background-color: var(--color-bg-light);
   padding: var(--spacing-md) var(--spacing-md);
   margin-left: var(--content-padding);
   z-index: 2;
