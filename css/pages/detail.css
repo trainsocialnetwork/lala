@@ -53,6 +53,7 @@
 .page-title-section {
   padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-sm) var(--spacing-sm);
   text-align: left;
+  max-width: 430px;
 }
 
 .page-title {
@@ -67,11 +68,12 @@
 
 .page-hero {
   position: relative;
-  height: 70vh;
+  height: 30vh;
   min-height: 400px;
   display: flex;
   align-items: center;
   overflow: hidden;
+  max-width: 430px;
 }
 
 .page-hero__visual {
