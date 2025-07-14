@@ -734,7 +734,7 @@
 }
 
 .faq-item__answer-inner {
-  padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) var(--spacing-md);
   display: flex;
   gap: var(--spacing-md);
   align-items: flex-start;
