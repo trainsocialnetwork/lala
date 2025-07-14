@@ -190,7 +190,6 @@
 
 .feature-item__content h3 {
   font-size: var(--font-size-xl);
-  font-weight: 600;
   margin-bottom: var(--spacing-sm);
   color: var(--color-primary);
 }
@@ -208,7 +207,6 @@
 
 .menu-category__title {
   font-size: var(--font-size-2xl);
-  font-weight: 600;
   margin-bottom: var(--spacing-sm);
   display: flex;
   align-items: center;
@@ -261,7 +259,6 @@
   padding: var(--spacing-xs) var(--spacing-md);
   border-radius: var(--radius-full);
   font-size: var(--font-size-sm);
-  font-weight: 600;
   z-index: 1;
 }
 
@@ -273,7 +270,6 @@
 
 .price-card__header h4 {
   font-size: var(--font-size-lg);
-  font-weight: 600;
   margin: 0;
 }
 
@@ -308,7 +304,6 @@
 
 .price-card__price .price {
   font-size: var(--font-size-2xl);
-  font-weight: 700;
   color: var(--color-primary);
 }
 
@@ -372,13 +367,8 @@
   margin-bottom: var(--spacing-md);
 }
 
-.guarantee-box__price .label {
-  font-weight: 600;
-}
-
 .guarantee-box__price .price {
   font-size: var(--font-size-xl);
-  font-weight: 700;
   color: var(--color-primary);
 }
 
@@ -441,7 +431,6 @@
 
 .price-box__main .price {
   font-size: var(--font-size-2xl);
-  font-weight: 700;
   color: var(--color-primary);
 }
 
@@ -484,7 +473,7 @@
 
 .removal-table .highlight {
   color: var(--color-primary);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .removal-notes {
