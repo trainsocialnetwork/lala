@@ -71,8 +71,7 @@
    =============================================== */
 .section--instagram {
   position: relative;
-  padding-top: var(--spacing-3xl);
-  padding-bottom: var(--spacing-3xl);
+  padding: 0;
   overflow: hidden;
   min-height: 500px;
   display: flex;
@@ -114,22 +113,51 @@
 .section--instagram .container {
   position: relative;
   z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: var(--spacing-3xl);
+  padding-top: var(--spacing-3xl);
+  text-align: left;
+}
+
+.section--instagram .section__title {
+  text-align: left;
+  margin-bottom: var(--spacing-md);
 }
 
 .section--instagram .section__title-ja {
   color: white;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-tight);
 }
 
 .section--instagram .section__lead {
   color: rgba(255, 255, 255, 0.95);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  text-align: left;
+  margin: 0;
+  margin-bottom: var(--spacing-lg);
+}
+
+.section--instagram .section__lead br {
+  display: none;
 }
 
 .instagram-link {
-  text-align: center;
-  margin-top: var(--spacing-lg);
+  text-align: left;
+  margin-top: 0;
 }
+
+.instagram-link .button {
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
 /* ===============================================
    フィーチャーセクション
    =============================================== */
