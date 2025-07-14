@@ -81,13 +81,9 @@
 .section--instagram .instagram-video {
   position: absolute;
   top: 0;
-  right: 0; /* 右寄せ */
-  width: 85%; /* 画面幅の85% */
+  width: 100%; /* 画面幅の85% */
   height: 100%;
   z-index: 0;
-  border-top-left-radius: 60px; /* 左上角丸 16px */
-  border-bottom-left-radius: 60px; /* 左下角丸 16px */
-  overflow: hidden; /* 角丸を適用するために必要 */
 }
 
 .section--instagram .instagram-video video {
@@ -95,29 +91,13 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-top-left-radius: 60px; /* 左上角丸 16px */
-  border-bottom-left-radius: 60px; /* 左下角丸 16px */
-}
-
-/* 上部コンテナ - 上にはみ出す */
-.section--instagram .container--top {
-  position: absolute;
-  top: -50px; /* 上にはみ出す */
-  left: 0;
-  width: 95%;
-  background-color: var(--color-bg-light);
-  padding: var(--spacing-lg);
-  margin-left: var(--content-padding);
-  z-index: 2;
-  box-shadow: var(--shadow-lg);
-  border-radius: var(--radius-lg);
 }
 
 /* 下部コンテナ - 下にはみ出す */
 .section--instagram .container--bottom {
   position: absolute;
   bottom: -150px; /* 下にはみ出す */
-  right: 0;
+  left: 0;
   width: 80%;
   background-color: var(--color-bg-light);
   padding: var(--spacing-md) var(--spacing-md);
@@ -167,7 +147,7 @@
 
 /* 次のセクションの上部パディング調整 */
 .section--instagram + .section {
-  padding-top: calc(var(--spacing-3xl) + 200px); /* 下部コンテナのはみ出し分 */
+  padding-top: calc(var(--spacing-3xl) + 150px); /* 下部コンテナのはみ出し分 */
 }
 /* ===============================================
    フィーチャーセクション
