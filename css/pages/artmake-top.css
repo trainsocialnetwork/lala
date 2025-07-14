@@ -500,7 +500,7 @@
 
 .flow-step {
   display: flex;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
   margin-bottom: var(--spacing-xl);
   position: relative;
 }
