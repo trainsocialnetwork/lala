@@ -72,18 +72,22 @@
 .section--instagram {
   position: relative;
   padding: 0;
-  overflow: visible; /* コンテナがはみ出せるように */
-  height: 400px; /* 固定高さ */
+  overflow: visible;
+  height: 400px;
   max-width: 430px;
+  margin: 0 auto;
 }
 
 .section--instagram .instagram-video {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: 0; /* 右寄せ */
+  width: 85%; /* 画面幅の85% */
   height: 100%;
   z-index: 0;
+  border-top-left-radius: var(--radius-lg); /* 左上角丸 16px */
+  border-bottom-right-radius: var(--radius-lg); /* 右下角丸 16px */
+  overflow: hidden; /* 角丸を適用するために必要 */
 }
 
 .section--instagram .instagram-video video {
@@ -93,17 +97,26 @@
   object-position: center;
 }
 
-.section--instagram .container {
+/* 上部コンテナ - 上にはみ出す */
+.section--instagram .container--top {
   position: absolute;
-  bottom: -200px; /* 下にはみ出す位置調整 */
+  top: -50px; /* 上にはみ出す */
   left: 0;
-  width: 75%;
-  background-color: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.2) 40%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
+  width: 70%;
+  background-color: white;
+  padding: var(--spacing-lg);
+  margin-left: var(--content-padding);
+  z-index: 2;
+  box-shadow: var(--shadow-lg);
+}
+
+/* 下部コンテナ - 下にはみ出す */
+.section--instagram .container--bottom {
+  position: absolute;
+  bottom: -100px; /* 下にはみ出す */
+  left: 0;
+  width: 70%;
+  background-color: white;
   padding: var(--spacing-xl) var(--spacing-lg);
   margin-left: var(--content-padding);
   z-index: 2;
@@ -112,17 +125,17 @@
 
 .section--instagram .section__title {
   text-align: left;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 0;
 }
 
 .section--instagram .section__title-ja {
-  color: var(--color-text); /* 通常のテキスト色（黒系） */
+  color: var(--color-text);
   font-size: var(--font-size-xl);
   line-height: var(--line-height-tight);
 }
 
 .section--instagram .section__lead {
-  color: var(--color-text-light); /* 少し薄いテキスト色 */
+  color: var(--color-text-light);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-loose);
   text-align: left;
@@ -144,9 +157,14 @@
   padding: var(--spacing-sm) var(--spacing-md);
 }
 
+/* 前のセクションの下部パディング調整 */
+.section--instagram {
+  margin-top: 50px; /* 上部コンテナのはみ出し分 */
+}
+
 /* 次のセクションの上部パディング調整 */
 .section--instagram + .section {
-  padding-top: calc(var(--spacing-3xl) + 200px); /* コンテナのはみ出し分を考慮 */
+  padding-top: calc(var(--spacing-3xl) + 100px); /* 下部コンテナのはみ出し分 */
 }
 /* ===============================================
    フィーチャーセクション
