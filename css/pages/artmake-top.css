@@ -95,6 +95,8 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  border-top-left-radius: var(--radius-lg); /* 左上角丸 16px */
+  border-bottom-right-radius: var(--radius-lg); /* 右下角丸 16px */
 }
 
 /* 上部コンテナ - 上にはみ出す */
@@ -113,11 +115,11 @@
 /* 下部コンテナ - 下にはみ出す */
 .section--instagram .container--bottom {
   position: absolute;
-  bottom: -100px; /* 下にはみ出す */
+  bottom: -200px; /* 下にはみ出す */
   right: 0;
   width: 80%;
   background-color: ;
-  padding: var(--spacing-xl) var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-md);
   margin-left: var(--content-padding);
   z-index: 2;
   box-shadow: var(--shadow-lg);
@@ -129,8 +131,8 @@
 }
 
 .section--instagram .section__title-ja {
-  color: var(--color-text);
-  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
   line-height: var(--line-height-tight);
 }
 
@@ -164,7 +166,7 @@
 
 /* 次のセクションの上部パディング調整 */
 .section--instagram + .section {
-  padding-top: calc(var(--spacing-3xl) + 100px); /* 下部コンテナのはみ出し分 */
+  padding-top: calc(var(--spacing-3xl) + 200px); /* 下部コンテナのはみ出し分 */
 }
 /* ===============================================
    フィーチャーセクション
