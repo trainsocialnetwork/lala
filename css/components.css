@@ -406,6 +406,7 @@
 
 .footer__top {
   padding-bottom: var(--spacing-xl);
+  align: center;
 }
 
 .footer__logo-section {
@@ -414,7 +415,7 @@
 }
 
 .footer__logo img {
-  height: 80px;
+  height: var(--spacing-4xl);
   margin: 0 auto;
 }
 
@@ -428,7 +429,7 @@
 
 .footer__section h4 {
   font-size: var(--font-size-base);
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: var(--spacing-sm);
   color: white;
 }
