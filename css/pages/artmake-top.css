@@ -460,9 +460,16 @@
 .removal-table td {
   font-size: var(--font-size-sm);
   padding: var(--spacing-md);
-  text-align: right;
 }
 
+.removal-table th {
+   text-align: center;
+}
+
+
+.removal-table td {
+   text-align: right;
+}
 .removal-table tbody tr {
   border-bottom: 1px solid var(--color-border);
 }
