@@ -146,7 +146,7 @@
 
 /* 次のセクションの上部パディング調整 */
 .section--instagram + .section {
-  padding-top: calc(var(--spacing-3xl) + 100px); /* コンテナのはみ出し分を考慮 */
+  padding-top: calc(var(--spacing-3xl) + 200px); /* コンテナのはみ出し分を考慮 */
 }
 /* ===============================================
    フィーチャーセクション
