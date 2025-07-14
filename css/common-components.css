@@ -14,7 +14,7 @@
 .section__title-en {
   display: block;
   font-size: var(--font-size-sm);
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.1em;
   color: var(--color-secondary);
   margin-bottom: var(--spacing-xs);
