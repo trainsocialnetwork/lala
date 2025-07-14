@@ -92,8 +92,8 @@
   width: 100%;
   height: 400px;
   margin-left: auto; /* 右寄せ */
-  border-top-left-radius: var(--radius-lg);
-  border-bottom-right-radius: var(--radius-lg);
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
   overflow: hidden;
   z-index: 1;
 }
@@ -110,13 +110,15 @@
   position: relative;
   bottom: 100px; /* 上に引き上げて動画に重ねる */
   left: 0;
-  width: 70%;
+  width: 75%;
   background-color: white;
   padding: var(--spacing-xl) var(--spacing-lg);
   margin-left: var(--content-padding);
   margin-bottom: -150px; /* 下にはみ出す分 */
   z-index: 2;
   box-shadow: var(--shadow-lg);
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
 }
 
 .section--instagram .section__lead {
