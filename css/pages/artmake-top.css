@@ -469,11 +469,6 @@
 .removal-table td {
   font-size: var(--font-size-sm);
   padding: var(--spacing-md);
-  text-align: left;
-}
-
-.removal-table th:last-child,
-.removal-table td:last-child {
   text-align: right;
 }
 
