@@ -80,17 +80,10 @@
 
 /* タイトル - セクション直下に配置 */
 .section--instagram > .section__title {
-  text-align: left;
   margin-bottom: var(--spacing-lg);
   padding: 0 var(--content-padding);
   position: relative;
   z-index: 3;
-}
-
-.section--instagram .section__title-ja {
-  color: var(--color-text);
-  font-size: var(--font-size-xl);
-  line-height: var(--line-height-tight);
 }
 
 /* 動画部分 */
