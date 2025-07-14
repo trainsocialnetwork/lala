@@ -398,6 +398,7 @@
 /* ===============================================
    フッターコンポーネント
    =============================================== */
+
 .footer {
   background-color: var(--color-primary);
   color: white;
@@ -406,7 +407,6 @@
 
 .footer__top {
   padding-bottom: var(--spacing-xl);
-  align: center;
 }
 
 .footer__logo-section {
@@ -425,7 +425,11 @@
   gap: var(--spacing-lg);
   max-width: var(--content-width-max);
   margin: 0 auto;
-  align: center;
+  padding: 0 var(--content-padding);
+}
+
+.footer__section {
+  text-align: left;
 }
 
 .footer__section h4 {
@@ -453,17 +457,20 @@
 
 .footer__contact {
   font-size: var(--font-size-sm);
+  text-align: left;
 }
 
 .footer__address {
   margin-bottom: var(--spacing-sm);
   line-height: var(--line-height-loose);
+  text-align: left;
 }
 
 .footer__hours {
   display: flex;
   align-items: center;
   gap: var(--spacing-xs);
+  text-align: left;
 }
 
 .footer__bottom {
@@ -479,7 +486,7 @@
 }
 
 .footer__links {
-  margin-bottom: var(--spacing-xs) !important;
+  margin-bottom: var(--spacing-xs)
 }
 
 .footer__links a {
