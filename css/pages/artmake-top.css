@@ -94,10 +94,15 @@
 
 .section--instagram .container {
   position: absolute;
-  bottom: -100px; /* 下にはみ出す位置調整 */
+  bottom: -200px; /* 下にはみ出す位置調整 */
   left: 0;
-  width: 70%;
-  background-color: white;
+  width: 75%;
+  background-color: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 40%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
   padding: var(--spacing-xl) var(--spacing-lg);
   margin-left: var(--content-padding);
   z-index: 2;
