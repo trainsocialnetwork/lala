@@ -24,7 +24,7 @@
 .section__title-ja {
   display: block;
   font-size: var(--font-size-2xl);
-  font-weight: 600;
+  font-weight: 400;
   line-height: var(--line-height-tight);
 }
 
