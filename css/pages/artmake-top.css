@@ -66,15 +66,31 @@
   background-color: var(--color-primary);
 }
 
-/* ===============================================
+
+* ===============================================
    インスタグラムセクション
    =============================================== */
 .section--instagram {
   position: relative;
-  padding: 0;
+  padding: var(--spacing-2xl) 0 0 0; /* 上部のみパディング */
   overflow: visible;
   max-width: 430px;
   margin: 0 auto;
+}
+
+/* タイトル - セクション直下に配置 */
+.section--instagram > .section__title {
+  text-align: left;
+  margin-bottom: var(--spacing-lg);
+  padding: 0 var(--content-padding);
+  position: relative;
+  z-index: 3;
+}
+
+.section--instagram .section__title-ja {
+  color: var(--color-text);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-tight);
 }
 
 .section--instagram .instagram-video {
