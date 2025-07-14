@@ -73,14 +73,12 @@
   position: relative;
   padding: 0;
   overflow: visible;
-  height: 400px;
   max-width: 430px;
   margin: 0 auto;
 }
 
 .section--instagram .instagram-video {
   position: absolute;
-  top: 0;
   width: 100%; /* 画面幅の85% */
   height: 100%;
   z-index: 0;
