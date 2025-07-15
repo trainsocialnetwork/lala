@@ -141,6 +141,7 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  scroll-behavior: smooth;
 }
 
 .page-nav__list::-webkit-scrollbar {
@@ -157,11 +158,11 @@
   transition: all var(--transition-base);
 }
 
-.page-nav__link:hover,
 .page-nav__link.is-active {
   background-color: var(--color-primary);
   color: white;
   opacity: 1;
+  font-weight: 600;
 }
 
 /* ===============================================
