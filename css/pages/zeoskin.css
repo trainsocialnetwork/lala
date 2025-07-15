@@ -78,6 +78,7 @@
 /* カテゴリータイトル */
 .section--products .section__subtitle {
   margin-bottom: var(--spacing-md);
+  align: left;
 }
 
 .product-nav {
