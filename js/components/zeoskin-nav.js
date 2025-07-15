@@ -113,7 +113,32 @@
       if (currentSection) {
         this.navLinks.forEach(link => link.classList.remove('is-active'));
         currentSection.link.classList.add('is-active');
+        
+        // アクティブなリンクを表示領域の中央に配置
+        this.scrollToActiveLink(currentSection.link);
       }
+    }
+    
+    scrollToActiveLink(activeLink) {
+      const navList = activeLink.closest('.product-nav__list');
+      if (!navList) return;
+      
+      const linkRect = activeLink.getBoundingClientRect();
+      const navRect = navList.getBoundingClientRect();
+      
+      // リンクの中心位置
+      const linkCenter = linkRect.left + linkRect.width / 2;
+      // ナビゲーションの中心位置
+      const navCenter = navRect.left + navRect.width / 2;
+      
+      // スクロール量を計算
+      const scrollAmount = linkCenter - navCenter;
+      
+      // スムーズにスクロール
+      navList.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
     }
   }
   
