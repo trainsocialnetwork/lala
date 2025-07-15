@@ -537,30 +537,3 @@
 .price-button {
   text-align: center;
 }
-
-/* ===============================================
-   CTAセクション
-   =============================================== */
-.section--cta {
-  background-color: var(--color-primary);
-  color: white;
-  text-align: center;
-  padding: var(--spacing-3xl) 0;
-}
-
-.section--cta .section__title-ja {
-  color: white;
-}
-
-.section--cta .section__lead {
-  color: white;
-  opacity: 0.9;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: var(--spacing-md);
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: var(--spacing-lg);
-}
