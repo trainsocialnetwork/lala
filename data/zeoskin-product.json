@@ -1,0 +1,196 @@
+{
+  "products": {
+    "categories": [
+      {
+        "id": "category-cleanser",
+        "name": "洗顔料",
+        "products": [
+          {
+            "id": "gentle-cleanser",
+            "name": "ジェントルクレンザー",
+            "description": "普通肌～乾燥肌向け",
+            "price": "¥6,160 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          },
+          {
+            "id": "exfoliating-cleanser",
+            "name": "エクスフォリエーティングクレンザー",
+            "description": "普通肌～脂性肌向け",
+            "price": "¥6,160 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          },
+          {
+            "id": "hydrating-cleanser",
+            "name": "ハイドレーティングクレンザー",
+            "description": "普通肌～乾燥肌向け",
+            "price": "¥6,160 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          },
+          {
+            "id": "balancing-cleanser",
+            "name": "バランシングクレンジングエマルジョン",
+            "description": "オールスキン",
+            "price": "¥6,160 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          }
+        ]
+      },
+      {
+        "id": "category-toner",
+        "name": "化粧水",
+        "products": [
+          {
+            "id": "balancer-toner",
+            "name": "バランサートナー",
+            "description": "オールスキン",
+            "price": "¥7,040 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          },
+          {
+            "id": "w-texture-repair",
+            "name": "Wテクスチャーリペア",
+            "description": "レチノール配合",
+            "price": "¥20,460 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          },
+          {
+            "id": "skin-bright-025",
+            "name": "スキンブライセラム0.25",
+            "description": "レチノール・ビタミンC配合",
+            "price": "¥11,880 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          },
+          {
+            "id": "skin-bright-05",
+            "name": "スキンブライセラム0.5",
+            "description": "レチノール・ビタミンC配合",
+            "price": "¥13,420 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          }
+        ]
+      },
+      {
+        "id": "category-cream",
+        "name": "美容ジェル・美容クリーム",
+        "products": [
+          {
+            "id": "daily-pd",
+            "name": "デイリーPD",
+            "description": "光老化対策",
+            "price": "¥21,780 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          },
+          {
+            "id": "rc-cream",
+            "name": "RCクリーム",
+            "description": "軽度な乾燥・刺激に",
+            "price": "¥15,400 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          },
+          {
+            "id": "rn-cream",
+            "name": "RNクリーム",
+            "description": "軽度な乾燥・刺激に",
+            "price": "¥15,400 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          },
+          {
+            "id": "illumination-aox",
+            "name": "イルミネーションAOXセラム",
+            "description": "光老化対策",
+            "price": "¥21,780 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          }
+        ]
+      },
+      {
+        "id": "category-special",
+        "name": "スペシャルケア",
+        "products": [
+          {
+            "id": "ar-night-repair",
+            "name": "ARナイトリペア",
+            "description": "レチノール配合",
+            "price": "¥20,900 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          },
+          {
+            "id": "melamin",
+            "name": "ミラミン",
+            "description": "ハイドロキノン配合",
+            "price": "¥14,080 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          },
+          {
+            "id": "melamix",
+            "name": "ミラミックス",
+            "description": "ハイドロキノン配合",
+            "price": "¥13,640 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          },
+          {
+            "id": "c-serum",
+            "name": "シーセラム",
+            "description": "ビタミンC配合",
+            "price": "¥15,840 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          }
+        ]
+      },
+      {
+        "id": "category-sunscreen",
+        "name": "日焼け止め",
+        "products": [
+          {
+            "id": "bs-sunscreen",
+            "name": "BSサンスクリーン SPF50",
+            "description": "敏感肌にも",
+            "price": "¥12,320 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          },
+          {
+            "id": "sunscreen-primer",
+            "name": "サンスクリーンプラスプライマー SPF30",
+            "description": "化粧下地としても",
+            "price": "¥8,360 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          },
+          {
+            "id": "powder-sunscreen",
+            "name": "パウダーサンスクリーン SPF30",
+            "description": "持ち運びにも便利",
+            "price": "¥7,260 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          },
+          {
+            "id": "g-factor-eye",
+            "name": "Gファクターアイセラム",
+            "description": "目元のエイジングケア",
+            "price": "¥20,460 (税込)",
+            "image": "assets/images/zeoskin_01webp.webp",
+            "link": "#"
+          }
+        ]
+      }
+    ]
+  }
+}
