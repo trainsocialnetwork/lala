@@ -11,154 +11,471 @@
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/pages/zeoskin.css">
     
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
-            <div class="header__inner">
-                <div class="header__logo">
-                    <a href="./home.html">
-                        <img src="../assets/images/logo.png" alt="LaLa Beauty Clinicのロゴ">
-                    </a>
-                </div>
-                <nav class="header__nav">
-                    <ul class="header__nav-list">
-                        <li class="header__nav-item">
-                            <a href="#about" class="header__nav-link">セラピューティックプログラム</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#products" class="header__nav-link">製品一覧</a>
-                        </li>
-                    </ul>
-                </nav>
-                <button class="header__menu-toggle" aria-label="メニューを開く">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+<body class="page-zeoskin">
+    <!-- Header Component -->
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="/">
+                    <img src="../assets/images/logo.png" alt="LaLa Beauty Clinicのロゴ">
+                </a>
             </div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="#about">ゼオスキンとは</a></li>
+                    <li><a href="#products">製品一覧</a></li>
+                </ul>
+            </nav>
+            <button class="header__menu-toggle" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero__image">
-            <img src="../assets/images/zeoskin_01webp.webp" alt="ゼオスキンの主要製品">
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__header">
+            <img src="../assets/images/logo.png" alt="LaLa">
+            <button class="mobile-menu__close" aria-label="メニューを閉じる">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-        <div class="hero__content">
-            <div class="container">
-                <h1 class="hero__title">医師と共に育む、美しく健康な肌へ。</h1>
-                <p class="hero__description">世界基準のスキンケア「ゼオスキンヘルス」。専門医が一人ひとりの肌を診察し、あなただけの最適なプログラムをご提案します。</p>
-            </div>
-        </div>
-    </section>
+        <nav class="mobile-menu__nav">
+            <ul>
+                <li><a href="#about">ゼオスキンとは</a></li>
+                <li><a href="#products">製品一覧</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <!-- About Section -->
-    <section class="section section--about" id="about">
-        <div class="container">
-            <div class="section__inner">
-                <div class="section__header">
-                    <h2 class="section__title">
-                        <span class="section__title-en">ABOUT ZO SKIN HEALTH</span>
-                        <span class="section__title-ja">セラピューティックプログラム</span>
-                    </h2>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero hero--zeoskin">
+            <div class="hero__visual">
+                <img src="../assets/images/zeoskin_01webp.webp" alt="ゼオスキンヘルス">
+            </div>
+            <div class="hero__content">
+                <div class="container">
+                    <h1>医師と共に育む、<br>美しく健康な肌へ。</h1>
+                    <p>世界基準のスキンケア「ゼオスキンヘルス」。<br>専門医が一人ひとりの肌を診察し、<br>あなただけの最適なプログラムをご提案します。</p>
                 </div>
-                <div class="about__content">
-                    <div class="about__image">
-                        <img src="../assets/images/zeoskin_02.png" alt="セラピューティックプログラム">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section section--about" id="about">
+            <div class="container">
+                <h2 class="section__title">
+                    <span class="section__title-en">ABOUT ZO SKIN HEALTH</span>
+                    <span class="section__title-ja">ゼオスキンヘルスとは</span>
+                </h2>
+                
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="../assets/images/zeoskin_02.png" alt="ゼオスキンヘルス">
                     </div>
-                    <div class="about__text">
-                        <p class="about__description">
-                            高名な皮膚科医Dr.ゼイン・オバジによって開発された、医療機関専売のスキンケアプログラムです。肌の表面だけでなく、細胞レベルにまで働きかけ、肌本来の力を引き出し、美しく健康な肌へと導きます。
+                    <div class="about-text">
+                        <p>
+                            ゼオスキンヘルスは、世界的に高名な皮膚科医Dr.ゼイン・オバジによって開発された、医療機関専売のスキンケアプログラムです。<br><br>
+                            肌の表面だけでなく、細胞レベルにまで働きかけ、肌本来の力を引き出し、美しく健康な肌へと導きます。
                         </p>
                         <a href="#" class="button button--primary">
+                            <i class="fas fa-chevron-right"></i>
                             セラピューティックプログラムについて
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Products Section -->
-    <section class="section section--products" id="products">
-        <div class="container">
-            <div class="section__header">
+        <!-- Products Section -->
+        <section class="section section--products bg-light" id="products">
+            <div class="container">
                 <h2 class="section__title">
                     <span class="section__title-en">PRODUCTS</span>
                     <span class="section__title-ja">製品一覧</span>
                 </h2>
-            </div>
-            <div class="products" id="products-container">
-                <!-- Products will be dynamically loaded here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer__main">
-                    <div class="footer__logo">
-                        <img src="../assets/images/footer-logo.png" alt="LaLa Beauty Clinic">
+                
+                <div class="products-container">
+                    <!-- 洗顔料 -->
+                    <div class="product-category">
+                        <h3 class="product-category__title">洗顔料</h3>
+                        <div class="products-grid">
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="ジェントルクレンザー">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">Gentle Cleanser</h4>
+                                    <p class="product-name-jp">ジェントルクレンザー</p>
+                                    <p class="product-description">普通肌～乾燥肌向け</p>
+                                    <p class="product-price">¥6,160 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="エクスフォリエーティングクレンザー">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">Exfoliating Cleanser</h4>
+                                    <p class="product-name-jp">エクスフォリエーティングクレンザー</p>
+                                    <p class="product-description">普通肌～脂性肌向け</p>
+                                    <p class="product-price">¥6,160 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="ハイドレーティングクレンザー">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">Hydrating Cleanser</h4>
+                                    <p class="product-name-jp">ハイドレーティングクレンザー</p>
+                                    <p class="product-description">普通肌～乾燥肌向け</p>
+                                    <p class="product-price">¥6,160 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="バランシングクレンジングエマルジョン">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">Balancing Cleansing</h4>
+                                    <p class="product-name-jp">バランシングクレンジングエマルジョン</p>
+                                    <p class="product-description">オールスキン</p>
+                                    <p class="product-price">¥6,160 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="footer__sections">
-                        <div class="footer__section">
-                            <h3 class="footer__section-title">アートメイク</h3>
-                            <ul class="footer__links">
-                                <li><a href="#">眉アートメイク</a></li>
-                                <li><a href="#">リップアートメイク</a></li>
-                                <li><a href="#">メンズアートメイク</a></li>
-                                <li><a href="#">メラニンケア</a></li>
-                            </ul>
+
+                    <!-- 化粧水 -->
+                    <div class="product-category">
+                        <h3 class="product-category__title">化粧水</h3>
+                        <div class="products-grid">
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="バランサートナー">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">Balancer Toner</h4>
+                                    <p class="product-name-jp">バランサートナー</p>
+                                    <p class="product-description">オールスキン</p>
+                                    <p class="product-price">¥7,040 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="Wテクスチャーリペア">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">W-Texture Repair</h4>
+                                    <p class="product-name-jp">Wテクスチャーリペア</p>
+                                    <p class="product-description">レチノール配合</p>
+                                    <p class="product-price">¥20,460 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="スキンブライセラム0.25">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">Skin Brightener 0.25</h4>
+                                    <p class="product-name-jp">スキンブライセラム0.25</p>
+                                    <p class="product-description">レチノール・ビタミンC配合</p>
+                                    <p class="product-price">¥11,880 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="スキンブライセラム0.5">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">Skin Brightener 0.5</h4>
+                                    <p class="product-name-jp">スキンブライセラム0.5</p>
+                                    <p class="product-description">レチノール・ビタミンC配合</p>
+                                    <p class="product-price">¥13,420 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="footer__section">
-                            <h3 class="footer__section-title">オンライン総合美容</h3>
-                            <ul class="footer__links">
-                                <li><a href="#">スキンケア（ゼオスキン）</a></li>
-                                <li><a href="#">ヘアケア</a></li>
-                            </ul>
+                    </div>
+
+                    <!-- 美容ジェル・美容クリーム -->
+                    <div class="product-category">
+                        <h3 class="product-category__title">美容ジェル・美容クリーム</h3>
+                        <div class="products-grid">
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="デイリーPD">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">Daily PD</h4>
+                                    <p class="product-name-jp">デイリーPD</p>
+                                    <p class="product-description">光老化対策</p>
+                                    <p class="product-price">¥21,780 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="RCクリーム">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">RC Cream</h4>
+                                    <p class="product-name-jp">RCクリーム</p>
+                                    <p class="product-description">軽度な乾燥・刺激に</p>
+                                    <p class="product-price">¥15,400 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="RNクリーム">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">RN Cream</h4>
+                                    <p class="product-name-jp">RNクリーム</p>
+                                    <p class="product-description">軽度な乾燥・刺激に</p>
+                                    <p class="product-price">¥15,400 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="イルミネーションAOXセラム">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">Illumination AOX</h4>
+                                    <p class="product-name-jp">イルミネーションAOXセラム</p>
+                                    <p class="product-description">光老化対策</p>
+                                    <p class="product-price">¥21,780 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="footer__section">
-                            <h3 class="footer__section-title">クリニック情報</h3>
-                            <ul class="footer__links">
-                                <li><a href="#">当院について</a></li>
-                                <li><a href="#">アクセス</a></li>
-                                <li><a href="#">お知らせ一覧</a></li>
-                                <li><a href="#">採用情報</a></li>
-                                <li><a href="#">料金一覧</a></li>
-                            </ul>
+                    </div>
+
+                    <!-- スペシャルケア -->
+                    <div class="product-category">
+                        <h3 class="product-category__title">スペシャルケア</h3>
+                        <div class="products-grid">
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="ARナイトリペア">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">AR Night Repair</h4>
+                                    <p class="product-name-jp">ARナイトリペア</p>
+                                    <p class="product-description">レチノール配合</p>
+                                    <p class="product-price">¥20,900 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="ミラミン">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">Melamin</h4>
+                                    <p class="product-name-jp">ミラミン</p>
+                                    <p class="product-description">ハイドロキノン配合</p>
+                                    <p class="product-price">¥14,080 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="ミラミックス">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">Melamix</h4>
+                                    <p class="product-name-jp">ミラミックス</p>
+                                    <p class="product-description">ハイドロキノン配合</p>
+                                    <p class="product-price">¥13,640 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="シーセラム">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">C-Serum</h4>
+                                    <p class="product-name-jp">シーセラム</p>
+                                    <p class="product-description">ビタミンC配合</p>
+                                    <p class="product-price">¥15,840 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="footer__section">
-                            <h3 class="footer__section-title">お問い合わせ</h3>
-                            <p class="footer__contact-address">
-                                〒650-0002<br>
-                                兵庫県神戸市中央区北野町1丁目1<br>
-                                コトノハコ神戸西館1F
-                            </p>
-                            <p class="footer__contact-hours">10:00〜17:00（不定休）</p>
+                    </div>
+
+                    <!-- 日焼け止め -->
+                    <div class="product-category">
+                        <h3 class="product-category__title">日焼け止め</h3>
+                        <div class="products-grid">
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="BSサンスクリーン">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">BS Sunscreen SPF50</h4>
+                                    <p class="product-name-jp">BSサンスクリーン SPF50</p>
+                                    <p class="product-description">敏感肌にも</p>
+                                    <p class="product-price">¥12,320 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="サンスクリーンプラスプライマー">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">Sunscreen Primer</h4>
+                                    <p class="product-name-jp">サンスクリーンプラスプライマー SPF30</p>
+                                    <p class="product-description">化粧下地としても</p>
+                                    <p class="product-price">¥8,360 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="パウダーサンスクリーン">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">Powder Sunscreen</h4>
+                                    <p class="product-name-jp">パウダーサンスクリーン SPF30</p>
+                                    <p class="product-description">持ち運びにも便利</p>
+                                    <p class="product-price">¥7,260 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
+                            
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="../assets/images/zeoskin_01webp.webp" alt="Gファクターアイセラム">
+                                </div>
+                                <div class="product-content">
+                                    <h4 class="product-name">G-Factor Eye Serum</h4>
+                                    <p class="product-name-jp">Gファクターアイセラム</p>
+                                    <p class="product-description">目元のエイジングケア</p>
+                                    <p class="product-price">¥20,460 (税込)</p>
+                                    <a href="#" class="product-cta">詳細を見る</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="footer__bottom">
-                    <div class="footer__bottom-links">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__logo-section">
+                    <div class="footer__logo">
+                        <img src="../assets/images/footer-logo.png" alt="LaLa Beauty Clinic">
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <div class="footer__section">
+                        <h4>アートメイク</h4>
+                        <ul>
+                            <li><a href="#">眉アートメイク</a></li>
+                            <li><a href="#">リップアートメイク</a></li>
+                            <li><a href="#">メンズアートメイク</a></li>
+                            <li><a href="#">メラニンケア</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__section">
+                        <h4>オンライン総合美容</h4>
+                        <ul>
+                            <li><a href="#">スキンケア（ゼオスキン）</a></li>
+                            <li><a href="#">ヘアケア</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__section">
+                        <h4>クリニック情報</h4>
+                        <ul>
+                            <li><a href="#">当院について</a></li>
+                            <li><a href="#">アクセス</a></li>
+                            <li><a href="#">お知らせ一覧</a></li>
+                            <li><a href="#">採用情報</a></li>
+                            <li><a href="#">料金一覧</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__section footer__contact">
+                        <h4>お問い合わせ</h4>
+                        <p class="footer__address">
+                            〒650-0002<br>
+                            兵庫県神戸市中央区北野町1丁目1<br>
+                            コトノハコ神戸西館1F
+                        </p>
+                        <p class="footer__hours">
+                            <i class="fas fa-clock"></i>
+                            10:00〜17:00（不定休）
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <div class="footer__links">
                         <a href="#">プライバシーポリシー</a>
                     </div>
-                    <p class="footer__copyright">© 2025 LaLa Beauty Clinic. All rights reserved.</p>
+                    <p class="copyright">&copy; 2025 LaLa Beauty Clinic. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
     <script src="../js/main.js"></script>
     <script src="../js/components/navigation.js"></script>
-    <script src="../js/components/zeoskin.js"></script>
 </body>
 </html>
