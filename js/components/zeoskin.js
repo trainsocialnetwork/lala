@@ -9,7 +9,7 @@ const productsContainer = document.getElementById('products-container');
 // Load products data
 async function loadProducts() {
   try {
-    const response = await fetch('data/zeoskin-data.json');
+    const response = await fetch('../data/zeoskin-product.json');
     const data = await response.json();
     renderProducts(data.products.categories);
   } catch (error) {
