@@ -64,7 +64,7 @@
    製品セクション用リード文
    =============================================== */
 .products-lead {
-  text-align: center;
+  text-align: left;
   margin: 0 auto var(--spacing-xl);
   max-width: 100%;
   font-size: var(--font-size-sm);
