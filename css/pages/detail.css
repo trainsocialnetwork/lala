@@ -328,24 +328,65 @@
 /* ===============================================
    症例ギャラリー
    =============================================== */
-.cases-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+.section--cases {
+  padding: var(--spacing-3xl) 0;
+}
+
+.section--cases .voice-carousel {
+  max-width: 800px;
+  margin: 0 auto var(--spacing-lg);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.section--cases .voice-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.section--cases .voice-carousel__track {
+  display: flex;
   gap: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  scroll-snap-type: x mandatory;
 }
 
-.case-image {
+.section--cases .voice-card {
+  flex: 0 0 300px;
+  background-color: var(--color-bg);
   border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  aspect-ratio: 1;
+  padding: var(--spacing-md);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  scroll-snap-align: start;
 }
 
-.case-image img {
+.section--cases .voice-card__header {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.section--cases .voice-card__image {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.section--cases .voice-card__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.section--cases .instagram-link {
+  text-align: center;
+  margin-top: var(--spacing-lg);
 }
 
 /* ===============================================
@@ -659,3 +700,4 @@
   color: var(--color-text);
   margin: 0;
 }
+
