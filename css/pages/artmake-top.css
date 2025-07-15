@@ -24,10 +24,7 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
-　  /* パディングを追加してシャドウのスペースを確保 */
-  padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-md) var(--spacing-sm);
-  /* ネガティブマージンで見た目の位置を調整 */
-  margin: calc(-1 * var(--spacing-sm)) calc(-1 * var(--spacing-sm)) 0 calc(-1 * var(--spacing-sm));
+  padding-bottom: 20px;
 }
 
 .campaign-carousel__track::-webkit-scrollbar {
@@ -39,7 +36,9 @@
   scroll-snap-align: start;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow:var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  /* 下部に強めのシャドウを追加 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .campaign-slide img {
