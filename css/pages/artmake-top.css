@@ -14,6 +14,8 @@
   position: relative;
   max-width: 800px;
   margin: 0 auto;
+  overflow: visible; /* 明示的にvisibleを設定 */
+  padding-bottom: var(--spacing-md); /* 下部に余白を追加 */
 }
 
 .campaign-carousel__track {
