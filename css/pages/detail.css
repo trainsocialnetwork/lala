@@ -135,7 +135,7 @@
 .page-nav__list {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
   padding: var(--spacing-md) 0;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
