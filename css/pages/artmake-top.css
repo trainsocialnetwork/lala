@@ -33,17 +33,15 @@
 .campaign-slide {
   flex: 0 0 100%;
   scroll-snap-align: start;
-  border-radius: var(--radius-lg);
+  border-radius: 4px;
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  radius: 4px;
+  box-shadow: var(--shadow-md);
 }
 
 .campaign-slide img {
   width: 100%;
   height: auto;
   display: block;
-  box-shadow: var(--shadow-lg);
 }
 
 .campaign-carousel__dots {
@@ -67,7 +65,6 @@
   border-radius: 4px;
   background-color: var(--color-primary);
 }
-
 
 /* ===============================================
    インスタグラムセクション
