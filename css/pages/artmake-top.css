@@ -24,7 +24,7 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
-　padding: var(--spacing-sm) 0; /* 上下にパディングを追加 */
+　padding-bottom: var(--spacing-md); /* 下部に余白を追加 */
 }
 
 .campaign-carousel__track::-webkit-scrollbar {
