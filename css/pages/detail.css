@@ -139,7 +139,6 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  scroll-behavior: smooth;
 }
 
 /* 最初のアイテムに左パディングを追加 */
