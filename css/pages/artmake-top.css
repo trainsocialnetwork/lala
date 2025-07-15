@@ -14,8 +14,6 @@
   position: relative;
   max-width: 800px;
   margin: 0 auto;
-  overflow: visible; /* 明示的にvisibleを設定 */
-  padding-bottom: var(--spacing-md); /* 下部に余白を追加 */
 }
 
 .campaign-carousel__track {
@@ -26,7 +24,10 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
-　padding-bottom: var(--spacing-md); /* 下部に余白を追加 */
+　  /* パディングを追加してシャドウのスペースを確保 */
+  padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-md) var(--spacing-sm);
+  /* ネガティブマージンで見た目の位置を調整 */
+  margin: calc(-1 * var(--spacing-sm)) calc(-1 * var(--spacing-sm)) 0 calc(-1 * var(--spacing-sm));
 }
 
 .campaign-carousel__track::-webkit-scrollbar {
