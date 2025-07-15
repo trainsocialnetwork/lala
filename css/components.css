@@ -668,3 +668,130 @@
   grid-template-columns: 1fr;
   gap: var(--spacing-md);
 }
+
+/* ===============================================
+   セクションタイトル
+   使用箇所: index.html, artmake/index.html, artmake/eyebrow.html
+   =============================================== */
+.section__title {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.section__title-en {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+}
+
+.section__title-ja {
+  display: block;
+  font-size: var(--font-size-2xl);
+  font-weight: 400;
+  line-height: var(--line-height-tight);
+}
+
+/* サブタイトルバリエーション */
+.section__subtitle {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.section__subtitle-en {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+}
+
+.section__subtitle-ja {
+  display: block;
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+}
+
+/* リード文 */
+.section__lead {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+  line-height: var(--line-height-loose);
+}
+
+/* ===============================================
+   CTAセクション
+   使用箇所: artmake/eyebrow.html, 他の詳細ページ（予定）
+   =============================================== */
+.section--cta {
+  background-color: var(--color-primary);
+  color: white;
+  text-align: center;
+  padding: var(--spacing-3xl) 0;
+}
+
+.section--cta .section__title-ja {
+  color: white;
+}
+
+.section--cta .section__lead {
+  color: white;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-lg);
+}
+
+
+/* ===============================================
+   アクセス情報
+   使用箇所: index.html, artmake/index.html
+   =============================================== */
+.access-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+.access-content__map {
+  width: 100%;
+  height: 300px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.access-content__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.clinic-info {
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.info-table {
+  width: 100%;
+  margin-bottom: var(--spacing-lg);
+}
+
+.info-table th,
+.info-table td {
+  padding: var(--spacing-sm) 0;
+  font-size: var(--font-size-sm);
+  vertical-align: top;
+}
