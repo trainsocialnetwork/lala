@@ -35,15 +35,15 @@
   scroll-snap-align: start;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
+  radius: 4px;
 }
 
 .campaign-slide img {
   width: 100%;
   height: auto;
   display: block;
-  radius: 4px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-lg);
 }
 
 .campaign-carousel__dots {
