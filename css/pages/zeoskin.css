@@ -99,7 +99,6 @@
 .product-nav--zeoskin .product-nav__list {
   display: flex;
   gap: var(--spacing-xs) !important;
-  padding: var(--spacing-sm) 0;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
