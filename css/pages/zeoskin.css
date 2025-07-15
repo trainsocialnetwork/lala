@@ -14,12 +14,92 @@
 }
 
 /* ===============================================
+   製品セクション用リード文
+   =============================================== */
+.products-lead {
+  text-align: center;
+  margin: 0 auto var(--spacing-xl);
+  max-width: 100%;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+}
+
+/* ===============================================
+   製品カテゴリナビゲーション
+   =============================================== */
+.product-nav {
+  background-color: var(--color-bg);
+  position: sticky;
+  top: 60px;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-xl);
+}
+
+.product-nav__list {
+  display: flex;
+  padding: var(--spacing-md) 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: var(--spacing-xs);
+}
+
+.product-nav__list::-webkit-scrollbar {
+  display: none;
+}
+
+.product-nav__link {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.product-nav__link:hover {
+  background-color: var(--color-bg-light);
+  opacity: 1;
+}
+
+.product-nav__link:first-child {
+  margin-left: var(--spacing-sm);
+}
+
+.product-nav__link:last-child {
+  margin-right: var(--spacing-sm);
+}
+
+/* ===============================================
    ヒーローセクション（既存heroを拡張）
    =============================================== */
 .hero--zeoskin {
   height: 60vh;
   min-height: 400px;
   margin-top: 60px;
+}
+
+.hero--zeoskin .hero__visual {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.hero--zeoskin .hero__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom; /* 画像の下部を基準に配置 */
 }
 
 .hero--zeoskin .hero__visual::after {
@@ -61,31 +141,9 @@
 }
 
 /* ===============================================
-   Aboutセクション（既存content-gridを活用）
+   Aboutセクション（detail.cssのcontent-gridを活用）
    =============================================== */
-.about-content {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-lg);
-  margin-top: var(--spacing-xl);
-}
-
-.about-image {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-}
-
-.about-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.about-text p {
-  line-height: var(--line-height-loose);
-  margin-bottom: var(--spacing-lg);
-}
+/* content-gridクラスを使用するため、追加スタイルは最小限に */
 
 /* ===============================================
    製品カテゴリ（既存スタイルを活用）
@@ -168,20 +226,13 @@
   flex-direction: column;
 }
 
-/* 製品名（英語） */
-.product-name {
+/* 製品名（日本語） */
+.product-name-jp {
   font-size: 18px;
-  font-family: Georgia, serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: normal;
   line-height: 1.2;
   color: #333;
-  margin-bottom: 2px;
-}
-
-/* 製品名（日本語） */
-.product-name-jp {
-  font-size: 11px;
-  color: #666;
   margin-bottom: 8px;
 }
 
