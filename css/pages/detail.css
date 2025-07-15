@@ -537,3 +537,172 @@
 .price-button {
   text-align: center;
 }
+
+/* ===============================================
+   注意事項セクション
+   =============================================== */
+.section--cautions {
+  background-color: var(--color-bg);
+  padding: var(--spacing-3xl) 0;
+}
+
+.caution-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.caution-section:last-child {
+  margin-bottom: 0;
+}
+
+.caution-section__title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.caution-section__description {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-light);
+}
+
+/* 注意点ブロック */
+.caution-block {
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.caution-block:last-child {
+  margin-bottom: 0;
+}
+
+.caution-block__title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.caution-block__title i {
+  color: var(--color-secondary);
+}
+
+.caution-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.caution-list li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  line-height: var(--line-height-loose);
+  font-size: var(--font-size-sm);
+}
+
+.caution-list li::before {
+  content: "•";
+  position: absolute;
+  left: var(--spacing-sm);
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+/* リスク・副作用ブロック */
+.risk-block {
+  background-color: #FFF9F0;
+  border: 1px solid #FFE0B2;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+}
+
+.risk-block p {
+  line-height: var(--line-height-loose);
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* 禁忌症リスト */
+.contraindication-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-sm);
+}
+
+.contraindication-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background-color: #FFF3F3;
+  border-radius: var(--radius-md);
+  border: 1px solid #FFDDDD;
+}
+
+.contraindication-item i {
+  color: #D32F2F;
+  font-size: var(--font-size-lg);
+  flex-shrink: 0;
+}
+
+.contraindication-item span {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-tight);
+}
+
+/* 相談が必要なケース */
+.consultation-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.consultation-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background-color: #F0F4FF;
+  border-radius: var(--radius-md);
+  border: 1px solid #D0E0FF;
+}
+
+.consultation-item i {
+  color: #1976D2;
+  font-size: var(--font-size-lg);
+  flex-shrink: 0;
+}
+
+.consultation-item span {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-tight);
+}
+
+.consultation-note {
+  display: flex;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-md);
+}
+
+.consultation-note i {
+  color: var(--color-secondary);
+  font-size: var(--font-size-lg);
+  flex-shrink: 0;
+}
+
+.consultation-note p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  margin: 0;
+}
