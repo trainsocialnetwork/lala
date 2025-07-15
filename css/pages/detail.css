@@ -82,8 +82,7 @@
   overflow: hidden;
   max-width: 430px;
 　 /* センタリング用の設定を追加 */
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .page-hero__visual {
