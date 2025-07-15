@@ -268,6 +268,25 @@
   width: 100%;
 }
 
+/* アウトラインプライマリーボタン */
+.button--outline-primary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.button--outline-primary:hover {
+  background-color: var(--color-primary);
+  color: white;
+  opacity: 1;
+}
+
+/* 横幅調整 */
+.button--wide {
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+}
+
 /* ===============================================
    カードコンポーネント
    =============================================== */
