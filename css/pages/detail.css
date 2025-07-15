@@ -144,6 +144,16 @@
   scroll-behavior: smooth;
 }
 
+/* 最初のアイテムに左パディングを追加 */
+.page-nav__link:first-child {
+ margin-left: var(--spacing-sm);
+}
+
+/* 最後のアイテムに右パディングを追加 */
+.page-nav__link:last-child {
+ margin-right: var(--spacing-sm);
+}
+
 .page-nav__list::-webkit-scrollbar {
   display: none;
 }
