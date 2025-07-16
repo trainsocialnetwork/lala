@@ -84,6 +84,8 @@
   width: 80%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
+  padding: var(--spacing-sm);
+  align: center;
 }
 
 .product-image img {
