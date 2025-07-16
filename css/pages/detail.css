@@ -76,14 +76,15 @@
 
 
 .page-hero {
-  position: relative;
   height: 30vh;
-  display: flex;
   align-items: center;
   overflow: hidden;
   max-width: 430px;
 　 /* センタリング用の設定を追加 */
-  margin: 0 auto;
+　margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  position: relative;
 }
 
 .page-hero__visual {
