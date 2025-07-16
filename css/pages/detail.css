@@ -509,12 +509,19 @@
 }
 
 .type-card--cardless .type-card__image {
-  width: 300px;
-  height: auto;
-  margin-bottom: var(--spacing-lg);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ width: 150px;
+ height: 150px;
+ margin-bottom: var(--spacing-lg);
+ border-radius: 50%;
+ overflow: hidden;
+ object-fit: fill;
+ border: 1px dashed var(--color-accent);
+}
+
+.type-card__image img {
+    max-width: 150px;
+    display: block;
+    margin-top: 30px;
 }
 
 .type-card--cardless .type-card__content {
