@@ -1,0 +1,319 @@
+/* ===============================================
+   Online Top Page CSS - オンライン総合美容トップページ専用スタイル
+   =============================================== */
+
+/* ===============================================
+   ページヒーロー（オンライン用）
+   =============================================== */
+.page-hero--online {
+  height: 35vh;
+  min-height: 250px;
+  max-height: 350px;
+}
+
+/* ===============================================
+   製品セクション
+   =============================================== */
+.section--products {
+  padding: var(--spacing-3xl) 0;
+}
+
+/* 製品グリッド（ゼオスキンのスタイルを流用） */
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+/* 単一商品用グリッド */
+.products-grid--single {
+  grid-template-columns: 1fr;
+  max-width: 300px;
+}
+
+/* 製品アイテム（ゼオスキンのスタイルを拡張） */
+.product-item {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  background: white;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+/* リンク全体をクリッカブルに */
+.product-item__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-item:hover {
+  box-shadow: var(--shadow-md);
+  z-index: 1;
+  transform: translateY(-2px);
+}
+
+/* 右端のボーダーを削除 */
+.product-item:nth-child(2n) {
+  border-right: none;
+}
+
+/* 大きい商品アイテム（単一商品用） */
+.product-item--large {
+  border: 1px solid #f0f0f0;
+}
+
+.product-item--large .product-image {
+  aspect-ratio: 4/3;
+}
+
+.product-item--large .product-content {
+  padding: var(--spacing-md);
+}
+
+/* 製品画像 */
+.product-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.product-item:hover .product-image img {
+  transform: scale(1.05);
+}
+
+/* 製品コンテンツ */
+.product-content {
+  padding: 12px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 製品名（英語） */
+.product-name-en {
+  font-size: var(--font-size-sm);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--color-secondary);
+  margin-bottom: 4px;
+}
+
+/* 製品名（日本語） */
+.product-name-jp {
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* CTAボタン */
+.product-cta {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 11px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.product-item:hover .product-cta {
+  background-color: var(--color-secondary);
+}
+
+/* ===============================================
+   フローセクション
+   =============================================== */
+.section--flow {
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-3xl) 0;
+}
+
+.flow-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flow-column {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.flow-column__title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.flow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.flow-step {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.flow-step__number {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.flow-step__text {
+  flex: 1;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+}
+
+/* ===============================================
+   情報セクション
+   =============================================== */
+.section--info {
+  padding: var(--spacing-3xl) 0;
+}
+
+.info-subsections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info-subsection {
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.info-subsection__title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.info-subsection__content {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+}
+
+/* ===============================================
+   注意事項セクション
+   =============================================== */
+.section--cautions {
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-3xl) 0;
+}
+
+.caution-list {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.caution-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.caution-list li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+}
+
+.caution-list li::before {
+  content: "・";
+  position: absolute;
+  left: var(--spacing-sm);
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+.caution-link {
+  text-align: center;
+}
+
+.caution-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.caution-link a:hover {
+  opacity: 0.7;
+}
+
+.caution-link i {
+  font-size: var(--font-size-xs);
+}
+
+/* ===============================================
+   監修者セクション（共通コンポーネントを活用）
+   =============================================== */
+.section--supervisor {
+  border-top: 1px solid var(--color-border);
+  padding: var(--spacing-xl) 0;
+}
+
+/* ===============================================
+   レスポンシブ対応（タブレット以上でも430px維持）
+   =============================================== */
+@media (min-width: 768px) {
+  /* フローカラムを2列に */
+  .flow-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
