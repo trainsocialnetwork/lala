@@ -12,6 +12,24 @@
   margin-top: 60px;
 }
 
+/* 動画スタイル */
+.page-hero--online .page-hero__visual video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 動画のフォールバック画像 */
+.page-hero--online .page-hero__visual img {
+  display: none;
+}
+
+/* 動画非対応ブラウザ用 */
+.page-hero--online .page-hero__visual video:not([src]) + img {
+  display: block;
+}
+
 /* ===============================================
    製品セクション
    =============================================== */
