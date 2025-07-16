@@ -210,6 +210,10 @@
 /* ===============================================
    料金カード
    =============================================== */
+.container {
+  max-width: 430px; /* 追加：SP最適化 */
+}
+
 .menu-category {
   margin-bottom: var(--spacing-3xl);
 }
@@ -235,56 +239,45 @@
 
 .price-cards {
   display: grid;
-  grid-template-columns: 1fr !important;
-  gap: var(--spacing-md);
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
   margin-bottom: var(--spacing-lg);
+  background: none; /* 追加 */
+  box-shadow: none; /* 追加 */
 }
 
 .price-card {
-  background-color: var(--color-bg);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
+  max-width: 440px;
+  width: 100%;
+  padding: 60px 40px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none; /* 変更 */
+  border-radius: 0; /* 変更 */
+  overflow: visible; /* 変更 */
+  box-shadow: none; /* 変更 */
   position: relative;
   transition: all var(--transition-base);
 }
 
+.price-card:last-child {
+  border-bottom: none;
+}
+
 .price-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-}
-
-.price-card--featured {
-  border: 2px solid var(--color-accent);
-}
-
-.price-card__badge {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--color-accent);
-  color: white;
-  padding: var(--spacing-xs) var(--spacing-md);
-  border-radius: var(--radius-full);
-  font-size: var(--font-size-sm);
-  z-index: 1;
-}
-
-.price-card__header {
-  background-color: var(--color-bg-light);
-  padding: var(--spacing-md);
-  text-align: center;
-}
-
-.price-card__header h4 {
-  font-size: var(--font-size-lg);
-  margin: 0;
 }
 
 .price-card__image {
-  height: 200px;
+  width: 200px;
+  height: 150px;
   overflow: hidden;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-bottom: 30px; /* 追加 */
 }
 
 .price-card__image img {
@@ -294,44 +287,81 @@
 }
 
 .price-card__content {
-  padding: var(--spacing-md);
+  text-align: center;
+  margin-bottom: 30px;
+  width: 100%; /* 追加 */
+  padding: 0; /* 変更 */
+}
+
+.price-card__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.price-card__name {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: var(--color-text);
+  font-weight: 600;
 }
 
 .price-card__description {
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-loose);
-  margin-bottom: var(--spacing-md);
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.price-card__description p {
+  margin-bottom: 8px;
 }
 
 .price-card__price {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: var(--spacing-xs);
   margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+  font-size: 36px;
+  font-weight: normal;
+  letter-spacing: 0.02em;
 }
 
 .price-card__price .price {
-  font-size: var(--font-size-2xl);
-  color: var(--color-primary);
+  font-size: inherit; /* 変更 */
+  color: inherit; /* 変更 */
 }
 
 .price-card__price .unit {
-  font-size: var(--font-size-sm);
+  font-size: 16px; /* 変更 */
   color: var(--color-text-light);
+}
+
+.price-card__price--additional {
+  font-size: 32px;
+}
+
+.price-card__note {
+  font-size: 13px;
+  color: var(--color-text-light);
+  margin-top: 8px;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .price-card__info {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
-  font-size: var(--font-size-sm);
+  font-size: 14px;
   color: var(--color-text-light);
+  text-align: center;
+  margin-top: 20px;
 }
-
 .price-card__info li {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-xs);
 }
 
@@ -340,10 +370,11 @@
   width: 16px;
 }
 
-.price-card__info .note {
-  font-size: var(--font-size-sm);
+  font-size: 13px;
   color: var(--color-text-light);
-  margin-top: var(--spacing-xs);
+  margin-top: 8px;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 /* ===============================================
@@ -352,43 +383,74 @@
 .guarantee-box {
   background-color: var(--color-bg-light);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
-  display: flex;
-  gap: var(--spacing-lg);
-  align-items: center;
-  margin-top: var(--spacing-lg);
+  padding: 32px 24px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.guarantee-box__content {
+    max-width: 100%;
 }
 
 .guarantee-box__content h4 {
-  font-size: var(--font-size-xl);
-  margin-bottom: var(--spacing-sm);
+    font-size: 18px; /* 変更：サイズ縮小 */
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text);
 }
 
 .guarantee-box__content p {
-  line-height: var(--line-height-loose);
-  margin-bottom: var(--spacing-md);
+    line-height: var(--line-height-loose);
+    margin-bottom: var(--spacing-md);
+    font-size: 14px; /* 追加：フォントサイズ指定 */
+    color: var(--color-text-light); /* 追加：色指定 */
 }
 
 .guarantee-box__price {
   display: flex;
   align-items: baseline;
+  justify-content: center; /* 追加：中央揃え */
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-md);
 }
 
+.guarantee-box__price .label {
+    font-size: 14px;
+    color: var(--color-text-light);
+}
+
 .guarantee-box__price .price {
-  font-size: var(--font-size-xl);
-  color: var(--color-primary);
+    font-size: 24px; /* 変更：価格サイズ調整 */
+    color: var(--color-primary);
+    font-weight: 600; /* 追加：太字 */
+}
+
+.guarantee-box__price .unit {
+    font-size: 14px; /* 追加：単位サイズ */
+    color: var(--color-text-light);
 }
 
 .guarantee-box__notes {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-light);
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xs);
+    font-size: 12px; /* 変更：サイズ縮小 */
+    color: var(--color-text-light);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    text-align: left; /* 追加：左揃え */
+    max-width: 90%; /* 追加：最大幅制限 */
+    margin: 0 auto; /* 追加：中央配置 */
+    list-style: none; /* 追加：リストスタイル削除 */
 }
 
+.guarantee-box__notes li {
+    position: relative; /* 追加 */
+    padding-left: 1em; /* 追加 */
+}
+
+.guarantee-box__notes li:before {
+    content: "※"; /* 追加：※マーク */
+    position: absolute; /* 追加 */
+    left: 0; /* 追加 */
+}
 /* ===============================================
    リップ料金
    =============================================== */
