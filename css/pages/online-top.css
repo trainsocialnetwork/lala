@@ -9,7 +9,11 @@
   height: auto;
   min-height: 250px;
   max-height: 350px;
-  margin-top: 80px;
+  margin-top: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  position: relative;
 }
 
 /* 動画スタイル */
