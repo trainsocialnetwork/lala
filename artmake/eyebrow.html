@@ -8,9 +8,9 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/pages/artmake-top.css">
-    <link rel="stylesheet" href="../css/common-components.css">
     <link rel="stylesheet" href="../css/themes/artmake.css">
     <link rel="stylesheet" href="../css/pages/detail.css">
     
@@ -31,7 +31,7 @@
                     <li><a href="../artmake/">アートメイクTOP</a></li>
                     <li><a href="#about">眉アートメイクとは</a></li>
                     <li><a href="#types">施術タイプ</a></li>
-                    <li><a href="#flow">施術の流れ</a></li>
+                    <li><a href="#faq">施術の流れ</a></li>
                 </ul>
             </nav>
             <button class="header__menu-toggle" aria-label="メニューを開く">
@@ -72,18 +72,17 @@
     </nav>
 
     <main>
+
+        <div class="page-title-section">
+            <h1 class="page-title fade-in">
+            眉アートメイクで、<br>
+            想像を超えて美しく。
+            </h1>
+        </div>
         <!-- Page Hero -->
         <section class="page-hero">
             <div class="page-hero__visual">
                 <img src="../assets/images/eyeblow_01.webp" alt="眉アートメイク">
-            </div>
-            <div class="page-hero__content">
-                <div class="container">
-                    <h1 class="page-hero__title">
-                        眉アートメイクで、<br>
-                        想像を超えて美しく。
-                    </h1>
-                </div>
             </div>
         </section>
 
@@ -91,13 +90,10 @@
         <nav class="page-nav">
             <div class="container">
                 <ul class="page-nav__list">
-                    <li><a href="#about" class="page-nav__link">眉アートメイクとは</a></li>
-                    <li><a href="#benefits" class="page-nav__link">メリット</a></li>
-                    <li><a href="#strengths" class="page-nav__link">4つの強み</a></li>
                     <li><a href="#cases" class="page-nav__link">症例写真</a></li>
-                    <li><a href="#techniques" class="page-nav__link">技法</a></li>
                     <li><a href="#types" class="page-nav__link">施術タイプ</a></li>
                     <li><a href="#flow" class="page-nav__link">施術の流れ</a></li>
+                    <li><a href="#flow" class="page-nav__link">Q&A</a></li>
                 </ul>
             </div>
         </nav>
@@ -193,7 +189,7 @@
         <section class="section section--strengths" id="strengths">
             <div class="container">
                 <h2 class="section__title">
-                    <span class="section__title-ja">LaLaの眉アートメイク4つの強み</span>
+                    <span class="section__title-ja">LaLaの眉アートメイク<br>4つの強み</span>
                 </h2>
                 <p class="section__lead">
                     ふと鏡を見たとき、誰かに見られたとき。いつでも自信を持てる、洗練された美しさを。<br>
@@ -215,7 +211,7 @@
                             </div>
                             <div class="strength-item__video">
                                 <video autoplay muted loop playsinline>
-                                    <source src="../videos/treatment.mp4" type="video/mp4">
+                                    <source src="../assets/videos/treatment.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
@@ -283,19 +279,22 @@
                 <h2 class="section__title">
                     <span class="section__title-ja">症例写真</span>
                 </h2>
-                <p class="section__lead">
-                    最新の症例は、Instagramで随時更新しています。
-                </p>
-
-                <div class="cases-grid">
-                    <div class="case-image">
-                        <img src="../assets/images/eyebrow_case01.png" alt="眉アートメイク症例1">
-                    </div>
-                    <div class="case-image">
-                        <img src="../assets/images/eyebrow_case02.png" alt="眉アートメイク症例2">
+                <div class="voice-carousel">
+                    <div class="voice-carousel__track">
+                        <div class="voice-card">
+                            <div class="voice-card__header">眉アートメイク</div>
+                            <div class="voice-card__image">
+                                <img src="../assets/images/eyebrow_case01.png" alt="眉アートメイク症例1">
+                            </div>
+                        </div>
+                        <div class="voice-card">
+                            <div class="voice-card__header">眉アートメイク</div>
+                            <div class="voice-card__image">
+                                <img src="../assets/images/eyebrow_case02.png" alt="眉アートメイク症例2">
+                            </div>
+                        </div>
                     </div>
                 </div>
-
                 <div class="instagram-link">
                     <a href="https://www.instagram.com/lala_beautyclinicbrows" target="_blank" class="button button--primary">
                         <i class="fab fa-instagram"></i>
@@ -406,8 +405,7 @@
                         </div>
                     </div>
 
-                    <div class="type-card type-card--featured">
-                        <span class="type-card__badge">一番人気</span>
+                    <div class="type-card">
                         <div class="type-card__header">
                             <h3>ミックス眉</h3>
                         </div>
@@ -613,25 +611,231 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="section section--cta">
+        <!-- Cautions Section -->
+        <section class="section section--cautions" id="cautions">
             <div class="container">
                 <h2 class="section__title">
-                    <span class="section__title-ja">まずは無料カウンセリングから</span>
+                    <span class="section__title-ja">眉アートメイクの注意点・リスク・副作用</span>
                 </h2>
                 <p class="section__lead">
-                    あなたの理想の眉を一緒に見つけましょう。<br>
-                    カウンセリングは無料で承っております。
+                    アートメイクの施術は医療機関でのみ行える医療行為です。美しい仕上がりと安全性を両立させるためには、施術前後のケアや注意点を正しく理解し、医師・看護師の指示に従うことが不可欠です。以下の各項目を必ずご確認ください。
                 </p>
-                <div class="cta-buttons">
-                    <a href="#" class="button button--primary button--lg">
-                        <i class="fab fa-line"></i>
-                        LINEで予約する
-                    </a>
-                    <a href="#" class="button button--outline button--lg">
-                        <i class="fas fa-phone"></i>
-                        電話で相談する
-                    </a>
+        
+                <!-- 注意点 -->
+                <div class="caution-section">
+                    <h3 class="caution-section__title">注意点</h3>
+                    
+                    <!-- 施術前の注意点 -->
+                    <div class="caution-block">
+                        <h4 class="caution-block__title">
+                            施術前の注意点
+                        </h4>
+                        <ul class="caution-list">
+                            <li>飲酒や激しい運動、長時間の入浴は、施術の3日前からお控えください。</li>
+                            <li>施術部位の日焼けは、施術の1週間前から中止してください。</li>
+                            <li>施術部位のピーリング、レチノール外用薬の塗布は、施術の1週間前から中止してください。</li>
+                            <li>眉毛のブリーチをされる方は、施術の2週間前までに行ってください。</li>
+                            <li>施術当日は、普段どおりのお化粧でご来院ください。</li>
+                            <li>施術直後に、一時的に軽い赤みや腫れが生じる場合があるため、気になる方は帽子をご持参ください。</li>
+                        </ul>
+                    </div>
+        
+                    <!-- ダウンタイム -->
+                    <div class="caution-block">
+                        <h4 class="caution-block__title">
+                            ダウンタイム
+                        </h4>
+                        <ul class="caution-list">
+                            <li>施術直後に軽い赤みや腫れが生じることがありますが、ほとんどの場合、数時間〜2日で軽減します。</li>
+                            <li>施術後は発色が濃く現れます。1週間ほどで自然な色味に変化していきます。</li>
+                            <li>施術した部位の皮が剥けたり、かさぶたができることがありますが、色素の定着を良くするために、無理に剥がすことは避けてください。</li>
+                        </ul>
+                    </div>
+        
+                    <!-- 施術後の注意点 -->
+                    <div class="caution-block">
+                        <h4 class="caution-block__title">
+                            施術後の注意点
+                        </h4>
+                        <ul class="caution-list">
+                            <li>施術後24時間は、施術部位を濡らす行為はお控えください。</li>
+                            <li>施術後24時間は、洗顔料やクレンジング剤、化粧水、乳液、シャンプーなどが施術部位に付かないようにお気をつけください。</li>
+                            <li>施術後1週間は、施術部位のメイクは避けてください。</li>
+                            <li>施術後1週間は、入浴時に湯舟には浸からず、シャワーのみをご使用ください。</li>
+                            <li>施術後1週間は、激しい運動や飲酒、サウナなどの血行を良くする行為はお控えください。</li>
+                            <li>施術後1週間は、プールや海水浴場などのご利用は避けてください。</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- リスク・副作用 -->
+                <div class="caution-section">
+                    <h3 class="caution-section__title">リスク・副作用</h3>
+                    <div class="risk-block">
+                        <p>
+                            アートメイクではごく稀に、腫脹や疼痛、内出血、感染や創傷治癒の遅延、瘢痕化、アレルギー、ケロイド、色素沈着、色素不定着、色素の変性や拡散麻酔によるトラブル(紅斑、発疹、水疱、蕁麻疹、浮腫、ものもらい、角膜損傷、視力低下)、その他予測不能な事象などの副作用が起こる場合があります。万が一このようなトラブルが起きた際は医師が迅速に対応します。気になることがありましたら、お気軽にお問い合わせください。
+                        </p>
+                    </div>
+                </div>
+        
+                <!-- 禁忌症 -->
+                <div class="caution-block">
+                    <h4 class="caution-block__title">
+                        禁忌症
+                    </h4>
+                    <p class="caution-block__description">下記の方は施術を受けることができません。</p>
+                    <ul class="caution-list">
+                        <li>未成年の方</li>
+                        <li>妊娠中または妊娠の疑いのある方</li>
+                        <li>アトピー性皮膚炎の方</li>
+                        <li>極度の敏感肌の方</li>
+                        <li>施術箇所に皮膚疾患または大きな傷、怪我がある方</li>
+                        <li>ケロイド体質の方</li>
+                        <li>施術部位にアートメイクを受けて2ヵ月未満の方</li>
+                        <li>C型肝炎、B型肝炎、血友病、AIDSなどの感染症の方</li>
+                        <li>ペースメーカーをご使用中の方</li>
+                    </ul>
+                </div>
+                
+                <!-- かかりつけ医との相談が必要なケース -->
+                <div class="caution-block">
+                    <h4 class="caution-block__title">
+                        かかりつけ医との相談が必要なケース
+                    </h4>
+                    <p class="caution-block__description">下記の方は、事前にかかりつけ医とご相談のうえ、ご予約ください。</p>
+                    <ul class="caution-list">
+                        <li>不妊治療中の方</li>
+                        <li>心疾患、糖尿病、高血圧の症状をお持ちの方</li>
+                        <li>抗凝固剤、ステロイドをご使用中の方</li>
+                        <li>高度のアレルギーをお持ちの方</li>
+                    </ul>
+                    <div class="caution-block__note">
+                        <i class="fas fa-info-circle"></i>
+                        <p>他にご心配な点がある方は、必ず医師にご相談ください。また、目元の美容整形やお顔の美容施術を受けられた方、ご検討中の方は、必ず予約の際にお申し出ください。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="section section--faq bg-light" id="faq">
+            <div class="container">
+                <h2 class="section__title">
+                    <span class="section__title-ja">よくある質問</span>
+                </h2>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-item__question">
+                            <span class="faq-item__q">Q</span>
+                            <span class="faq-item__text">カウンセリングのみの予約は無料ですか？</span>
+                            <span class="faq-item__icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <div class="faq-item__answer-inner">
+                                <span class="faq-item__a">A</span>
+                                <div class="faq-item__content">
+                                    <p>はい、カウンセリングは無料で承っております。施術前に不安な点や疑問点をすべて解消していただけるよう、丁寧にご説明させていただきます。カウンセリング当日の施術も可能ですが、一度お持ち帰りいただいてゆっくり検討していただくことも可能です。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-item__question">
+                            <span class="faq-item__q">Q</span>
+                            <span class="faq-item__text">どれくらい持続しますか？</span>
+                            <span class="faq-item__icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <div class="faq-item__answer-inner">
+                                <span class="faq-item__a">A</span>
+                                <div class="faq-item__content">
+                                    <p>個人差はありますが、通常1〜3年程度持続します。肌質や生活習慣により変動しますので、定期的なメンテナンスをおすすめしています。1年に1回程度のリタッチで、きれいな状態を保つことができます。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-item__question">
+                            <span class="faq-item__q">Q</span>
+                            <span class="faq-item__text">痛みはありますか？</span>
+                            <span class="faq-item__icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <div class="faq-item__answer-inner">
+                                <span class="faq-item__a">A</span>
+                                <div class="faq-item__content">
+                                    <p>施術前に表面麻酔を使用しますので、痛みは最小限に抑えられます。個人差はありますが、多くの方が「思ったより痛くなかった」とおっしゃいます。痛みに弱い方は事前にお申し出ください。麻酔の量を調整させていただきます。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-item__question">
+                            <span class="faq-item__q">Q</span>
+                            <span class="faq-item__text">施術前の注意点はありますか？</span>
+                            <span class="faq-item__icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <div class="faq-item__answer-inner">
+                                <span class="faq-item__a">A</span>
+                                <div class="faq-item__content">
+                                    <p>施術前日は飲酒を控え、十分な睡眠をとってください。また、施術部位の日焼けも避けてください。血液をサラサラにする薬を服用されている方は、事前にご相談ください。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-item__question">
+                            <span class="faq-item__q">Q</span>
+                            <span class="faq-item__text">当日はメイクをしてもいいですか？</span>
+                            <span class="faq-item__icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <div class="faq-item__answer-inner">
+                                <span class="faq-item__a">A</span>
+                                <div class="faq-item__content">
+                                    <p>普段通りのメイクでお越しください。普段のメイクを参考に、デザインを決めさせていただきます。ただし、施術部位のメイクは施術前にオフさせていただきます。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-item__question">
+                            <span class="faq-item__q">Q</span>
+                            <span class="faq-item__text">施術時間はどれくらいですか？</span>
+                            <span class="faq-item__icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <div class="faq-item__answer-inner">
+                                <span class="faq-item__a">A</span>
+                                <div class="faq-item__content">
+                                    <p>カウンセリングから施術完了まで、眉の場合は約3時間、リップの場合は約3.5時間程度です。初回は特に丁寧にカウンセリングを行うため、お時間に余裕を持ってお越しください。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-item__question">
+                            <span class="faq-item__q">Q</span>
+                            <span class="faq-item__text">施術後の注意点はありますか？</span>
+                            <span class="faq-item__icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <div class="faq-item__answer-inner">
+                                <span class="faq-item__a">A</span>
+                                <div class="faq-item__content">
+                                    <p>施術直後から24時間は極力水に濡らさないようにしてお過ごしいただくようお願いしております。また、施術後1週間は代謝の上がるようなスポーツ・温泉・岩盤浴などはお控えいただきますようお願いいたします。施術部位のお化粧は1週間お控えいただく必要があり、お帰りの際にお渡ししているアフターケアクリームを塗布いただくようお願いいたします。詳細につきましては、施術当日ご説明とともにアフターケアシートをお渡しさせていただきます。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -751,6 +955,13 @@
         </div>
     </footer>
 
+    <div class="mobile-fixed-cta" id="mobileFixedCTA">
+        <a href="https://line.me/R/ti/p/@lala_beauty" class="mobile-cta-button" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-line"></i>
+            <span>LINEで予約する</span>
+        </a>
+    </div>
+    
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
         <i class="fas fa-chevron-up"></i>
@@ -760,5 +971,9 @@
     <script src="../js/main.js"></script>
     <script src="../js/components/navigation.js"></script>
     <script src="../js/components/page-nav.js"></script>
+    <script src="../js/components/accordion.js"></script>
+    <script src="../js/components/carousel.js"></script>
+    <script src="../js/components/mobile-cta.js"></script>
+
 </body>
 </html>

@@ -28,6 +28,7 @@
   --font-size-lg: 18px;
   --font-size-xl: 20px;
   --font-size-2xl: 24px;
+  --font-size-2xll: 26px;
   --font-size-3xl: 28px;
   --font-size-4xl: 32px;
   --line-height-base: 1.7;
@@ -42,6 +43,7 @@
   --spacing-xl: 40px;
   --spacing-2xl: 60px;
   --spacing-3xl: 80px;
+  --spacing-4xl: 100px;
   
   /* レイヤー */
   --z-index-header: 1000;
@@ -152,7 +154,7 @@ table {
 
 /* 見出し */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
+  font-weight: 400;
   line-height: var(--line-height-tight);
   color: var(--color-text);
 }

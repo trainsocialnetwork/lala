@@ -207,7 +207,7 @@
   gap: var(--spacing-xs);
   padding: var(--spacing-sm) var(--spacing-lg);
   font-size: var(--font-size-base);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
@@ -268,6 +268,25 @@
   width: 100%;
 }
 
+/* アウトラインプライマリーボタン */
+.button--outline-primary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.button--outline-primary:hover {
+  background-color: var(--color-primary);
+  color: white;
+  opacity: 1;
+}
+
+/* 横幅調整 */
+.button--wide {
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+}
+
 /* ===============================================
    カードコンポーネント
    =============================================== */
@@ -311,7 +330,7 @@
 
 .card__title {
   font-size: var(--font-size-lg);
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: var(--spacing-xs);
 }
 
@@ -360,7 +379,7 @@
 
 .service-card__content h4 {
   font-size: var(--font-size-lg);
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: var(--spacing-xs);
   color: var(--color-primary);
 }
@@ -377,7 +396,7 @@
   align-items: center;
   gap: var(--spacing-xs);
   font-size: var(--font-size-sm);
-  font-weight: 500;
+  font-weight: 400;
   color: var(--color-primary);
   transition: gap var(--transition-base);
 }
@@ -398,6 +417,7 @@
 /* ===============================================
    フッターコンポーネント
    =============================================== */
+
 .footer {
   background-color: var(--color-primary);
   color: white;
@@ -414,7 +434,7 @@
 }
 
 .footer__logo img {
-  height: 80px;
+  height: var(--spacing-4xl);
   margin: 0 auto;
 }
 
@@ -424,11 +444,16 @@
   gap: var(--spacing-lg);
   max-width: var(--content-width-max);
   margin: 0 auto;
+  padding: 0 var(--content-padding);
+}
+
+.footer__section {
+  text-align: left;
 }
 
 .footer__section h4 {
   font-size: var(--font-size-base);
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: var(--spacing-sm);
   color: white;
 }
@@ -451,6 +476,7 @@
 
 .footer__contact {
   font-size: var(--font-size-sm);
+  text-align: center;
 }
 
 .footer__address {
@@ -477,7 +503,7 @@
 }
 
 .footer__links {
-  margin-bottom: var(--spacing-xs) !important;
+  margin-bottom: var(--spacing-xs)
 }
 
 .footer__links a {
@@ -547,7 +573,7 @@
 
 .news-item__title {
   font-size: var(--font-size-base);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .news-more {
@@ -588,7 +614,7 @@
 
 .voice-card__header {
   font-size: var(--font-size-sm);
-  font-weight: 600;
+  font-weight: 400;
   color: var(--color-primary);
   margin-bottom: var(--spacing-sm);
 }
@@ -630,7 +656,7 @@
 
 .feature-card h4 {
   font-size: var(--font-size-lg);
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: var(--spacing-md);
   text-align: center;
   line-height: var(--line-height-tight);
@@ -663,6 +689,227 @@
 }
 
 /* ===============================================
+   セクションタイトル
+   使用箇所: index.html, artmake/index.html, artmake/eyebrow.html
+   =============================================== */
+.section__title {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.section__title-en {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+}
+
+.section__title-ja {
+  display: block;
+  font-size: var(--font-size-2xl);
+  font-weight: 400;
+  line-height: var(--line-height-tight);
+}
+
+/* サブタイトルバリエーション */
+.section__subtitle {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.section__subtitle-en {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+}
+
+.section__subtitle-ja {
+  display: block;
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+}
+
+/* リード文 */
+.section__lead {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+  line-height: var(--line-height-loose);
+}
+
+/* ===============================================
+   CTAセクション
+   使用箇所: artmake/eyebrow.html, 他の詳細ページ（予定）
+   =============================================== */
+.section--cta {
+  background-color: var(--color-primary);
+  color: white;
+  text-align: center;
+  padding: var(--spacing-3xl) 0;
+}
+
+.section--cta .section__title-ja {
+  color: white;
+}
+
+.section--cta .section__lead {
+  color: white;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-lg);
+}
+
+/* ===============================================
+   FAQセクション
+   =============================================== */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-item.is-open {
+  overflow: visible;
+}
+
+.faq-item__question {
+  width: 100%;
+  padding: var(--spacing-md);
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  text-align: left;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.faq-item__question:hover {
+  background-color: var(--color-bg-light);
+}
+
+.faq-item__q,
+.faq-item__a {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+.faq-item__a {
+  background-color: var(--color-secondary);
+}
+
+.faq-item__text {
+  flex: 1;
+}
+
+.faq-item__icon {
+  flex-shrink: 0;
+  color: var(--color-primary);
+  transition: transform var(--transition-base);
+}
+
+.faq-item.is-open .faq-item__icon {
+  transform: rotate(45deg);
+}
+
+.faq-item__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.faq-item.is-open .faq-item__answer {
+  max-height: 1000px;
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+}
+
+.faq-item__answer-inner {
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) var(--spacing-md);
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+}
+
+.faq-item__content {
+  flex: 1;
+  line-height: var(--line-height-loose);
+}
+
+/* ===============================================
+   アクセス情報
+   使用箇所: index.html, artmake/index.html
+   =============================================== */
+.access-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+.access-content__map {
+  width: 100%;
+  height: 300px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.access-content__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.clinic-info {
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.info-table {
+  width: 100%;
+  margin-bottom: var(--spacing-lg);
+}
+
+.info-table th,
+.info-table td {
+  padding: var(--spacing-sm) 0;
+  font-size: var(--font-size-sm);
+  vertical-align: top;
+}
+
+/* ===============================================
    モバイル固定CTAボタン
    =============================================== */
 .mobile-fixed-cta {
@@ -673,7 +920,9 @@
   padding: var(--spacing-xs) var(--spacing-sm);
   /* Safe area対応 */
   padding-bottom: calc(var(--spacing-xs) + env(safe-area-inset-bottom, 0px));
-  background: rgba(255, 255, 255, 0.95);
+
+  background: rgba(255, 255, 255, 0.45);
+
   backdrop-filter: blur(10px);
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
   z-index: 900;
@@ -704,14 +953,16 @@
   gap: var(--spacing-xs);
   background: linear-gradient(135deg, #00B900 0%, #00D000 100%);
   color: white;
-  padding: var(--spacing-sm) var(--spacing-lg);
+
+  padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-full);
   text-decoration: none;
   font-weight: 600;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   box-shadow: 0 4px 15px rgba(0, 185, 0, 0.3);
   transition: all var(--transition-base);
-  max-width: 280px;
+  max-width: 250px;
+
   margin: 0 auto;
 }
 
@@ -739,4 +990,10 @@
   body.has-mobile-cta {
     padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px));
   }
+  
+  /* バックトゥトップボタンの位置調整 */
+  body.has-mobile-cta .back-to-top {
+    bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+  }
 }
+

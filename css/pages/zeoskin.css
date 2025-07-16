@@ -1,0 +1,279 @@
+/* ===============================================
+   Zeoskin Page CSS - ゼオスキンページ専用スタイル
+   =============================================== */
+
+/* ===============================================
+   カラーテーマ定義
+   =============================================== */
+.page-zeoskin {
+  --color-primary: #404d6a;
+  --color-secondary: #5a6a8f;
+  --color-secondary-2: #2d3549;
+  --color-accent-1: #8b6a40;
+  --color-accent-2: #6a8b40;
+}
+
+/* ===============================================
+   ゼオスキン専用ページヒーロー
+   =============================================== */
+.page-hero--zeoskin {
+  height: 40vh; /* ゼオスキン専用の高さ */
+  min-height: 300px;
+}
+
+/* ===============================================
+   リードセクション（新規追加）
+   =============================================== */
+.section--lead {
+  padding: var(--spacing-xl) 0;
+  text-align: center;
+}
+
+.lead-text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* ===============================================
+   アウトラインプライマリーボタン（新規追加）
+   =============================================== */
+.button--outline-primary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.button--outline-primary:hover {
+  background-color: var(--color-primary);
+  color: white;
+  opacity: 1;
+}
+
+.button--wide {
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+}
+
+/* ===============================================
+   製品セクション用リード文
+   =============================================== */
+.products-lead {
+  text-align: left;
+  margin: 0 auto var(--spacing-xl);
+  max-width: 100%;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+}
+
+/* ===============================================
+   製品カテゴリナビゲーション（ゼオスキン専用）
+   =============================================== */
+/* カテゴリータイトル */
+.section--products .section__subtitle {
+  margin-bottom: var(--spacing-md);
+  align: left;
+}
+
+.product-nav {
+  background-color: var(--color-bg);
+  position: sticky;
+  top: 60px; /* ヘッダーの高さ */
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-xl);
+}
+
+.product-nav--zeoskin {
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg);
+  padding: var(--spacing-xs) 0;
+  overflow: hidden;
+}
+
+.product-nav--zeoskin .product-nav__list {
+  display: flex;
+  gap: var(--spacing-xs) !important;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  white-space: nowrap;
+}
+
+.product-nav--zeoskin .product-nav__list::-webkit-scrollbar {
+  display: none;
+}
+
+.product-nav--zeoskin .product-nav__link {
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  margin: 0 2px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.product-nav--zeoskin .product-nav__link:hover {
+  background-color: var(--color-bg-light);
+  opacity: 1;
+}
+
+.product-nav--zeoskin .product-nav__link.is-active {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 600;
+}
+
+.product-nav--zeoskin .product-nav__link:first-child {
+  margin-left: var(--spacing-sm);
+}
+
+.product-nav--zeoskin .product-nav__link:last-child {
+  margin-right: var(--spacing-sm);
+}
+
+/* ===============================================
+   Aboutセクション - 余白調整
+   =============================================== */
+.section--about .container {
+  max-width: var(--content-width-max);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+}
+
+.section--about .content-grid {
+  max-width: 100%;
+}
+
+/* ===============================================
+   製品カテゴリ（既存スタイルを活用）
+   =============================================== */
+.product-category {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.product-category:last-child {
+  margin-bottom: 0;
+}
+
+.product-category__title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* ===============================================
+   製品グリッド（スマホ用2カラム固定）
+   =============================================== */
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+/* ===============================================
+   製品アイテム
+   =============================================== */
+.product-item {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  background: white;
+  transition: all var(--transition-base);
+}
+
+.product-item:hover {
+  box-shadow: var(--shadow-md);
+  z-index: 1;
+  transform: translateY(-2px);
+}
+
+/* 右端のボーダーを削除 */
+.product-item:nth-child(2n) {
+  border-right: none;
+}
+
+/* 製品画像 */
+.product-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.product-item:hover .product-image img {
+  transform: scale(1.05);
+}
+
+/* 製品コンテンツ */
+.product-content {
+  padding: 12px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 製品名（日本語） */
+.product-name-jp {
+  font-size: 18px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* 説明 */
+.product-description {
+  font-size: 10px;
+  line-height: 1.4;
+  color: #666;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+/* 価格 */
+.product-price {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-accent-1);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* CTAボタン（既存buttonスタイルを活用） */
+.product-cta {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 11px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.product-cta:hover {
+  background-color: var(--color-secondary);
+  opacity: 1;
+}

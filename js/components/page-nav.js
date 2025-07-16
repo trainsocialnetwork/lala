@@ -11,6 +11,7 @@
   class PageNavigation {
     constructor() {
       this.nav = document.querySelector('.page-nav');
+      this.navList = document.querySelector('.page-nav__list');
       this.links = document.querySelectorAll('.page-nav__link');
       this.sections = [];
       
@@ -23,6 +24,9 @@
     }
     
     init() {
+      // 横スクロール位置を初期化
+      this.resetScrollPosition();
+      
       // セクション要素を取得
       this.collectSections();
       
@@ -31,6 +35,19 @@
       
       // クリックイベント
       this.initClickBehavior();
+    }
+    
+    // 横スクロール位置をリセット
+    resetScrollPosition() {
+      if (this.navList) {
+        // 即座にリセット
+        this.navList.scrollLeft = 0;
+        
+        // 念のため、少し遅延してもう一度リセット
+        setTimeout(() => {
+          this.navList.scrollLeft = 0;
+        }, 100);
+      }
     }
     
     collectSections() {
@@ -50,12 +67,31 @@
     }
     
     initScrollBehavior() {
-      window.addEventListener('scroll', window.LaLaUtils.throttle(() => {
+      // スロットル関数が利用可能か確認
+      const throttleFunc = window.LaLaUtils && window.LaLaUtils.throttle 
+        ? window.LaLaUtils.throttle 
+        : this.simpleThrottle;
+      
+      window.addEventListener('scroll', throttleFunc(() => {
         this.updateActiveLink();
       }, 100));
       
       // 初期状態をチェック
       this.updateActiveLink();
+    }
+    
+    // LaLaUtilsが読み込まれていない場合の簡易スロットル
+    simpleThrottle(func, limit) {
+      let inThrottle;
+      return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+          func.apply(context, args);
+          inThrottle = true;
+          setTimeout(() => inThrottle = false, limit);
+        }
+      };
     }
     
     updateActiveLink() {
@@ -78,7 +114,32 @@
       
       if (currentSection) {
         currentSection.link.classList.add('is-active');
+        
+        // アクティブなリンクを中央に表示
+        this.scrollToActiveLink(currentSection.link);
       }
+    }
+    
+    // アクティブなリンクを表示領域の中央に配置
+    scrollToActiveLink(activeLink) {
+      if (!this.navList) return;
+      
+      const linkRect = activeLink.getBoundingClientRect();
+      const navRect = this.navList.getBoundingClientRect();
+      
+      // リンクの中心位置
+      const linkCenter = linkRect.left + linkRect.width / 2;
+      // ナビゲーションの中心位置
+      const navCenter = navRect.left + navRect.width / 2;
+      
+      // スクロール量を計算
+      const scrollAmount = linkCenter - navCenter;
+      
+      // スムーズにスクロール
+      this.navList.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
     }
     
     initClickBehavior() {
@@ -107,6 +168,14 @@
   // ===============================================
   document.addEventListener('DOMContentLoaded', () => {
     new PageNavigation();
+  });
+  
+  // ページ読み込み完了後にも念のためリセット
+  window.addEventListener('load', () => {
+    const navList = document.querySelector('.page-nav__list');
+    if (navList) {
+      navList.scrollLeft = 0;
+    }
   });
   
 })();
