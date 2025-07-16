@@ -9,7 +9,7 @@
   height: auto;
   min-height: 250px;
   max-height: 350px;
-  margin-top: 110px;
+  margin-top: 110px !important; 
   margin-left: auto;
   margin-right: auto;
   display: flex;
