@@ -442,7 +442,6 @@
 
 .technique-card--cardless .technique-card__image {
   width: 250px;
-  height: 200px;
   border-radius: var(--radius-md);
   overflow: hidden;
   margin-bottom: var(--spacing-lg);
