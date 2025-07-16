@@ -219,6 +219,20 @@
   font-weight: 600;
 }
 
+.flow-step__number::before {
+  content: '';
+  position: absolute;
+  left: 16px;
+  top: 80px;
+  bottom: -40px;
+  width: 2px;
+  background-color: var(--color-border);
+}
+
+.flow-step__number:last-child::before {
+  display: none;
+}
+
 .flow-step__text {
   flex: 1;
   font-size: var(--font-size-sm);
