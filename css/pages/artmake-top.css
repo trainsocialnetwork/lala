@@ -179,15 +179,17 @@
 }
 
 .feature-item__image {
-  border-radius: var(--radius-lg);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
   overflow: hidden;
   box-shadow: var(--shadow-md);
 }
 
 .feature-item__image img {
-  width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: cover;
 }
 
 .feature-item__content h3 {
