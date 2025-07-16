@@ -1,0 +1,26 @@
+/* ===============================================
+   Online Theme - オンライン総合美容ページ用テーマ
+   =============================================== */
+
+.theme-online {
+  /* カラーパレット（医療・信頼感を表現する色） */
+  --color-primary: #2C5282;        /* 深い青 - 医療の信頼感 */
+  --color-secondary: #4A90E2;      /* 明るい青 - 清潔感 */
+  --color-accent: #00B900;         /* グリーン - 健康・安心 */
+  --color-accent-2: #F7B731;       /* ゴールド - プレミアム感 */
+  --color-text: #2D3748;           /* 濃いグレー - 読みやすさ */
+  --color-text-light: #4A5568;     /* グレー - サブテキスト */
+  --color-bg: #FFFFFF;             /* 白 - 清潔感 */
+  --color-bg-light: #F7FAFC;       /* 薄いブルーグレー - 医療的な清潔感 */
+  --color-border: #E2E8F0;         /* ライトグレー - 境界線 */
+  
+  /* グラデーション */
+  --gradient-primary: linear-gradient(135deg, #2C5282 0%, #4A90E2 100%);
+  --gradient-light: linear-gradient(180deg, #FFFFFF 0%, #F7FAFC 100%);
+  --gradient-accent: linear-gradient(135deg, #00B900 0%, #00D000 100%);
+  
+  /* オンライン特有の色（商品カテゴリ用） */
+  --color-skincare: #E53E3E;       /* レッド系 - スキンケア */
+  --color-haircare: #38B2AC;       /* ティール系 - ヘアケア */
+  --color-supplement: #ED8936;     /* オレンジ系 - サプリメント */
+}
