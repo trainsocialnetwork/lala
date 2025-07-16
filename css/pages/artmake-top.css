@@ -527,13 +527,12 @@
 .removal-table {
   width: 100%;
   background-color: var(--color-bg);
-  border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
 }
 
 .removal-table thead {
-  background-color: var( --color-bg-light);
+  border-bottom: 2px solid var(--color-border);
+  border-top: 2px solid var(--color-border);
 }
 
 .removal-table th,
@@ -552,10 +551,6 @@
 }
 .removal-table tbody tr {
   border-bottom: 1px solid var(--color-border);
-}
-
-.removal-table tbody tr:last-child {
-  border-bottom: none;
 }
 
 .removal-table .highlight {
