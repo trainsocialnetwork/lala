@@ -219,17 +219,17 @@
   font-weight: 600;
 }
 
-.flow-step__number::before {
+.flow-step::before {
   content: '';
   position: absolute;
   left: 16px;
-  top: 80px;
-  bottom: -40px;
+  top: var(--spacing-xl);
+  bottom: -var(--spacing-md);
   width: 2px;
   background-color: var(--color-border);
 }
 
-.flow-step__number:last-child::before {
+.flow-step:last-child::before {
   display: none;
 }
 
