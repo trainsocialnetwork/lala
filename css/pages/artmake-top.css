@@ -210,15 +210,6 @@
 /* ===============================================
    料金カード
    =============================================== */
-.section--menu {
-  /*background-color: var(--color-bg-light)*/;
-  background-image: url('../../assets/images/bg_artmake04.webp'); 
-  background-size: auto 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}  
-
 .container {
   max-width: 430px; /* 追加：SP最適化 */
 }
@@ -270,10 +261,6 @@
   box-shadow: none; /* 変更 */
   position: relative;
   transition: all var(--transition-base);
-}
-
-.price-card:last-child {
-  border-bottom: none;
 }
 
 .price-card:hover {
