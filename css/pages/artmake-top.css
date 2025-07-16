@@ -665,6 +665,61 @@
   color: var(--color-text-light);
 }
 
+.flow-timeline--cardless {
+  padding: 0 var(--spacing-sm);
+}
+
+.flow-step--cardless {
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-2xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.flow-step--cardless:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.flow-step--cardless::before {
+  display: none; /* タイムラインの縦線を削除 */
+}
+
+.flow-step--cardless .flow-step__content {
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.flow-step--cardless .flow-step__image {
+  width: 200px;
+  height: 150px;
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.flow-step--cardless .flow-step__text {
+  padding: 0;
+  max-width: 100%;
+}
+
+.flow-step--cardless .flow-step__text h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+}
+
+.flow-step--cardless .flow-step__text p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+}
+
 /* ===============================================
    アーティストプロフィール
    =============================================== */
@@ -804,6 +859,97 @@
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
   }
+}
+
+/* ===============================================
+   アクセスセクション - カードレスデザイン
+   =============================================== */
+.section--access--cardless {
+  background: none;
+}
+
+.access-content--cardless {
+  gap: var(--spacing-2xl);
+}
+
+.access-content--cardless .access-content__map {
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.clinic-info--cardless {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.clinic-info--cardless h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.clinic-info--cardless .info-table {
+  margin-bottom: var(--spacing-xl);
+}
+
+.clinic-info--cardless .info-table tr {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.clinic-info--cardless .info-table tr:last-child {
+  border-bottom: none;
+}
+
+.hours-info--cardless {
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.hours-info--cardless h4 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.hours-grid--cardless {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 100%;
+}
+
+.hours-grid--cardless .hours-item {
+  background: none;
+  border-radius: 0;
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.hours-grid--cardless .hours-item:last-child {
+  border-bottom: none;
+}
+
+.hours-grid--cardless .hours-item h5 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text);
+}
+
+.hours-grid--cardless .hours-item p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.hours-grid--cardless .hours-item small {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sss);
 }
 
 /* ===============================================
