@@ -154,7 +154,7 @@
    フィーチャーセクション
    =============================================== */
 .section--features {
-  background-color: var(--color-bg-light);
+  /*background-color: var(--color-bg-light);*/
   background-image: url('../assets/images/bg_artmake02.webp'); 
   background-size: auto 100%;
   background-position: center;
