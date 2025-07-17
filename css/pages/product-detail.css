@@ -137,7 +137,7 @@
 .product-benefits-list li {
   position: relative;
   padding-left: var(--spacing-lg);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   line-height: var(--line-height-loose);
   color: var(--color-text);
 }
