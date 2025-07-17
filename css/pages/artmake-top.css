@@ -80,7 +80,7 @@
    =============================================== */
 .section--instagram {
   position: relative;
-  padding: var(--spacing-2xl) 4px;
+  padding: var(--spacing-2xl) 14px; 
   overflow: visible;
   max-width: 430px;
   margin: 0 auto;
@@ -89,7 +89,7 @@
 /* タイトル - セクション直下に配置 */
 .section--instagram > .section__title {
   margin-bottom: var(--spacing-lg);
-  padding: 0 var(--content-padding);
+  padding: 0 6px; /* 変更: 実質的に20pxのパディング（14px + 6px） */
   position: relative;
   z-index: 3;
 }
@@ -100,22 +100,24 @@
   width: 100%;
   height: 400px;
   overflow: hidden;
-  padding: 0 4px;
+  padding: 0; /* 変更: パディングを削除 */
   z-index: 1;
+  border-radius: 20px; /* 追加: 直接border-radiusを設定 */
 }
 
 .section--instagram .instagram-video video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 0; /* 変更: 親要素で設定するため0に */
   object-position: center;
   transform: rotate(90deg);
 }
 
 .instagram-link {
-  text-align: left;
-  margin-top: 0;
+  text-align: center; /* 変更: 中央揃えに */
+  margin-top: var(--spacing-lg); /* 変更: 適切な上部余白 */
+  padding: 0 6px; /* 追加: 左右のパディング */
 }
 
 .instagram-link .button {
@@ -143,10 +145,10 @@
 }
 
 .feature-item {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex; /* 変更: gridからflexに */
+  flex-direction: column; /* 追加: 縦方向に配置 */
+  align-items: center; /* 追加: 中央揃え */
   gap: var(--spacing-md);
-  align-items: center;
 }
 
 .feature-item__image {
@@ -155,12 +157,18 @@
   height: 200px;
   overflow: hidden;
   box-shadow: var(--shadow-md);
+  margin: 0 auto;
 }
 
 .feature-item__image img {
+  width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
+}
+
+.feature-item__content {
+  max-width: 100%; /* 追加: 最大幅を制限 */
 }
 
 .feature-item__content h3 {
