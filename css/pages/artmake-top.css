@@ -184,7 +184,7 @@
 }
 
 .menu-category__title {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
   margin-bottom: var(--spacing-sm);
   display: flex;
   align-items: center;
@@ -234,9 +234,9 @@
 
 .price-card__image {
   width: 200px;
-  height: 150px;
+  height: 200px;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 50%;
   flex-shrink: 0;
   margin-bottom: 30px; /* 追加 */
 }
@@ -257,7 +257,7 @@
 .price-card__text {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   width: 100%;
 }
 
@@ -302,41 +302,6 @@
   font-size: 32px;
 }
 
-.price-card__note {
-  font-size: 13px;
-  color: var(--color-text-light);
-  margin-top: 8px;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-.price-card__info {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xs);
-  font-size: 14px;
-  color: var(--color-text-light);
-  text-align: center;
-  margin-top: 20px;
-}
-.price-card__info li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-xs);
-}
-
-.price-card__info i {
-  color: var(--color-secondary);
-  width: 16px;
-}
-
-  font-size: 13px;
-  color: var(--color-text-light);
-  margin-top: 8px;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
 
 /* ===============================================
    保証ボックス
