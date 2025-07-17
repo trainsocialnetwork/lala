@@ -6,44 +6,7 @@
    パンくずリスト
    =============================================== */
 .breadcrumb {
-  background-color: var(--color-bg-light);
-  padding: var(--spacing-sm) 0;
   margin-top: 60px; /* ヘッダーの高さ分 */
-}
-
-.breadcrumb__list {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  font-size: var(--font-size-sm);
-}
-
-.breadcrumb__list li {
-  display: flex;
-  align-items: center;
-}
-
-.breadcrumb__list li::after {
-  content: '>';
-  margin-left: var(--spacing-xs);
-  color: var(--color-text-light);
-}
-
-.breadcrumb__list li:last-child::after {
-  display: none;
-}
-
-.breadcrumb__list li:last-child {
-  color: var(--color-text-light);
-}
-
-.breadcrumb__list a {
-  color: var(--color-primary);
-}
-
-.breadcrumb__list a:hover {
-  text-decoration: underline;
-  opacity: 1;
 }
 
 /* ===============================================
