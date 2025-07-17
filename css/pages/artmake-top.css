@@ -80,7 +80,7 @@
    =============================================== */
 .section--instagram {
   position: relative;
-  padding: var(--spacing-2xl) 0 0 0; /* 上部のみパディング */
+  padding: var(--spacing-2xl) 4px;
   overflow: visible;
   max-width: 430px;
   margin: 0 auto;
