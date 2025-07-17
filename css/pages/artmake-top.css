@@ -126,6 +126,7 @@
 /* ===============================================
    フィーチャーセクション
    =============================================== */
+/*
 .section--features {
   /*background-color: var(--color-bg-light)*/;
   background-image: url('../../assets/images/bg_artmake04.webp'); 
@@ -133,7 +134,7 @@
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-}
+}*/
 
 .features-list {
   display: flex;
