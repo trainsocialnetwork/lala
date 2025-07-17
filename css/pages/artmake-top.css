@@ -110,6 +110,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 0; /* 変更: 親要素で設定するため0に */
+  border-radius: 20px;
   object-position: center;
   transform: rotate(90deg);
 }
@@ -149,6 +150,12 @@
   flex-direction: column; /* 追加: 縦方向に配置 */
   align-items: center; /* 追加: 中央揃え */
   gap: var(--spacing-md);
+  padding: var(--spacing-lg) 0; /* 上下のパディングを追加 */
+}
+
+.feature-item:not(:last-child) {
+  border-bottom: 1px solid var(--color-border); /* 区切り線を追加（オプション） */
+  margin-bottom: var(--spacing-xl); /* アイテム間の余白を追加 */
 }
 
 .feature-item__image {
