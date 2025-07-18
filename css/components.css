@@ -207,10 +207,8 @@
 
 .hero__visual img {
   display: block;
-  object-fit: contain; /* coverからcontainに変更 - 画像全体を表示 */
-  object-position: center top; /* 上部を基準に配置 */
-  width: 100%;
-  height: auto;
+  object-fit: cover;
+  height: 100%;
 }
 
 .hero__content {
