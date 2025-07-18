@@ -552,9 +552,9 @@
 /* ===============================================
    フローセクション
    =============================================== */
-.section--flow {
+/*.section--flow {
   background-color: var(--color-bg-light);
-}
+}*/
 
 .flow-timeline {
   position: relative;
