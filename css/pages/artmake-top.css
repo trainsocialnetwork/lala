@@ -193,12 +193,12 @@
    =============================================== */
 .section--menu {
   /*background-color: var(--color-bg-light)*/;
-  background-image: url('../../assets/images/bg_03.webp'); 
-  background-size: contain;
-  background-position: top left;
-  background-repeat: repeat;
-  position: relative;
-  overflow: hidden;
+    background-image: url(../../assets/images/bg_03.webp);
+    background-size: contain;
+    background-position: top left;
+    background-repeat: repeat;
+    /* position: relative; */
+    overflow: hidden;
 }
 
 .section--menu::before,
@@ -508,7 +508,7 @@
    =============================================== */
 .removal-table {
   width: 100%;
-  background-color: var(--color-bg);
+  /*background-color: var(--color-bg);*/
   overflow: hidden;
 }
 
@@ -537,7 +537,7 @@
 
 .removal-table .highlight {
   color: var(--color-primary);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .removal-notes {
