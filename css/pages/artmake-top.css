@@ -200,6 +200,17 @@
   position: relative;
 }
 
+.section--menu::before,
+.section--menu::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 120px; /* ぼかしエリアの高さ */
+  pointer-events: none;
+  z-index: 1;
+}
+
 .container {
   max-width: 430px; /* 追加：SP最適化 */
 }
