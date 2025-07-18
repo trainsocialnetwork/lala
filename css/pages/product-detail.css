@@ -12,7 +12,6 @@
 .product-hero__content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
   align-items: center;
   text-align: center;
 }
@@ -25,6 +24,7 @@
   justify-content: center;
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
 }
 
 .product-hero__image img {
@@ -72,7 +72,6 @@
 .product-hero__details {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
   padding-top: var(--spacing-lg);
   border-top: 1px solid var(--color-border);
 }
@@ -90,9 +89,9 @@
 }
 
 .volume-amount {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-md);
   color: var(--color-text);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .product-hero__price {
