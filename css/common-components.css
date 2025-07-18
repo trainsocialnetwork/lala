@@ -250,6 +250,10 @@
    アクセス情報
    使用箇所: index.html, artmake/index.html
    =============================================== */
+/* ===============================================
+   アクセス情報
+   使用箇所: index.html, artmake/index.html
+   =============================================== */
 .access-content {
   display: grid;
   grid-template-columns: 1fr;
@@ -286,4 +290,70 @@
   padding: var(--spacing-sm) 0;
   font-size: var(--font-size-sm);
   vertical-align: top;
+}
+
+/* ===============================================
+   サービスカード（共通）
+   使用箇所: index.html, artmake/index.html
+   =============================================== */
+.service-item {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.service-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-item__image {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3のアスペクト比 */
+  overflow: hidden;
+}
+
+.service-item__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-item__content {
+  padding: var(--spacing-md);
+}
+
+.service-item__content h4 {
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-primary);
+}
+
+.service-item__content p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-item__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--color-primary);
+  transition: gap var(--transition-base);
+}
+
+.service-item__link:hover {
+  gap: var(--spacing-sm);
+  opacity: 1;
 }
