@@ -191,56 +191,6 @@
 /* ===============================================
    料金カード
    =============================================== */
-/* ===============================================*/
-/* ===============================================
-.section--menu {
-  /*background-color: var(--color-bg-light)*/;
-    background-image: url(../../assets/images/bg_03.webp);
-    background-size: contain;
-    background-position: top left;
-    background-repeat: repeat;
-    position: relative;
-    overflow: hidden;
-}
-   =============================================== */
-/* ===============================================
-.section--menu::before,
-.section--menu::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 120px; 
-   =============================================== */
-/* ぼかしエリアの高さ */
-/* ===============================================
-  pointer-events: none;
-  z-index: 1;
-}
-   =============================================== */
-/* 上部のグラデーション */
-.section--menu::before {
-  top: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(248, 243, 239, 1) 0%,     /* 背景色と同じ色 */
-    rgba(248, 243, 239, 0.8) 30%,
-    rgba(248, 243, 239, 0.4) 60%,
-    rgba(248, 243, 239, 0) 100%
-  );
-}
-
-/* 下部のグラデーション */
-.section--menu::after {
-  bottom: 0;
-  background: linear-gradient(
-    to top,
-    rgba(248, 243, 239, 1) 0%,     /* 背景色と同じ色 */
-    rgba(248, 243, 239, 0.8) 30%,
-    rgba(248, 243, 239, 0.4) 60%,
-    rgba(248, 243, 239, 0) 100%
-  );
-}
 
 /* コンテンツが擬似要素の下に隠れないように */
 .section--menu .container {
