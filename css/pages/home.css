@@ -50,7 +50,7 @@
 .service-item--cardless .service-item__image {
   width: 200px;
   height: 200px;
-  border-radius: 50%;
+  border-radius: 100px;
   overflow: hidden;
   margin-bottom: var(--spacing-lg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
