@@ -197,7 +197,7 @@
     background-size: contain;
     background-position: top left;
     background-repeat: repeat;
-    /* position: relative; */
+    position: relative;
     overflow: hidden;
 }
 
