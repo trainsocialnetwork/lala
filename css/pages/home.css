@@ -49,7 +49,7 @@
 
 .service-item--cardless .service-item__image {
   width: 200px;
-  height: 200px;
+  height: 280px;
   border-radius: 100px;
   overflow: hidden;
   margin-bottom: var(--spacing-lg);
