@@ -13,6 +13,142 @@
 }
 
 /* ===============================================
+   サービスリスト - カードレスデザイン
+   =============================================== */
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.service-list--cardless {
+  margin: 0 -var(--content-padding);
+}
+
+.service-item--cardless {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-2xl) var(--content-padding);
+  border-bottom: 1px solid var(--color-border);
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.service-item--cardless:last-child {
+  border-bottom: none;
+}
+
+.service-item--cardless:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.service-item--cardless .service-item__image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: var(--spacing-lg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-item--cardless .service-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-item--cardless .service-item__content {
+  max-width: 100%;
+  padding: 0;
+}
+
+.service-item--cardless .service-item__content h4 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.service-item--cardless .service-item__content p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.service-item--cardless .service-item__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-primary);
+  transition: gap var(--transition-base);
+}
+
+.service-item--cardless .service-item__link:hover {
+  gap: var(--spacing-sm);
+  opacity: 1;
+}
+
+/* ===============================================
+   強みリスト - カードレスデザイン
+   =============================================== */
+.features-list--cardless {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.feature-card--cardless {
+  background: none;
+  border-radius: 0;
+  padding: var(--spacing-xl) 0;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: none;
+}
+
+.feature-card--cardless:last-child {
+  border-bottom: none;
+}
+
+.feature-card--cardless h4 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  line-height: var(--line-height-tight);
+  color: var(--color-primary);
+}
+
+.feature-card--cardless ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.feature-card--cardless li {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  padding-left: var(--spacing-lg);
+  position: relative;
+  color: var(--color-text-light);
+}
+
+.feature-card--cardless li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+/* ===============================================
    クリニックギャラリー
    =============================================== */
 .clinic-gallery {
@@ -72,82 +208,119 @@
 }
 
 /* ===============================================
-   アクセスセクション
-   =============================================== 
+   アクセスセクション - カードレスデザイン
+   =============================================== */
+.section--access--cardless {
+  background: none;
+}
 
-.clinic-info h3 {
+.access-content--cardless {
+  gap: var(--spacing-2xl);
+}
+
+.access-content--cardless .access-content__map {
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.clinic-info--cardless {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.clinic-info--cardless h3 {
   font-size: var(--font-size-xl);
-  margin-bottom: var(--spacing-md);
-  color: var(--color-primary);
-}
-
-.info-table {
-  width: 100%;
   margin-bottom: var(--spacing-lg);
+  color: var(--color-primary);
+  text-align: center;
 }
 
-.info-table tr {
+.clinic-info--cardless .info-table {
+  margin-bottom: var(--spacing-xl);
+}
+
+.clinic-info--cardless .info-table tr {
   border-bottom: 1px solid var(--color-border);
 }
 
-.info-table tr:last-child {
+.clinic-info--cardless .info-table tr:last-child {
   border-bottom: none;
 }
 
-.info-table th {
+.clinic-info--cardless .info-table th {
   font-weight: 600;
   white-space: nowrap;
   padding-right: var(--spacing-md);
   color: var(--color-text);
 }
 
-.info-table th i {
+.clinic-info--cardless .info-table th i {
   margin-right: var(--spacing-xs);
   color: var(--color-secondary);
 }
 
-.hours-info h4 {
+.hours-info--cardless {
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.hours-info--cardless h4 {
   font-size: var(--font-size-lg);
-  margin-bottom: var(--spacing-md);
-}
-
-.hours-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-sm);
   margin-bottom: var(--spacing-lg);
+  text-align: center;
+  color: var(--color-primary);
 }
 
-.hours-item {
-  background-color: var(--color-bg);
-  border-radius: var(--radius-md);
-  padding: var(--spacing-sm);
+.hours-grid--cardless {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 100%;
 }
 
-.hours-item h5 {
+.hours-grid--cardless .hours-item {
+  background: none;
+  border-radius: 0;
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.hours-grid--cardless .hours-item:last-child {
+  border-bottom: none;
+}
+
+.hours-grid--cardless .hours-item h5 {
   font-size: var(--font-size-base);
   font-weight: 600;
   margin-bottom: var(--spacing-xs);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-xs);
+  color: var(--color-text);
 }
 
-.hours-item h5 i {
+.hours-grid--cardless .hours-item h5 i {
   color: var(--color-secondary);
 }
 
-.hours-item p {
+.hours-grid--cardless .hours-item p {
   font-size: var(--font-size-sm);
   margin: 0;
-}
-
-.hours-item small {
   color: var(--color-text-light);
 }
 
+.hours-grid--cardless .hours-item small {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sss);
+}
+
 .access-buttons {
-  margin-top: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+  text-align: center;
 }
 
 /* ===============================================
