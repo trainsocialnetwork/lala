@@ -193,11 +193,12 @@
    =============================================== */
 .section--menu {
   /*background-color: var(--color-bg-light)*/;
-  background-image: url('../../assets/images/bg_02.webp'); 
-  background-size: auto;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url('../../assets/images/bg_01.webp'); 
+  background-size: contain;
+  background-position: top left;
+  background-repeat: repeat;
   position: relative;
+  overflow: hidden;
 }
 
 .section--menu::before,
