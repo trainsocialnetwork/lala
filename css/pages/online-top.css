@@ -19,6 +19,7 @@
 /* 動画スタイル */
 .page-hero--online .page-hero__visual video {
   height: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
 }
