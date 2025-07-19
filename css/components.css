@@ -185,10 +185,17 @@
         .hero-geometric {
             position: relative;
             width: 100%;
-            height: 100vh;
-            min-height: 600px;
-            overflow: hidden;
             background: #f8f8f8;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            margin-top: 60px; /* ヘッダーの高さ分 */
+            max-width: var(--content-width-max);
+            /* デフォルトはアスペクト比で高さを決定 */
+            height: auto;
+            aspect-ratio: var(--hero-img-width) / var(--hero-img-height); /* 15:22 */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* 動画背景 */
@@ -234,37 +241,14 @@
             clip-path: polygon(40% 100%, 100% 40%, 100% 100%);
         }
 
-        /* 方法2: SVGマスクを使用した実装（代替案） */
-        .hero-geometric--svg {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .hero-geometric--svg video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero-geometric--svg svg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-        }
-
         /* コンテンツエリア */
         .hero-geometric__content {
             position: absolute;
-            top: 50%;
+            top: 70%;
             left: 5%;
             transform: translateY(-50%);
             z-index: 3;
-            max-width: 500px;
+            max-width: var(--content-width-max);
             padding: 20px;
         }
 
@@ -281,23 +265,6 @@
             line-height: 1.8;
             margin-bottom: 30px;
             color: #666;
-        }
-
-        .hero-geometric__cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 32px;
-            background: #6B4F3C;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-        }
-
-        .hero-geometric__cta:hover {
-            background: #A1866F;
-            transform: translateY(-2px);
         }
 
         /* アニメーション効果 */
@@ -327,57 +294,6 @@
 
         .hero-geometric__cta {
             animation-delay: 0.7s;
-        }
-
-        /* レスポンシブ対応 */
-        @media (max-width: 430px) {
-            .hero-geometric__content {
-                left: 20px;
-                right: 20px;
-                max-width: none;
-            }
-
-            .shape-overlay--1 {
-                clip-path: polygon(0 0, 70% 0, 30% 100%, 0 100%);
-            }
-
-            .shape-overlay--2 {
-                clip-path: polygon(70% 0, 100% 0, 100% 50%, 30% 100%);
-            }
-
-            .hero-geometric__title {
-                font-size: 28px;
-            }
-
-            .hero-geometric__text {
-                font-size: 14px;
-            }
-        }
-
-        /* パララックス効果（オプション） */
-        .shape-overlay {
-            transition: transform 0.5s ease-out;
-        }
-
-        .shape-overlay--1 {
-            transform: translateX(0);
-        }
-
-        .shape-overlay--2 {
-            transform: translateY(0);
-        }
-
-        .shape-overlay--3 {
-            transform: translate(0, 0);
-        }
-
-        /* マウスムーブで微細な動き */
-        .hero-geometric.parallax .shape-overlay--1 {
-            transform: translateX(var(--mouse-x, 0));
-        }
-
-        .hero-geometric.parallax .shape-overlay--2 {
-            transform: translateY(var(--mouse-y, 0));
         }
 
 /* ===============================================
