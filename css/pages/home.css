@@ -40,24 +40,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
   z-index: 1;
-  /* マスクで2つの帯状の領域だけ表示 */
-  -webkit-mask-image: 
-    linear-gradient(105deg,
-      transparent 0%,
-      transparent 20%,
-      black 20%,
-      black 65%,
-      transparent 65%,
-      transparent 75%,
-      black 75%,
-      black 95%,
-      transparent 95%
-    );
   mask-image: 
-    linear-gradient(105deg,
+    linear-gradient(75deg,
       transparent 0%,
       transparent 20%,
       black 20%,
@@ -72,10 +58,10 @@
 
 .hero--geometric .hero__visual video,
 .hero--geometric .hero__visual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: none;
+    /* object-position: center;
 }
 
 /* コンテンツエリア */
