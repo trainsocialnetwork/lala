@@ -181,28 +181,24 @@
 /* ===============================================
    ヒーローセクション
    =============================================== */
-.hero {
+.hero--geometric {
   position: relative;
   width: 100%;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  margin-top: 60px; /* ヘッダーの高さ分 */
-  max-width: var(--content-width-max);
-  /* デフォルトはアスペクト比で高さを決定 */
   height: auto;
-  aspect-ratio: var(--hero-img-width) / var(--hero-img-height); /* 15:22 */
-  margin-left: auto;
-  margin-right: auto;
+  aspect-ratio: auto; /* 既存のアスペクト比をリセット */
+  min-height: 80vh;
+  overflow: hidden;
+  margin-top: 60px;
 }
 
-.hero__visual {
+/* 既存の画像をビデオに置き換える場合 */
+.hero--geometric .hero__visual {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 1;
 }
 
 .hero__visual img {
@@ -211,31 +207,156 @@
   height: 100%;
 }
 
-.hero__content {
-  position: relative;
-  z-index: 1;
+/* ジオメトリックシェイプ */
+.hero__shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: var(--spacing-xl) 0;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(255, 255, 255, 0.3) 70%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.hero__title {
-  font-size: clamp(24px, 6vw, 32px);
+.shape-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-out;
+}
+
+/* メインの白いシェイプ */
+.shape-overlay--main {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.98) 0%, 
+    rgba(248, 243, 239, 0.95) 100%);
+  clip-path: polygon(0 0, 65% 0, 35% 100%, 0 100%);
+}
+
+/* アクセントシェイプ1 */
+.shape-overlay--accent1 {
+  background: linear-gradient(135deg,
+    rgba(107, 79, 60, 0.08) 0%,
+    rgba(161, 134, 111, 0.05) 100%);
+  clip-path: polygon(65% 0, 100% 0, 100% 45%, 35% 100%);
+}
+
+/* アクセントシェイプ2 */
+.shape-overlay--accent2 {
+  background: rgba(0, 185, 0, 0.03);
+  clip-path: polygon(35% 100%, 100% 45%, 100% 100%);
+}
+
+/* コンテンツの配置調整 */
+.hero--geometric .hero__content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 100%;
+  max-width: var(--content-width-max);
+  padding: var(--spacing-xl);
+  background: none;
+}
+
+/* アニメーション */
+@keyframes heroSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero--geometric .hero__title,
+.hero--geometric .hero__text {
+  animation: heroSlideIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.hero--geometric .hero__title {
+  animation-delay: 0.3s;
+  font-size: clamp(28px, 5vw, 40px);
   font-weight: 300;
-  line-height: var(--line-height-tight);
-  margin-bottom: var(--spacing-md);
-  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-lg);
 }
 
-.hero__text {
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-loose);
-  color: var(--color-text-light);
+.hero--geometric .hero__text {
+  animation-delay: 0.5s;
+  max-width: 500px;
+}
+
+/* ボタンを追加する場合 */
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  animation: heroSlideIn 0.8s ease-out 0.7s forwards;
+  opacity: 0;
+}
+
+.hero__cta:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+/* モバイル対応 */
+@media (max-width: 430px) {
+  .hero--geometric {
+    min-height: 70vh;
+  }
+  
+  .shape-overlay--main {
+    clip-path: polygon(0 0, 75% 0, 25% 100%, 0 100%);
+  }
+  
+  .shape-overlay--accent1 {
+    clip-path: polygon(75% 0, 100% 0, 100% 55%, 25% 100%);
+  }
+  
+  .hero--geometric .hero__content {
+    padding: var(--spacing-md);
+  }
+  
+  .hero--geometric .hero__title {
+    font-size: 24px;
+  }
+  
+  .hero--geometric .hero__text {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* インタラクティブ効果（オプション） */
+.hero--geometric.interactive .shape-overlay {
+  will-change: transform;
+}
+
+.hero--geometric.interactive .shape-overlay--main {
+  transform: translateX(var(--mouse-x, 0));
+}
+
+.hero--geometric.interactive .shape-overlay--accent1 {
+  transform: translateY(var(--mouse-y, 0));
+}
+
+.hero--geometric.interactive .shape-overlay--accent2 {
+  transform: translate(
+    calc(var(--mouse-x, 0) * 0.5), 
+    calc(var(--mouse-y, 0) * 0.5)
+  );
 }
 
 /* ===============================================
