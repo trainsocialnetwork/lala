@@ -181,137 +181,66 @@
 /* ===============================================
    ヒーローセクション
    =============================================== */
-        /* ヒーローセクション */
-        .hero-geometric {
-            position: relative;
-            width: 100%;
-            background: #f8f8f8;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            margin-top: 60px; /* ヘッダーの高さ分 */
-            max-width: var(--content-width-max);
-            /* デフォルトはアスペクト比で高さを決定 */
-            height: auto;
-            aspect-ratio: var(--hero-img-width) / var(--hero-img-height); /* 15:22 */
-            margin-left: auto;
-            margin-right: auto;
-        }
+/* ===============================================
+   ヒーローセクション
+   =============================================== */
+.hero {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 60px; /* ヘッダーの高さ分 */
+  max-width: var(--content-width-max);
+  /* デフォルトはアスペクト比で高さを決定 */
+  height: auto;
+  aspect-ratio: var(--hero-img-width) / var(--hero-img-height); /* 15:22 */
+  margin-left: auto;
+  margin-right: auto;
+}
 
-/* ビデオ背景 */
-.hero--geometric .hero__visual {
+.hero__visual {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
+}
+
+.hero__visual img {
+  display: block;
+  object-fit: contain; /* coverからcontainに変更 - 画像全体を表示 */
+  object-position: center top; /* 上部を基準に配置 */
+  width: 100%;
+  height: auto;
+}
+
+.hero__content {
+  position: relative;
   z-index: 1;
-}
-
-.hero--geometric .hero__visual video,
-.hero--geometric .hero__visual img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  padding: var(--spacing-xl) 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.3) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
-/* ジオメトリックシェイプオーバーレイ */
-.hero__shapes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.shape-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s ease-out;
-  will-change: transform;
-}
-
-/* メインの白いシェイプ（左側） */
-.shape-overlay--main {
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.98) 0%, 
-    rgba(248, 243, 239, 0.95) 100%);
-  clip-path: polygon(0 0, 65% 0, 35% 100%, 0 100%);
-}
-
-/* アクセントシェイプ1（右上） */
-.shape-overlay--accent1 {
-  background: linear-gradient(135deg,
-    rgba(107, 79, 60, 0.12) 0%,
-    rgba(161, 134, 111, 0.08) 100%);
-  clip-path: polygon(65% 0, 100% 0, 100% 45%, 35% 100%);
-}
-
-/* アクセントシェイプ2（右下） */
-.shape-overlay--accent2 {
-  background: rgba(0, 185, 0, 0.05);
-  clip-path: polygon(35% 100%, 100% 45%, 100% 100%);
-}
-
-/* コンテンツエリア */
-.hero--geometric .hero__content {
-  position: absolute;
-  top: 80%;
-  left: 0;
-  transform: translateY(-50%);
-  z-index: 3;
-  width: 100%;
-  background: none;
-  padding: 0;
-}
-
-.hero--geometric .hero__content .container {
-  padding-left: 5%;
-  max-width: none;
-}
-
-/* テキストスタイル調整 */
-.hero--geometric .hero__title {
-  font-size: clamp(32px, 5vw, 48px);
+.hero__title {
+  font-size: clamp(24px, 6vw, 32px);
   font-weight: 300;
-  line-height: 1.4;
-  margin-bottom: var(--spacing-lg);
-  color: var(--color-text);
-  max-width: 500px;
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 0.05em;
 }
 
-.hero--geometric .hero__text {
-  font-size: var(--font-size-base);
-  line-height: 1.8;
+.hero__text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
   color: var(--color-text-light);
-  max-width: 500px;
-  margin-bottom: var(--spacing-xl);
-}
-
-/* アニメーション */
-@keyframes heroSlideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.hero--geometric .hero__title {
-  animation: heroSlideIn 0.8s ease-out 0.3s forwards;
-  opacity: 0;
-}
-
-.hero--geometric .hero__text {
-  animation: heroSlideIn 0.8s ease-out 0.5s forwards;
-  opacity: 0;
 }
 
 /* ===============================================
