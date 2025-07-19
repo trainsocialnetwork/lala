@@ -181,184 +181,204 @@
 /* ===============================================
    ヒーローセクション
    =============================================== */
-.hero--geometric {
-  position: relative;
-  width: 100%;
-  height: auto;
-  aspect-ratio: auto; /* 既存のアスペクト比をリセット */
-  min-height: 80vh;
-  overflow: hidden;
-  margin-top: 60px;
-}
+        /* ヒーローセクション */
+        .hero-geometric {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 600px;
+            overflow: hidden;
+            background: #f8f8f8;
+        }
 
-/* 既存の画像をビデオに置き換える場合 */
-.hero--geometric .hero__visual {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
+        /* 動画背景 */
+        .hero-geometric__video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
 
-.hero--geometric .hero__visual video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
+        /* ジオメトリックオーバーレイ */
+        .hero-geometric__shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
 
-/* ジオメトリックシェイプ */
-.hero__shapes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
+        /* 方法1: clip-pathを使用した実装 */
+        .shape-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
 
-.shape-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s ease-out;
-}
+        .shape-overlay--1 {
+            background: rgba(255, 255, 255, 0.95);
+            clip-path: polygon(0 0, 60% 0, 40% 100%, 0 100%);
+        }
 
-/* メインの白いシェイプ */
-.shape-overlay--main {
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.98) 0%, 
-    rgba(248, 243, 239, 0.95) 100%);
-  clip-path: polygon(0 0, 65% 0, 35% 100%, 0 100%);
-}
+        .shape-overlay--2 {
+            background: rgba(107, 79, 60, 0.1);
+            clip-path: polygon(60% 0, 100% 0, 100% 40%, 40% 100%);
+        }
 
-/* アクセントシェイプ1 */
-.shape-overlay--accent1 {
-  background: linear-gradient(135deg,
-    rgba(107, 79, 60, 0.08) 0%,
-    rgba(161, 134, 111, 0.05) 100%);
-  clip-path: polygon(65% 0, 100% 0, 100% 45%, 35% 100%);
-}
+        .shape-overlay--3 {
+            background: rgba(161, 134, 111, 0.05);
+            clip-path: polygon(40% 100%, 100% 40%, 100% 100%);
+        }
 
-/* アクセントシェイプ2 */
-.shape-overlay--accent2 {
-  background: rgba(0, 185, 0, 0.03);
-  clip-path: polygon(35% 100%, 100% 45%, 100% 100%);
-}
+        /* 方法2: SVGマスクを使用した実装（代替案） */
+        .hero-geometric--svg {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-/* コンテンツの配置調整 */
-.hero--geometric .hero__content {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  z-index: 3;
-  width: 100%;
-  max-width: var(--content-width-max);
-  padding: var(--spacing-xl);
-  background: none;
-}
+        .hero-geometric--svg video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-/* アニメーション */
-@keyframes heroSlideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+        .hero-geometric--svg svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
 
-.hero--geometric .hero__title,
-.hero--geometric .hero__text {
-  animation: heroSlideIn 0.8s ease-out forwards;
-  opacity: 0;
-}
+        /* コンテンツエリア */
+        .hero-geometric__content {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            z-index: 3;
+            max-width: 500px;
+            padding: 20px;
+        }
 
-.hero--geometric .hero__title {
-  animation-delay: 0.3s;
-  font-size: clamp(28px, 5vw, 40px);
-  font-weight: 300;
-  margin-bottom: var(--spacing-lg);
-}
+        .hero-geometric__title {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 300;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            color: #333;
+        }
 
-.hero--geometric .hero__text {
-  animation-delay: 0.5s;
-  max-width: 500px;
-}
+        .hero-geometric__text {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #666;
+        }
 
-/* ボタンを追加する場合 */
-.hero__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  margin-top: var(--spacing-lg);
-  padding: var(--spacing-sm) var(--spacing-lg);
-  background-color: var(--color-primary);
-  color: white;
-  border-radius: var(--radius-full);
-  text-decoration: none;
-  transition: all var(--transition-base);
-  animation: heroSlideIn 0.8s ease-out 0.7s forwards;
-  opacity: 0;
-}
+        .hero-geometric__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 32px;
+            background: #6B4F3C;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
 
-.hero__cta:hover {
-  background-color: var(--color-secondary);
-  transform: translateY(-2px);
-  opacity: 1;
-}
+        .hero-geometric__cta:hover {
+            background: #A1866F;
+            transform: translateY(-2px);
+        }
 
-/* モバイル対応 */
-@media (max-width: 430px) {
-  .hero--geometric {
-    min-height: 70vh;
-  }
-  
-  .shape-overlay--main {
-    clip-path: polygon(0 0, 75% 0, 25% 100%, 0 100%);
-  }
-  
-  .shape-overlay--accent1 {
-    clip-path: polygon(75% 0, 100% 0, 100% 55%, 25% 100%);
-  }
-  
-  .hero--geometric .hero__content {
-    padding: var(--spacing-md);
-  }
-  
-  .hero--geometric .hero__title {
-    font-size: 24px;
-  }
-  
-  .hero--geometric .hero__text {
-    font-size: var(--font-size-sm);
-  }
-}
+        /* アニメーション効果 */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
-/* インタラクティブ効果（オプション） */
-.hero--geometric.interactive .shape-overlay {
-  will-change: transform;
-}
+        .hero-geometric__content > * {
+            animation: slideIn 1s ease-out forwards;
+            opacity: 0;
+        }
 
-.hero--geometric.interactive .shape-overlay--main {
-  transform: translateX(var(--mouse-x, 0));
-}
+        .hero-geometric__title {
+            animation-delay: 0.3s;
+        }
 
-.hero--geometric.interactive .shape-overlay--accent1 {
-  transform: translateY(var(--mouse-y, 0));
-}
+        .hero-geometric__text {
+            animation-delay: 0.5s;
+        }
 
-.hero--geometric.interactive .shape-overlay--accent2 {
-  transform: translate(
-    calc(var(--mouse-x, 0) * 0.5), 
-    calc(var(--mouse-y, 0) * 0.5)
-  );
-}
+        .hero-geometric__cta {
+            animation-delay: 0.7s;
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 430px) {
+            .hero-geometric__content {
+                left: 20px;
+                right: 20px;
+                max-width: none;
+            }
+
+            .shape-overlay--1 {
+                clip-path: polygon(0 0, 70% 0, 30% 100%, 0 100%);
+            }
+
+            .shape-overlay--2 {
+                clip-path: polygon(70% 0, 100% 0, 100% 50%, 30% 100%);
+            }
+
+            .hero-geometric__title {
+                font-size: 28px;
+            }
+
+            .hero-geometric__text {
+                font-size: 14px;
+            }
+        }
+
+        /* パララックス効果（オプション） */
+        .shape-overlay {
+            transition: transform 0.5s ease-out;
+        }
+
+        .shape-overlay--1 {
+            transform: translateX(0);
+        }
+
+        .shape-overlay--2 {
+            transform: translateY(0);
+        }
+
+        .shape-overlay--3 {
+            transform: translate(0, 0);
+        }
+
+        /* マウスムーブで微細な動き */
+        .hero-geometric.parallax .shape-overlay--1 {
+            transform: translateX(var(--mouse-x, 0));
+        }
+
+        .hero-geometric.parallax .shape-overlay--2 {
+            transform: translateY(var(--mouse-y, 0));
+        }
 
 /* ===============================================
    ボタンコンポーネント
