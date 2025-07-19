@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/themes/artmake.css">
     <link rel="stylesheet" href="../css/pages/artmake-top.css">
+    <link rel="stylesheet" href="../css/pages/home.css">
+    
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -58,6 +60,7 @@
         </nav>
     </div>
 
+
     <main>
         <!-- Hero Section -->
         <section class="hero hero--artmake">
@@ -66,6 +69,16 @@
             </div>
         </section>
 
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+            <div class="container">
+                <ul class="breadcrumb__list">
+                    <li><a href="/">TOP</a></li>
+                    <li>アートメイク</li>
+                </ul>
+            </div>
+        </nav>
+        
         <!-- Campaign Section -->
         <section class="section section--campaign">
             <div class="container">
@@ -104,26 +117,20 @@
                     <source src="../assets/videos/treatment.mp4" type="video/mp4">
                 </video>
             </div>
-            <div class="container container--bottom">
-                <p class="section__lead">
-                    経験豊富なアートメイクアーティストがあなたの理想に寄り添い、<br>
-                    高い技術で「あなただけの美しさ」をかなえます。
-                </p>
-                <div class="instagram-link">
-                    <a href="https://www.instagram.com/lala_beautyclinicbrows" target="_blank" class="button button--primary">
-                        <i class="fab fa-instagram"></i>
-                        最新の症例を見る
-                    </a>
-                </div>
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/lala_beautyclinicbrows" target="_blank" class="button button--outline button--sm">
+                    <i class="fab fa-instagram"></i>
+                    最新の症例を見る
+                </a>
             </div>
         </section>
 
         <!-- Features Section -->
-        <section class="section section--features bg-light">
+        <section class="section section--features">
             <div class="container">
                 <h2 class="section__title">
                     <span class="section__title-en">OUR COMMITMENT</span>
-                    <span class="section__title-ja">LaLaのアートメイク3つのこだわり</span>
+                    <span class="section__title-ja">LaLaのアートメイク<br>3つのこだわり</span>
                 </h2>
                 <div class="features-list">
                     <div class="feature-item">
@@ -175,74 +182,65 @@
                     </p>
                     
                     <div class="price-cards">
-                        <div class="price-card">
-                            <div class="price-card__header">
-                                <h4>毛並み眉</h4>
-                            </div>
+                        <!-- 毛並み眉 -->
+                        <article class="price-card">
                             <div class="price-card__image">
-                                <img src="../assets/images/06_artmake_price02.png" alt="毛並み眉">
+                                <img src="../assets/images/artmake_kenami.webp" alt="毛並み眉">
                             </div>
                             <div class="price-card__content">
-                                <p class="price-card__description">
-                                    一本一本の毛流れを繊細に描き出し、よりリアルな自然眉を目指すのが毛並み眉です。
-                                </p>
-                                <div class="price-card__price">
-                                    <span class="price">¥55,000</span>
-                                    <span class="unit">/回</span>
+                                <div class="price-card__text">
+                                    <h4 class="price-card__name">毛並み眉</h4>
+                                    <div class="price-card__description">
+                                        <p>一本一本の毛流れを繊細に描き出し、</p>
+                                        <p>よりリアルな自然眉を目指すのが毛並み眉です。</p>
+                                    </div>
+                                    <div class="price-card__price">
+                                        <span class="price">¥55,000</span>
+                                        <span class="unit">/回</span>
+                                    </div>
                                 </div>
-                                <ul class="price-card__info">
-                                    <li><i class="far fa-clock"></i> 約2時間</li>
-                                    <li><i class="far fa-calendar"></i> 1〜2年持続</li>
-                                    <li><i class="fas fa-band-aid"></i> ダウンタイム3〜7日</li>
-                                </ul>
                             </div>
-                        </div>
-
-                        <div class="price-card">
-                            <div class="price-card__header">
-                                <h4>パウダー眉</h4>
-                            </div>
+                        </article>
+                    
+                        <!-- パウダー眉 -->
+                        <article class="price-card">
                             <div class="price-card__image">
-                                <img src="../assets/images/06_artmake_price03.png" alt="パウダー眉">
+                                <img src="../assets/images/artmake_powder.webp" alt="パウダー眉">
                             </div>
                             <div class="price-card__content">
-                                <p class="price-card__description">
-                                    パウダーでぼかしたような、柔らかい印象の眉。ふんわりした仕上がりを好む方に人気。
-                                </p>
-                                <div class="price-card__price">
-                                    <span class="price">¥55,000</span>
-                                    <span class="unit">/回</span>
+                                <div class="price-card__text">
+                                    <h4 class="price-card__name">パウダー眉</h4>
+                                    <div class="price-card__description">
+                                        <p>パウダーでぼかしたような、柔らかい印象の眉。</p>
+                                        <p>ふんわりした仕上がりを好む方に人気。</p>
+                                    </div>
+                                    <div class="price-card__price">
+                                        <span class="price">¥55,000</span>
+                                        <span class="unit">/回</span>
+                                    </div>
                                 </div>
-                                <ul class="price-card__info">
-                                    <li><i class="far fa-clock"></i> 約2時間</li>
-                                    <li><i class="far fa-calendar"></i> 2〜3年持続</li>
-                                    <li><i class="fas fa-band-aid"></i> ダウンタイム3〜5日</li>
-                                </ul>
                             </div>
-                        </div>
-
-                        <div class="price-card">
-                            <div class="price-card__header">
-                                <h4>MIX眉（毛並み + パウダー）</h4>
-                            </div>
+                        </article>
+                    
+                        <!-- MIX眉 -->
+                        <article class="price-card">
                             <div class="price-card__image">
-                                <img src="../assets/images/06_artmake_price04.png" alt="MIX眉">
+                                <img src="../assets/images/artmake_mix.webp" alt="MIX眉">
                             </div>
                             <div class="price-card__content">
-                                <p class="price-card__description">
-                                    毛並みとパウダー、両方のメリットを掛け合わせて、立体感と柔らかさを同時に実現。
-                                </p>
-                                <div class="price-card__price">
-                                    <span class="price">+¥11,000</span>
-                                    <span class="unit">/回</span>
+                                <div class="price-card__text">
+                                    <h4 class="price-card__name">MIX眉（毛並み + パウダー）</h4>
+                                    <div class="price-card__description">
+                                        <p>毛並みとパウダー、両方のメリットを掛け合わせて、</p>
+                                        <p>立体感と柔らかさを同時に実現。</p>
+                                    </div>
+                                    <div class="price-card__price price-card__price--additional">
+                                        <span class="price">+¥11,000</span>
+                                        <span class="unit">/回</span>
+                                    </div>
                                 </div>
-                                <ul class="price-card__info">
-                                    <li><i class="far fa-clock"></i> 約2.5時間</li>
-                                    <li><i class="far fa-calendar"></i> 2〜3年持続</li>
-                                    <li class="note">※毛並み眉またはパウダー眉の料金に追加</li>
-                                </ul>
                             </div>
-                        </div>
+                        </article>
                     </div>
 
                     <!-- レーザー除去保証 -->
@@ -272,25 +270,25 @@
                         唇の色味や輪郭を補正し、血色感のあるふっくらとした口元を演出。年齢によるくすみ・色むらが気になる方や、毎日のリップメイクを時短したい方に好評です。
                     </p>
                     
-                    <div class="lip-pricing">
-                        <div class="lip-pricing__image">
-                            <img src="../assets/images/06_artmake_price07.png" alt="リップアートメイク">
-                        </div>
-                        <div class="lip-pricing__content">
-                            <h4>リップアートメイク</h4>
-                            <p>自然なカラーから発色の良いカラーまで、多数の色素を取りそろえています。</p>
-                            <div class="price-box">
-                                <div class="price-box__main">
-                                    <span class="price">¥55,000</span>
-                                    <span class="unit">/回</span>
-                                </div>
-                                <ul class="price-box__info">
-                                    <li><i class="far fa-clock"></i> 約2.5時間</li>
-                                    <li><i class="far fa-calendar"></i> 1〜2年持続</li>
-                                    <li><i class="fas fa-gift"></i> リップエステ付き</li>
-                                </ul>
+                    <div class="price-cards">
+                        <article class="price-card">
+                            <div class="price-card__image">
+                                <img src="../assets/images/artmake_lip.webp" alt="リップアートメイク">
                             </div>
-                        </div>
+                            <div class="price-card__content">
+                                <div class="price-card__text">
+                                    <h4 class="price-card__name">リップアートメイク</h4>
+                                    <div class="price-card__description">
+                                        <p>自然なカラーから発色の良いカラーまで、</p>
+                                        <p>多数の色素を取りそろえています。</p>
+                                    </div>
+                                    <div class="price-card__price">
+                                        <span class="price">¥66,000</span>
+                                        <span class="unit">/回</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
 
@@ -334,16 +332,16 @@
             </div>
         </section>
 
-        <!-- Flow Section -->
-        <section class="section section--flow bg-light" id="flow">
+        <!-- Flow Section 更新版 -->
+        <section class="section section--flow" id="flow">
             <div class="container">
                 <h2 class="section__title">
                     <span class="section__title-en">FLOW</span>
                     <span class="section__title-ja">アートメイクの流れ</span>
                 </h2>
                 
-                <div class="flow-timeline">
-                    <div class="flow-step">
+                <div class="flow-timeline flow-timeline--cardless">
+                    <div class="flow-step flow-step--cardless">
                         <div class="flow-step__number">
                             <span>STEP</span>
                             <strong>01</strong>
@@ -358,8 +356,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="flow-step">
+        
+                    <div class="flow-step flow-step--cardless">
                         <div class="flow-step__number">
                             <span>STEP</span>
                             <strong>02</strong>
@@ -374,8 +372,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="flow-step">
+        
+                    <div class="flow-step flow-step--cardless">
                         <div class="flow-step__number">
                             <span>STEP</span>
                             <strong>03</strong>
@@ -390,8 +388,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="flow-step">
+        
+                    <div class="flow-step flow-step--cardless">
                         <div class="flow-step__number">
                             <span>STEP</span>
                             <strong>04</strong>
@@ -406,8 +404,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="flow-step">
+        
+                    <div class="flow-step flow-step--cardless">
                         <div class="flow-step__number">
                             <span>STEP</span>
                             <strong>05</strong>
@@ -422,8 +420,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="flow-step">
+        
+                    <div class="flow-step flow-step--cardless">
                         <div class="flow-step__number">
                             <span>STEP</span>
                             <strong>06</strong>
@@ -438,8 +436,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="flow-step">
+        
+                    <div class="flow-step flow-step--cardless">
                         <div class="flow-step__number">
                             <span>STEP</span>
                             <strong>07</strong>
@@ -454,8 +452,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="flow-step">
+        
+                    <div class="flow-step flow-step--cardless">
                         <div class="flow-step__number">
                             <span>STEP</span>
                             <strong>08</strong>
@@ -475,7 +473,7 @@
         </section>
 
         <!-- Staff Section -->
-        <section class="section section--artist">
+        <section class="section section--artist bg-light">
             <div class="container">
                 <h2 class="section__title">
                     <span class="section__title-en">ARTIST</span>
@@ -515,7 +513,7 @@
         </section>
 
         <!-- FAQ Section -->
-        <section class="section section--faq bg-light" id="faq">
+        <section class="section section--faq" id="faq">
             <div class="container">
                 <h2 class="section__title">
                     <span class="section__title-en">FAQ</span>
@@ -639,20 +637,20 @@
         </section>
 
         <!-- Access Section -->
-        <section class="section section--access" id="access">
+         <section class="section section--access section--access--cardless" id="access">
             <div class="container">
                 <h2 class="section__title">
                     <span class="section__title-en">ACCESS</span>
                     <span class="section__title-ja">アクセス・営業時間</span>
                 </h2>
                 
-                <div class="access-content">
+                <div class="access-content access-content--cardless">
                     <div class="access-content__map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1639.9911085988833!2d135.19417408791634!3d34.70562846443731!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008fb46ee74291%3A0x65154ce2bb89a31b!2z44Op44Op44OT44Ol44O844OG44Kj44Kv44Oq44OL44OD44Kv5paw56We5oi477yI44Ki44O844OI44Oh44Kk44Kv77yJ56We5oi4!5e0!3m2!1sja!2sjp!4v1750145514852!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-
+        
                     <div class="access-content__info">
-                        <div class="clinic-info">
+                        <div class="clinic-info clinic-info--cardless">
                             <h3>LaLa Beauty Clinic</h3>
                             <table class="info-table">
                                 <tr>
@@ -660,27 +658,22 @@
                                     <td>〒650-0002<br>兵庫県神戸市中央区北野町1丁目1<br>コトノハコ神戸西館1F</td>
                                 </tr>
                                 <tr>
-                                    <th><i class="fas fa-train"></i> アクセス</th>
+                                    <th>アクセス</th>
                                     <td>JR三ノ宮駅 徒歩10分<br>阪急神戸三宮駅 徒歩8分<br>地下鉄三宮駅 徒歩7分</td>
                                 </tr>
                                 <tr>
-                                    <th><i class="fas fa-car"></i> 駐車場</th>
+                                    <th>駐車場</th>
                                     <td>近隣にコインパーキングあり<br>（提携駐車場はございません）</td>
                                 </tr>
                             </table>
-
-                            <div class="hours-info">
+        
+                            <div class="hours-info hours-info--cardless">
                                 <h4>営業時間</h4>
-                                <div class="hours-grid">
+                                <div class="hours-grid hours-grid--cardless">
                                     <div class="hours-item">
-                                        <h5><i class="fas fa-brush"></i> アートメイク</h5>
+                                        <h5>アートメイク</h5>
                                         <p>日〜土　10:00〜17:00<br>
                                         <small>※不定休</small></p>
-                                    </div>
-                                    <div class="hours-item">
-                                        <h5><i class="fas fa-laptop-medical"></i> オンライン診療</h5>
-                                        <p>日〜土　10:00〜17:00<br>
-                                        <small>※予約制/※不定休</small></p>
                                     </div>
                                 </div>
                             </div>
@@ -691,54 +684,26 @@
         </section>
 
         <!-- News Section -->
-        <section class="section section--news bg-light">
+        <section class="section section--news" id="news">
             <div class="container">
                 <h2 class="section__title">
                     <span class="section__title-en">NEWS</span>
                     <span class="section__title-ja">お知らせ</span>
                 </h2>
-                
-                <div class="news-grid">
-                    <article class="news-card">
-                        <a href="#" class="news-card__link">
-                            <div class="news-card__content">
-                                <div class="news-card__meta">
-                                    <span class="news-card__category">キャンペーン</span>
-                                    <time class="news-card__date">2025.03.25</time>
-                                </div>
-                                <h3 class="news-card__title">春のアートメイクキャンペーン開始のお知らせ</h3>
-                                <p class="news-card__excerpt">4月1日より、春の新生活応援キャンペーンを開始いたします。期間限定の特別価格でご提供...</p>
-                            </div>
-                        </a>
+                <div class="news-list">
+                    <article class="news-item">
+                        <time class="news-item__date">2025.06.01</time>
+                        <span class="news-item__title">夏季休業のお知らせ</span>
                     </article>
-
-                    <article class="news-card">
-                        <a href="#" class="news-card__link">
-                            <div class="news-card__content">
-                                <div class="news-card__meta">
-                                    <span class="news-card__category">スタッフ</span>
-                                    <time class="news-card__date">2025.03.20</time>
-                                </div>
-                                <h3 class="news-card__title">新しいアーティストが加わりました</h3>
-                                <p class="news-card__excerpt">この度、経験豊富なアートメイクアーティストが新たに加わりました。より多くのお客様に...</p>
-                            </div>
-                        </a>
+                    <article class="news-item">
+                        <time class="news-item__date">2025.05.15</time>
+                        <span class="news-item__title">新メニュー「リップアートメイク」リリース</span>
                     </article>
-
-                    <article class="news-card">
-                        <a href="#" class="news-card__link">
-                            <div class="news-card__content">
-                                <div class="news-card__meta">
-                                    <span class="news-card__category">営業情報</span>
-                                    <time class="news-card__date">2025.03.15</time>
-                                </div>
-                                <h3 class="news-card__title">営業時間変更のお知らせ</h3>
-                                <p class="news-card__excerpt">4月より営業時間を変更させていただきます。平日は19時まで営業時間を延長し...</p>
-                            </div>
-                        </a>
+                    <article class="news-item">
+                        <time class="news-item__date">2025.04.10</time>
+                        <span class="news-item__title">オンライン美容診断キャンペーン実施中</span>
                     </article>
                 </div>
-                
                 <div class="news-more">
                     <a href="#" class="link-more">
                         お知らせ一覧へ <i class="fas fa-chevron-right"></i>

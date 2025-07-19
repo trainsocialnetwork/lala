@@ -1,0 +1,499 @@
+/* ===============================================
+   Product Detail Page CSS - 商品詳細ページ専用スタイル
+   =============================================== */
+
+/* ===============================================
+   商品ヒーローセクション
+   =============================================== */
+.product-hero {
+  padding: var(--spacing-xl) 0;
+}
+
+.product-hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-hero__image {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.product-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-hero__info {
+  width: 100%;
+}
+
+.product-category-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: var(--color-secondary);
+  color: white;
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--spacing-md);
+}
+
+.product-hero__title {
+  font-size: var(--font-size-3xl);
+  font-weight: 400;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+  line-height: var(--line-height-tight);
+}
+
+.product-hero__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  letter-spacing: 0.1em;
+  margin-bottom: var(--spacing-md);
+}
+
+.product-hero__description {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-loose);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-lg);
+}
+
+.product-hero__details {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.product-hero__volume {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.volume-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+.volume-amount {
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+.product-hero__price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding-top: var(--spacing-lg);
+}
+
+.price-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+.price-amount {
+  font-size: var(--font-size-4xl);
+  color: var(--color-primary);
+  font-weight: 400;
+}
+
+.price-tax {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+/* ===============================================
+   商品詳細ブロック
+   =============================================== */
+.section--product-details {
+  padding: var(--spacing-3xl) 0;
+}
+
+.product-detail-block {
+  margin-bottom: var(--spacing-3xl);
+  padding-bottom: var(--spacing-3xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.product-detail-block:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.product-detail-block__title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.product-detail-block__title i {
+  color: var(--color-secondary);
+}
+
+/* 効果・効能リスト */
+.product-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.product-benefits-list li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text);
+}
+
+.product-benefits-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-size: var(--font-size-lg);
+}
+
+/* おすすめリスト */
+.product-recommend-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-sm);
+}
+
+.product-recommend-list li {
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.product-recommend-list li::before {
+  content: "•";
+  color: var(--color-secondary);
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+}
+
+/* 成分リスト */
+.ingredient-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.ingredient-item {
+  padding-left: var(--spacing-md);
+  border-left: 3px solid var(--color-secondary);
+}
+
+.ingredient-item h3 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.ingredient-item p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+}
+
+/* 成分リスト - タグパターン */
+.ingredient-list--tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  flex-direction: row; /* 明示的に横並びを指定 */
+}
+
+.ingredient-list--tags .ingredient-item {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: transparent;
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--radius-sm);
+  border-left: none;
+  color: var(--color-secondary);
+  transition: all var(--transition-base);
+   border-left: 1px solid var(--color-secondary) !important;
+}
+
+.ingredient-list--tags .ingredient-item:hover {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.ingredient-list--tags .ingredient-item h3 {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  margin: 0;
+  color: inherit;
+}
+
+.ingredient-list--tags .ingredient-item p {
+  display: none;
+}
+
+/* 使用方法 */
+.usage-guide {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.usage-step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+}
+
+.usage-step__number {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.usage-step p {
+  flex: 1;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  padding-top: 4px;
+}
+
+/* または、よりミニマルなデザイン */
+.usage-guide--minimal {
+    padding: var(--spacing-md) 0;
+}
+
+.usage-guide--minimal .usage-description {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-loose);
+    color: var(--color-text);
+    margin: 0;
+    padding-left: var(--spacing-lg);
+    position: relative;
+}
+
+.usage-guide--minimal .usage-description::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--color-secondary);
+}
+
+.usage-note {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+.usage-note i {
+  color: var(--color-secondary);
+}
+
+/* ===============================================
+   購入フローセクション
+   =============================================== */
+.section--purchase {
+  padding: var(--spacing-3xl) 0;
+}
+
+.purchase-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background-color: #FFF9F0;
+  border: 1px solid #FFE0B2;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.purchase-notice i {
+  color: #FF9800;
+  font-size: var(--font-size-xl);
+  flex-shrink: 0;
+}
+
+.purchase-notice p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text);
+}
+
+.purchase-flow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.purchase-flow .flow-step {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  position: relative;
+}
+
+.purchase-flow .flow-step::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 48px;
+  bottom: -var(--spacing-lg);
+  width: 2px;
+  background-color: var(--color-border);
+}
+
+.purchase-flow .flow-step:last-child::before {
+  display: none;
+}
+
+.purchase-flow .flow-step__number {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  z-index: 1;
+}
+
+.purchase-flow .flow-step__content {
+  flex: 1;
+  background-color: white;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.purchase-flow .flow-step__content h3 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.purchase-flow .flow-step__content p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  line-height: var(--line-height-loose);
+}
+
+.purchase-cta {
+  text-align: center;
+}
+
+.purchase-cta .button {
+  min-width: 280px;
+}
+
+/* ===============================================
+   関連商品セクション
+   =============================================== */
+.section--related {
+  padding: var(--spacing-3xl) 0;
+}
+
+.related-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+/* ===============================================
+   注意事項セクション
+   =============================================== */
+.section--cautions .caution-list {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.section--cautions .caution-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.section--cautions .caution-list li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+}
+
+.section--cautions .caution-list li::before {
+  content: "•";
+  position: absolute;
+  left: var(--spacing-sm);
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+/* ===============================================
+   レスポンシブ調整（PC版もスマホレイアウト維持）
+   =============================================== */
+@media (min-width: 430px) {
+  /* PCでもmax-width: 430pxを維持 */
+  .product-hero__content,
+  .section--product-details .container,
+  .section--purchase .container,
+  .section--related .container,
+  .section--cautions .container {
+    max-width: 430px;
+    margin: 0 auto;
+  }
+}
