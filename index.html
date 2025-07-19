@@ -61,21 +61,37 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero__visual">
-                <img src="assets/images/01_hero_01.png" alt="LALA Beauty Clinic">
+        <section class="hero-geometric">
+            <!-- 動画背景 -->
+            <video class="hero-geometric__video" autoplay muted loop playsinline>
+                <source src="assets/videos/hero-video.mp4" type="video/mp4">
+                <!-- フォールバック画像 -->
+                <img src="assets/images/hero-fallback.jpg" alt="LaLa Beauty Clinic">
+            </video>
+    
+            <!-- ジオメトリックシェイプ -->
+            <div class="hero-geometric__shapes">
+                <div class="shape-overlay shape-overlay--1"></div>
+                <div class="shape-overlay shape-overlay--2"></div>
+                <div class="shape-overlay shape-overlay--3"></div>
             </div>
-            <div class="hero__content">
-                <div class="container">
-                    <h1 class="hero__title">
-                        あなた史上、<br>もっとも自然な"美"を。
-                    </h1>
-                    <p class="hero__text">
-                        裏付けされた実績と技術でかなえるオーダーメイドのアートメイク、<br class="pc-only">
-                        そしてクリニック品質のケアをいつでもどこでも──おうちで叶えるサロンクオリティ。<br class="pc-only">
-                        LALA の２つのビューティーソリューションが、あなたの美しさを新たなステージへ導きます。
-                    </p>
-                </div>
+    
+            <!-- コンテンツ -->
+            <div class="hero-geometric__content">
+                <h1 class="hero-geometric__title">
+                    あなた史上、<br>
+                    もっとも自然な"美"を。
+                </h1>
+                <p class="hero-geometric__text">
+                    裏付けされた実績と技術でかなえるオーダーメイドのアートメイク、<br>
+                    そしてクリニック品質のケアをいつでもどこでも。
+                </p>
+                <a href="#services" class="hero-geometric__cta">
+                    サービスを見る
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
         </section>
 
