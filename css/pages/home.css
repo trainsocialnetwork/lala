@@ -58,7 +58,7 @@
 .hero--geometric .hero__visual video,
 .hero--geometric .hero__visual img {
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
     object-fit: none;
     /* object-position: center;*/
 }
