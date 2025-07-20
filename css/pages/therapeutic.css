@@ -1,353 +1,375 @@
 /* ===============================================
-Therapeutic Program Page CSS - セラピューティックプログラム専用スタイル
-=============================================== */
+   Therapeutic Program Page CSS - セラピューティックプログラム専用スタイル
+   =============================================== */
 
 /* ===============================================
-ページヒーロー（セラピューティック用）
-=============================================== */
-.page-hero–therapeutic {
-height: 35vh;
-min-height: 280px;
+   ページヒーロー（セラピューティック用）
+   =============================================== */
+.page-hero--therapeutic {
+  height: 35vh;
+  min-height: 280px;
 }
 
 /* ===============================================
-プロセスタイムライン（カードレス版）
-=============================================== */
-.process-timeline–cardless {
-display: flex;
-flex-direction: column;
-gap: 0;
-max-width: 100%;
-margin: 0 auto;
+   プロセスタイムライン（カードレス版）
+   =============================================== */
+.section--process .section__title {
+  margin-bottom: var(--spacing-2xl); /* 60px */
 }
 
-.process-timeline–cardless .process-phase {
-background-color: transparent;
-border-radius: 0;
-overflow: visible;
-box-shadow: none;
-padding-bottom: var(–spacing-3xl);
-margin-bottom: var(–spacing-3xl);
-border-bottom: 1px solid var(–color-border);
-transition: none;
+.process-timeline--cardless {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.process-timeline–cardless .process-phase:last-child {
-padding-bottom: 0;
-margin-bottom: 0;
-border-bottom: none;
+.process-timeline--cardless .process-phase {
+  background-color: transparent;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  padding-bottom: var(--spacing-2xl); /* 60pxに変更 */
+  margin-bottom: var(--spacing-2xl); /* 60pxに変更 */
+  border-bottom: 1px solid var(--color-border);
+  transition: none;
 }
 
-.process-timeline–cardless .process-phase:hover {
-box-shadow: none;
-transform: none;
+.process-timeline--cardless .process-phase:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
 }
 
-.process-timeline–cardless .process-phase__header {
-background-color: transparent;
-color: var(–color-text);
-padding: 0 0 var(–spacing-lg) 0;
-display: flex;
-flex-direction: column;
-gap: var(–spacing-sm);
-border-bottom: 2px solid var(–color-primary);
-margin-bottom: var(–spacing-lg);
+.process-timeline--cardless .process-phase:hover {
+  box-shadow: none;
+  transform: none;
 }
 
-.process-timeline–cardless .process-phase__period {
-font-size: var(–font-size-sm);
-color: var(–color-text-light);
+.process-timeline--cardless .process-phase__header {
+  background-color: transparent;
+  color: var(--color-text);
+  padding: 0 0 var(--spacing-md) 0; /* 24pxに変更 */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs); /* 8px */
+  border-bottom: 2px solid var(--color-primary);
+  margin-bottom: var(--spacing-lg); /* 32px */
 }
 
-.process-timeline–cardless .process-phase__title {
-font-size: var(–font-size-xl);
-font-weight: 600;
-margin: 0;
-display: flex;
-flex-direction: column;
-gap: var(–spacing-xs);
-color: var(–color-primary);
+.process-timeline--cardless .process-phase__period {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
 }
 
-.process-timeline–cardless .phase-number {
-font-size: var(–font-size-sm);
-font-weight: 400;
-color: var(–color-secondary);
-text-transform: uppercase;
-letter-spacing: 0.1em;
+.process-timeline--cardless .process-phase__title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  color: var(--color-primary);
 }
 
-.process-timeline–cardless .process-phase__content {
-padding: 0;
-display: flex;
-flex-direction: column;
-gap: var(–spacing-lg);
+.process-timeline--cardless .phase-number {
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.process-timeline--cardless .process-phase__content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg); /* 32px */
 }
 
 .process-phase__description {
-font-size: var(–font-size-sm);
-line-height: var(–line-height-loose);
-color: var(–color-text);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text);
 }
 
 .process-phase__symptoms {
-background-color: var(–color-bg-light);
-border-radius: var(–radius-md);
-padding: var(–spacing-md);
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg); /* 32pxに変更 */
 }
 
 .process-phase__symptoms h4 {
-font-size: var(–font-size-base);
-font-weight: 600;
-color: var(–color-primary);
-margin-bottom: var(–spacing-sm);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md); /* 24px */
 }
 
 .process-phase__symptoms ul {
-display: flex;
-flex-direction: column;
-gap: var(–spacing-xs);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm); /* 16px */
 }
 
 .process-phase__symptoms li {
-font-size: var(–font-size-sm);
-color: var(–color-text-light);
-padding-left: var(–spacing-md);
-position: relative;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  padding-left: var(--spacing-md);
+  position: relative;
 }
 
 .process-phase__symptoms li::before {
-content: “・”;
-position: absolute;
-left: 0;
-color: var(–color-secondary);
-font-weight: bold;
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: var(--color-secondary);
+  font-weight: bold;
 }
 
 /* ===============================================
-製品セット
-=============================================== */
+   製品セット
+   =============================================== */
+.section--products .section__title {
+  margin-bottom: var(--spacing-lg); /* 32px */
+}
+
+.section--products .section__lead {
+  margin-bottom: var(--spacing-2xl); /* 60px */
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+  text-align: center;
+}
+
 .product-set {
-margin-bottom: var(–spacing-3xl);
+  margin-bottom: var(--spacing-2xl); /* 60pxに変更 */
 }
 
 .product-set:last-child {
-margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .product-set__title {
-font-size: var(–font-size-lg);
-font-weight: 600;
-color: var(–color-primary);
-margin-bottom: var(–spacing-lg);
-padding-bottom: var(–spacing-sm);
-border-bottom: 2px solid var(–color-primary);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-primary);
 }
 
 .product-set__grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: var(–spacing-md);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
 }
 
 /* シンプルな製品カード */
-.product-card–simple {
-background-color: var(–color-bg);
-border: 1px solid var(–color-border);
-border-radius: var(–radius-md);
-padding: var(–spacing-md);
-text-align: center;
-transition: all var(–transition-base);
+.product-card--simple {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  text-align: center;
+  transition: all var(--transition-base);
 }
 
-.product-card–simple:hover {
-box-shadow: var(–shadow-sm);
-transform: translateY(-2px);
+.product-card--simple:hover {
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
 }
 
-.product-card–simple .product-card__image {
-width: 80px;
-height: 80px;
-margin: 0 auto var(–spacing-sm);
+.product-card--simple .product-card__image {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--spacing-sm);
 }
 
-.product-card–simple .product-card__image img {
-width: 100%;
-height: 100%;
-object-fit: contain;
+.product-card--simple .product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.product-card–simple .product-card__info h4 {
-font-size: var(–font-size-sm);
-font-weight: 600;
-color: var(–color-text);
-margin-bottom: var(–spacing-xs);
+.product-card--simple .product-card__info h4 {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
 }
 
-.product-card–simple .product-card__info p {
-font-size: var(–font-size-ss);
-color: var(–color-text-light);
-margin: 0;
+.product-card--simple .product-card__info p {
+  font-size: var(--font-size-ss);
+  color: var(--color-text-light);
+  margin: 0;
 }
 
 /* ===============================================
-効果グリッド
-=============================================== */
+   効果グリッド
+   =============================================== */
+.section--results .section__title {
+  margin-bottom: var(--spacing-2xl); /* 60px */
+}
+
 .results-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: var(–spacing-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md); /* 24px */
 }
 
 .result-item {
-text-align: center;
-padding: var(–spacing-lg);
-background-color: var(–color-bg);
-border-radius: var(–radius-lg);
-box-shadow: var(–shadow-sm);
-transition: all var(–transition-base);
+  text-align: center;
+  padding: var(--spacing-lg); /* 32px */
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
 }
 
 .result-item:hover {
-transform: translateY(-4px);
-box-shadow: var(–shadow-md);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .result-item__icon {
-width: 60px;
-height: 60px;
-margin: 0 auto var(–spacing-md);
-background-color: var(–color-bg-light);
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--spacing-md); /* 下部マージン24px */
+  background-color: var(--color-bg-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .result-item__icon i {
-font-size: var(–font-size-2xl);
-color: var(–color-primary);
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
 }
 
 .result-item h3 {
-font-size: var(–font-size-base);
-font-weight: 600;
-color: var(–color-primary);
-margin-bottom: var(–spacing-sm);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm); /* 16px */
+  line-height: var(--line-height-tight);
 }
 
 .result-item p {
-font-size: var(–font-size-sm);
-line-height: var(–line-height-loose);
-color: var(–color-text-light);
-margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+  margin: 0;
 }
 
 /* ===============================================
-重要事項リスト（カードレス版）
-=============================================== */
-.important-list–cardless {
-display: flex;
-flex-direction: column;
-gap: 0;
+   重要事項リスト（カードレス版）
+   =============================================== */
+.important-list--cardless {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .important-item {
-background-color: transparent;
-border-radius: 0;
-padding: var(–spacing-xl) 0;
-border-bottom: 1px solid var(–color-border);
-border-left: none;
+  background-color: transparent;
+  border-radius: 0;
+  padding: var(--spacing-xl) 0;
+  border-bottom: 1px solid var(--color-border);
+  border-left: none;
 }
 
 .important-item:last-child {
-border-bottom: none;
+  border-bottom: none;
 }
 
 .important-item__title {
-font-size: var(–font-size-lg);
-font-weight: 600;
-color: var(–color-primary);
-margin-bottom: var(–spacing-md);
-display: flex;
-align-items: center;
-gap: var(–spacing-sm);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
 }
 
 .important-item__title i {
-color: var(–color-secondary);
+  color: var(--color-secondary);
 }
 
 .important-item p {
-font-size: var(–font-size-sm);
-line-height: var(–line-height-loose);
-color: var(–color-text-light);
-margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+  margin: 0;
 }
 
 /* ===============================================
-CTAセクション
-=============================================== */
-.section–cta {
-background-color: var(–color-bg-light);
-text-align: center;
-padding: var(–spacing-3xl) 0;
+   CTAセクション
+   =============================================== */
+.section--cta {
+  background-color: var(--color-bg-light);
+  text-align: center;
+  padding: var(--spacing-3xl) 0;
 }
 
-.section–cta .section__lead {
-max-width: 600px;
-margin: 0 auto var(–spacing-xl);
+.section--cta .section__lead {
+  max-width: 600px;
+  margin: 0 auto var(--spacing-xl);
 }
 
 .cta-buttons {
-display: flex;
-justify-content: center;
-gap: var(–spacing-md);
-flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
 }
 
 /* ===============================================
-レスポンシブ調整
-=============================================== */
+   レスポンシブ調整
+   =============================================== */
 @media (min-width: 430px) {
-/* PCでもスマホレイアウトを維持 */
-.process-timeline–cardless,
-.product-set__grid,
-.results-grid,
-.important-list–cardless {
-max-width: 430px;
-margin: 0 auto;
-}
+  /* PCでもスマホレイアウトを維持 */
+  .process-timeline--cardless,
+  .product-set__grid,
+  .results-grid,
+  .important-list--cardless {
+    max-width: 430px;
+    margin: 0 auto;
+  }
 }
 
 /* ===============================================
-セクション余白の統一
-=============================================== */
-.section–process,
-.section–results,
-.section–important {
-padding: var(–spacing-3xl) 0; /* 他ページと同じ80px */
+   セクション余白の統一
+   =============================================== */
+.section--process,
+.section--products,
+.section--results,
+.section--important {
+  padding: var(--spacing-3xl) 0; /* 他ページと同じ80px */
 }
-.process-phase–reaction .process-phase__header {
-border-bottom-color: #E53E3E;
-}
-
-.process-phase–reaction .process-phase__title {
-color: #E53E3E;
+.process-phase--reaction .process-phase__header {
+  border-bottom-color: #E53E3E;
 }
 
-.process-phase–tolerance .process-phase__header {
-border-bottom-color: #38B2AC;
+.process-phase--reaction .process-phase__title {
+  color: #E53E3E;
 }
 
-.process-phase–tolerance .process-phase__title {
-color: #38B2AC;
+.process-phase--tolerance .process-phase__header {
+  border-bottom-color: #38B2AC;
 }
 
-.process-phase–completion .process-phase__header {
-border-bottom-color: #48BB78;
+.process-phase--tolerance .process-phase__title {
+  color: #38B2AC;
 }
 
-.process-phase–completion .process-phase__title {
-color: #48BB78;
+.process-phase--completion .process-phase__header {
+  border-bottom-color: #48BB78;
+}
+
+.process-phase--completion .process-phase__title {
+  color: #48BB78;
 }
