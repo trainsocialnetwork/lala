@@ -60,13 +60,13 @@
     width: 100%;
     /* height: 100%; */
     object-fit: none;
-    /* object-position: center;
+    /* object-position: center;*/
 }
 
 /* コンテンツエリア */
 .hero--geometric .hero__content {
   position: absolute;
-  bottom: 60px;
+  /*bottom: 60px;*/
   left: 0;
   right: 0;
   z-index: 3;
@@ -81,7 +81,7 @@
 /* テキストスタイル調整 */
 .hero--geometric .hero__title {
   font-size: clamp(28px, 7vw, 36px);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.5;
   margin-bottom: var(--spacing-md);
   color: var(--color-text);
@@ -92,6 +92,7 @@
   line-height: 1.8;
   color: var(--color-text-light);
   margin-bottom: 0;
+  font-weight: 600;
 }
 
 /* アニメーション */
