@@ -70,6 +70,8 @@
   left: 0;
   right: 0;
   z-index: 3;
+  padding: none;
+  background: none;
 }
 
 .hero--geometric .hero__inner {
