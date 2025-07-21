@@ -51,7 +51,7 @@
  font-size: clamp(14px, 2vw, 18px);
  line-height: 1.8;
  color: var(--color-primary);
- font-weight: 900;
+ font-weight: 700;
  width: 100%;
  text-shadow: var(--color-bg-light);
  background-color: rgba(255, 255, 255, 0.2);
