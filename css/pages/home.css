@@ -14,162 +14,125 @@
 /* ===============================================
    マスクビデオヒーローセクション
    =============================================== */
-.hero--masked {
+.hero--portal {
     position: relative;
     width: 100%;
-    max-width: var(--content-width-max);
-    height: 600px;
+    max-width: 430px;
+    height: 650px;
     margin: 60px auto 0;
     overflow: hidden;
-    background: #FAFAFA;
+    background: #F5F7FA;
 }
 
-/* ビデオコンテナ */
-.hero__video-container {
+/* ポータルコンテナ */
+.portal-container {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 150%;
-    height: 150%;
-    z-index: 1;
-}
-
-.hero__video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* マスクレイヤー */
-.hero__masks {
-    position: absolute;
+    height: 50%;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
     z-index: 2;
 }
 
-/* 円形マスク */
-.mask-circle {
+/* ポータル（円形の窓） */
+.portal {
     position: absolute;
-    background: #FAFAFA;
     border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    background: #000;
 }
 
-/* 各円の位置とサイズ */
-.mask-circle--1 {
-    width: 180px;
-    height: 180px;
-    top: 15%;
-    right: 10%;
-    box-shadow: inset 0 0 0 180px #FAFAFA;
-}
-
-.mask-circle--2 {
+.portal--1 {
     width: 140px;
     height: 140px;
-    top: 50%;
-    right: 25%;
-    box-shadow: inset 0 0 0 140px #FAFAFA;
+    top: 20px;
+    right: 10px;
 }
 
-.mask-circle--3 {
-    width: 100px;
-    height: 100px;
-    top: 70%;
-    right: 8%;
-    box-shadow: inset 0 0 0 100px #FAFAFA;
+.portal--2 {
+    width: 110px;
+    height: 110px;
+    top: 60px;
+    left: 20px;
 }
 
-/* SVGマスク版（より滑らかな表現） */
-.hero--masked::before {
-    content: '';
+.portal--3 {
+    width: 90px;
+    height: 90px;
+    top: 180px;
+    right: 40px;
+}
+
+/* ポータル内の動画 */
+.portal video {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #FAFAFA;
-    z-index: 3;
-    mask-image: radial-gradient(circle 90px at 85% 20%, transparent 100%, black 100%),
-                radial-gradient(circle 70px at 70% 55%, transparent 100%, black 100%),
-                radial-gradient(circle 50px at 88% 75%, transparent 100%, black 100%);
-    mask-composite: exclude;
-    -webkit-mask-image: radial-gradient(circle 90px at 85% 20%, transparent 100%, black 100%),
-                        radial-gradient(circle 70px at 70% 55%, transparent 100%, black 100%),
-                        radial-gradient(circle 50px at 88% 75%, transparent 100%, black 100%);
-    -webkit-mask-composite: source-out;
+    top: 50%;
+    left: 50%;
+    min-width: 430px;
+    min-height: 600px;
+    width: 430px;
+    height: 600px;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+/* 各ポータルの動画位置調整（異なる部分を表示） */
+.portal--1 video {
+    transform: translate(-30%, -30%);
+}
+
+.portal--2 video {
+    transform: translate(-60%, -50%);
+}
+
+.portal--3 video {
+    transform: translate(-40%, -70%);
 }
 
 /* コンテンツエリア */
-.hero--masked .hero__content {
+.hero--portal .hero__content {
     position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 55%;
-    z-index: 4;
+    width: 100%;
+    bottom: 20px;
+    z-index: 3;
     padding: 0;
-    background: none;
+    text-align: center;
 }
 
-.hero--masked .hero__inner {
-    padding-left: var(--content-padding);
+.hero--portal .hero__inner {
+    padding: 0 var(--content-padding);
 }
 
 /* テキストスタイル */
-.hero--masked .hero__title {
-    font-size: clamp(32px, 7vw, 40px);
+.hero--portal .hero__title {
+    font-size: 28px;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.3;
     margin-bottom: var(--spacing-lg);
     color: var(--color-primary);
     letter-spacing: 0.02em;
 }
 
-.hero--masked .hero__text {
-    font-size: var(--font-size-base);
+.hero--portal .hero__text {
+    font-size: var(--font-size-sm);
     line-height: 1.8;
     color: var(--color-text);
     margin-bottom: var(--spacing-xl);
-    max-width: 90%;
+    max-width: 100%;
 }
 
 /* CTAボタン */
 .hero__cta {
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .hero__cta .button {
-    padding: var(--spacing-sm) var(--spacing-xl);
-}
-
-/* フェードインアニメーション */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero--masked .hero__title {
-    animation: fadeInUp 0.8s ease-out 0.3s both;
-}
-
-.hero--masked .hero__text {
-    animation: fadeInUp 0.8s ease-out 0.5s both;
-}
-
-.hero--masked .hero__cta {
-    animation: fadeInUp 0.8s ease-out 0.7s both;
+    padding: 12px 28px;
+    font-size: var(--font-size-sm);
 }
 
 /* ===============================================
