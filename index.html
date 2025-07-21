@@ -61,27 +61,10 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero hero--portal">
-            <!-- Portal Windows with same video -->
-            <div class="portal-container">
-                <div class="portal portal--1">
-                    <video autoplay muted loop playsinline>
-                        <source src="assets/videos/top-hero1.webm" type="video/webm">
-                    </video>
-                </div>
-                <div class="portal portal--2">
-                    <video autoplay muted loop playsinline>
-                        <source src="assets/videos/top-hero1.webm" type="video/webm">
-                    </video>
-                </div>
-                <div class="portal portal--3">
-                    <video autoplay muted loop playsinline>
-                        <source src="assets/videos/top-hero1.webm" type="video/webm">
-                    </video>
-                </div>
-            </div>
-            
-            <!-- Content -->
+        <section class="hero">
+            <video class="hero__video" autoplay muted loop playsinline>
+                <source src="top-hero.webm" type="video/webm">
+            </video>
             <div class="hero__content">
                 <div class="hero__inner">
                     <h1 class="hero__title">
@@ -93,6 +76,11 @@
                         そしてクリニック品質のケアをいつでもどこでも。
                     </p>
                 </div>
+            </div>
+            <div class="hero__wave">
+                <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                    <path d="M0,40 C240,120 480,0 720,80 C960,160 1200,40 1440,120 L1440,120 L0,120 Z" fill="#ffffff"></path>
+                </svg>
             </div>
         </section>
 
