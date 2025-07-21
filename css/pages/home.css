@@ -172,40 +172,6 @@
     animation: fadeInUp 0.8s ease-out 0.7s both;
 }
 
-/* レスポンシブ調整 */
-@media (max-width: 768px) {
-    .hero--masked {
-        height: 500px;
-    }
-    
-    .hero--masked .hero__content {
-        width: 100%;
-        top: auto;
-        bottom: 40px;
-        transform: none;
-        text-align: center;
-    }
-    
-    .hero--masked .hero__inner {
-        padding: 0 var(--content-padding);
-    }
-    
-    /* モバイルでのマスク位置調整 */
-    .hero--masked::before {
-        -webkit-mask-image: radial-gradient(circle 60px at 80% 15%, transparent 100%, black 100%),
-                            radial-gradient(circle 50px at 70% 40%, transparent 100%, black 100%),
-                            radial-gradient(circle 40px at 85% 60%, transparent 100%, black 100%);
-    }
-    
-    .hero--masked .hero__text {
-        max-width: 100%;
-    }
-    
-    .hero__cta {
-        justify-content: center;
-    }
-}
-
 /* ===============================================
    サービスリスト - カードレスデザイン
    =============================================== */
