@@ -16,7 +16,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  width: 100%;
   object-fit: cover;
   z-index: 0;
 }
@@ -52,6 +52,7 @@
  line-height: 1.8;
  color: var(--color-primary);
  font-weight: 600;
+ width: 80%;
 }
 
 /* 波形の境界線 */
