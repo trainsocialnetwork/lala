@@ -12,111 +12,140 @@
 }
 
 /* ===============================================
-   ジオメトリックヒーローセクション
+   フローティングバブルヒーローセクション
    =============================================== */
-
-/* ヒーローセクション */
-.hero--geometric {
-  position: relative;
-  width: 100%;
-  max-width: var(--content-width-max);
-  height: 600px;
-  margin: 60px auto 0;
-  overflow: hidden;
-  /* 白い斜線の背景パターン */
-  background: 
-    repeating-linear-gradient(
-      -30deg,
-      #f8f8f8,
-      #f8f8f8 1px,
-      #fff 1px,
-      #fff 15px
-    );
+.hero--bubbles {
+    position: relative;
+    width: 100%;
+    max-width: var(--content-width-max);
+    height: 600px;
+    margin: 60px auto 0;
+    overflow: hidden;
+    background: #F8F9FA;
 }
 
-/* ビデオ背景 */
-.hero--geometric .hero__visual {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  z-index: 1;
-  mask-image: 
-    linear-gradient(75deg,
-      transparent 0%,
-      transparent 20%,
-      black 20%,
-      black 65%,
-      transparent 65%,
-      transparent 75%,
-      black 75%,
-      black 95%,
-      transparent 95%
-    );
-}
-
-.hero--geometric .hero__visual video,
-.hero--geometric .hero__visual img {
+/* バブルコンテナ */
+.hero--bubbles .bubble-container {
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: none;
-    /* object-position: center;*/
+    z-index: 2;
+}
+
+/* バブル共通スタイル */
+.hero--bubbles .bubble {
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* 各バブルのサイズと位置 */
+.bubble-1 {
+    width: 160px;
+    height: 160px;
+    top: 15%;
+    right: 5%;
+    animation-delay: 0s;
+}
+
+.bubble-2 {
+    width: 120px;
+    height: 120px;
+    top: 55%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.bubble-3 {
+    width: 100px;
+    height: 100px;
+    top: 25%;
+    right: 35%;
+    animation-delay: 4s;
+}
+
+/* バブル内の画像 */
+.bubble img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.bubble:hover img {
+    transform: scale(1.1);
+}
+
+/* フローティングアニメーション */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* コンテンツエリア */
-.hero--geometric .hero__content {
-  position: absolute;
-  /*bottom: 60px;*/
-  left: 0;
-  right: 0;
-  z-index: 3;
-  padding: none;
-  background: none;
+.hero--bubbles .hero__content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 55%;
+    z-index: 3;
+    padding: 0;
+    background: none;
 }
 
-.hero--geometric .hero__inner {
-  max-width: var(--content-width-max);
-  margin: 0 auto;
-  padding: 0 var(--content-padding);
+.hero--bubbles .hero__inner {
+    padding-left: var(--content-padding);
 }
 
-/* テキストスタイル調整 */
-.hero--geometric .hero__title {
-  font-size: clamp(28px, 7vw, 36px);
-  font-weight: 600;
-  line-height: 1.5;
-  margin-bottom: var(--spacing-md);
-  color: var(--color-text);
+/* テキストスタイル */
+.hero--bubbles .hero__title {
+    font-size: clamp(28px, 7vw, 36px);
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+    position: relative;
+    z-index: 5;
 }
 
-.hero--geometric .hero__text {
-  font-size: var(--font-size-sm);
-  line-height: 1.8;
-  color: var(--color-text-light);
-  margin-bottom: 0;
-  font-weight: 600;
+.hero--bubbles .hero__text {
+    font-size: var(--font-size-sm);
+    line-height: 1.8;
+    color: var(--color-text-light);
+    margin-bottom: 0;
+    max-width: 90%;
 }
 
-/* アニメーション */
-@keyframes heroSlideIn {
-  from {
+/* フェードインアニメーション */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero--bubbles .hero__title {
+    animation: fadeInLeft 0.8s ease-out 0.3s forwards;
     opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
-.hero--geometric .hero__title {
-  animation: heroSlideIn 0.8s ease-out 0.3s forwards;
-  opacity: 0;
-}
-
-.hero--geometric .hero__text {
-  animation: heroSlideIn 0.8s ease-out 0.5s forwards;
-  opacity: 0;
+.hero--bubbles .hero__text {
+    animation: fadeInLeft 0.8s ease-out 0.5s forwards;
+    opacity: 0;
 }
 
 /* ===============================================
