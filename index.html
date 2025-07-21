@@ -61,20 +61,24 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero hero--masked">
-            <!-- Background Video -->
-            <div class="hero__video-container">
-                <video class="hero__video" autoplay muted loop playsinline>
-                    <source src="assets/videos/top-hero1.mp4" type="video/mp4">
-                    <source src="assets/videos/top-hero1.webm" type="video/webm">
-                </video>
-            </div>
-            
-            <!-- Masked Circles -->
-            <div class="hero__masks">
-                <div class="mask-circle mask-circle--1"></div>
-                <div class="mask-circle mask-circle--2"></div>
-                <div class="mask-circle mask-circle--3"></div>
+        <section class="hero hero--portal">
+            <!-- Portal Windows with same video -->
+            <div class="portal-container">
+                <div class="portal portal--1">
+                    <video autoplay muted loop playsinline>
+                        <source src="assets/videos/top-hero1.webm" type="video/webm">
+                    </video>
+                </div>
+                <div class="portal portal--2">
+                    <video autoplay muted loop playsinline>
+                        <source src="assets/videos/top-hero1.webm" type="video/webm">
+                    </video>
+                </div>
+                <div class="portal portal--3">
+                    <video autoplay muted loop playsinline>
+                        <source src="assets/videos/top-hero1.webm" type="video/webm">
+                    </video>
+                </div>
             </div>
             
             <!-- Content -->
@@ -86,12 +90,29 @@
                     </h1>
                     <p class="hero__text">
                         裏付けされた実績と技術でかなえるオーダーメイドのアートメイク、<br class="pc-only">
-                        そしてクリニック品質のケアをいつでもどこでも──<br class="pc-only">
-                        おうちで叶えるサロンクオリティ。
+                        そしてクリニック品質のケアをいつでもどこでも。
                     </p>
+                    <div class="hero__cta">
+                        <a href="./artmake/" class="button button--primary">
+                            アートメイクを見る
+                        </a>
+                        <a href="./online/" class="button button--outline">
+                            オンライン美容を見る
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
+        
+        <!-- Hero Section -->
+        <section class="hero hero--masked">
+            <!-- Background Video -->
+            <div class="hero__video-container">
+                <video class="hero__video" autoplay muted loop playsinline>
+                    <source src="assets/videos/top-hero1.mp4" type="video/mp4">
+                    <source src="assets/videos/top-hero1.webm" type="video/webm">
+                </video>
+            </div>
 
         <!-- Service Overview Section -->
         <section class="section section--service-overview" id="services">
