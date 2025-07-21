@@ -12,140 +12,198 @@
 }
 
 /* ===============================================
-   フローティングバブルヒーローセクション
+   マスクビデオヒーローセクション
    =============================================== */
-.hero--bubbles {
+.hero--masked {
     position: relative;
     width: 100%;
     max-width: var(--content-width-max);
     height: 600px;
     margin: 60px auto 0;
     overflow: hidden;
-    background: #F8F9FA;
+    background: #FAFAFA;
 }
 
-/* バブルコンテナ */
-.hero--bubbles .bubble-container {
+/* ビデオコンテナ */
+.hero__video-container {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    z-index: 1;
+}
+
+.hero__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* マスクレイヤー */
+.hero__masks {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     z-index: 2;
 }
 
-/* バブル共通スタイル */
-.hero--bubbles .bubble {
+/* 円形マスク */
+.mask-circle {
     position: absolute;
+    background: #FAFAFA;
     border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    animation: float 6s ease-in-out infinite;
 }
 
-/* 各バブルのサイズと位置 */
-.bubble-1 {
-    width: 160px;
-    height: 160px;
+/* 各円の位置とサイズ */
+.mask-circle--1 {
+    width: 180px;
+    height: 180px;
     top: 15%;
-    right: 5%;
-    animation-delay: 0s;
+    right: 10%;
+    box-shadow: inset 0 0 0 180px #FAFAFA;
 }
 
-.bubble-2 {
-    width: 120px;
-    height: 120px;
-    top: 55%;
-    right: 15%;
-    animation-delay: 2s;
+.mask-circle--2 {
+    width: 140px;
+    height: 140px;
+    top: 50%;
+    right: 25%;
+    box-shadow: inset 0 0 0 140px #FAFAFA;
 }
 
-.bubble-3 {
+.mask-circle--3 {
     width: 100px;
     height: 100px;
-    top: 25%;
-    right: 35%;
-    animation-delay: 4s;
+    top: 70%;
+    right: 8%;
+    box-shadow: inset 0 0 0 100px #FAFAFA;
 }
 
-/* バブル内の画像 */
-.bubble img {
+/* SVGマスク版（より滑らかな表現） */
+.hero--masked::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.bubble:hover img {
-    transform: scale(1.1);
-}
-
-/* フローティングアニメーション */
-@keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+    background: #FAFAFA;
+    z-index: 3;
+    mask-image: radial-gradient(circle 90px at 85% 20%, transparent 100%, black 100%),
+                radial-gradient(circle 70px at 70% 55%, transparent 100%, black 100%),
+                radial-gradient(circle 50px at 88% 75%, transparent 100%, black 100%);
+    mask-composite: exclude;
+    -webkit-mask-image: radial-gradient(circle 90px at 85% 20%, transparent 100%, black 100%),
+                        radial-gradient(circle 70px at 70% 55%, transparent 100%, black 100%),
+                        radial-gradient(circle 50px at 88% 75%, transparent 100%, black 100%);
+    -webkit-mask-composite: source-out;
 }
 
 /* コンテンツエリア */
-.hero--bubbles .hero__content {
+.hero--masked .hero__content {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     width: 55%;
-    z-index: 3;
+    z-index: 4;
     padding: 0;
     background: none;
 }
 
-.hero--bubbles .hero__inner {
+.hero--masked .hero__inner {
     padding-left: var(--content-padding);
 }
 
 /* テキストスタイル */
-.hero--bubbles .hero__title {
-    font-size: clamp(28px, 7vw, 36px);
-    font-weight: 600;
-    line-height: 1.5;
-    margin-bottom: var(--spacing-md);
-    color: var(--color-text);
-    position: relative;
-    z-index: 5;
+.hero--masked .hero__title {
+    font-size: clamp(32px, 7vw, 40px);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-primary);
+    letter-spacing: 0.02em;
 }
 
-.hero--bubbles .hero__text {
-    font-size: var(--font-size-sm);
+.hero--masked .hero__text {
+    font-size: var(--font-size-base);
     line-height: 1.8;
-    color: var(--color-text-light);
-    margin-bottom: 0;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xl);
     max-width: 90%;
 }
 
+/* CTAボタン */
+.hero__cta {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.hero__cta .button {
+    padding: var(--spacing-sm) var(--spacing-xl);
+}
+
 /* フェードインアニメーション */
-@keyframes fadeInLeft {
+@keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateX(-30px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
-.hero--bubbles .hero__title {
-    animation: fadeInLeft 0.8s ease-out 0.3s forwards;
-    opacity: 0;
+.hero--masked .hero__title {
+    animation: fadeInUp 0.8s ease-out 0.3s both;
 }
 
-.hero--bubbles .hero__text {
-    animation: fadeInLeft 0.8s ease-out 0.5s forwards;
-    opacity: 0;
+.hero--masked .hero__text {
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.hero--masked .hero__cta {
+    animation: fadeInUp 0.8s ease-out 0.7s both;
+}
+
+/* レスポンシブ調整 */
+@media (max-width: 768px) {
+    .hero--masked {
+        height: 500px;
+    }
+    
+    .hero--masked .hero__content {
+        width: 100%;
+        top: auto;
+        bottom: 40px;
+        transform: none;
+        text-align: center;
+    }
+    
+    .hero--masked .hero__inner {
+        padding: 0 var(--content-padding);
+    }
+    
+    /* モバイルでのマスク位置調整 */
+    .hero--masked::before {
+        -webkit-mask-image: radial-gradient(circle 60px at 80% 15%, transparent 100%, black 100%),
+                            radial-gradient(circle 50px at 70% 40%, transparent 100%, black 100%),
+                            radial-gradient(circle 40px at 85% 60%, transparent 100%, black 100%);
+    }
+    
+    .hero--masked .hero__text {
+        max-width: 100%;
+    }
+    
+    .hero__cta {
+        justify-content: center;
+    }
 }
 
 /* ===============================================
