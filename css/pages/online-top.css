@@ -229,7 +229,7 @@
   align-items: flex-start;
   gap: var(--spacing-md);
   position: relative;
-  padding-bottom: var(--spacing-xl);
+  /* padding-bottom: var(--spacing-sm);*/
 }
 
 .flow-step:last-child {
