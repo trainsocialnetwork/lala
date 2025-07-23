@@ -228,6 +228,17 @@
   padding-bottom: 0;
 }
 
+/*common-componentsの上書き*/
+.flow-step::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0px;
+    bottom: -40px;
+    width: 2px;
+    background-color: var(--color-border);
+}
+
 /* 縦線のスタイル */
 .flow-step:not(:last-child)::after {
   content: '';
@@ -281,6 +292,11 @@
   background-color: var(--color-bg-light);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
+}
+
+#about-beauty-supplements .info-subsection {
+  background-color: white;
+  box-shadow: var(--shadow-sm);
 }
 
 .info-subsection__title {
