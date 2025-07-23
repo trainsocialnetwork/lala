@@ -238,7 +238,6 @@
   background-color: transparent;
   border: 1px solid var(--color-primary);
   border-radius: var(--radius-sm);
-  border-left: none;
   color: var(--color-primary);
   transition: all var(--transition-base);
 }
