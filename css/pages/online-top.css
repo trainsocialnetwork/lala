@@ -212,14 +212,15 @@
 .flow-steps {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: 0;
 }
 
 .flow-step {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--spacing-md);
   position: relative;
+  padding-bottom: var(--spacing-lg)
 }
 
 .flow-step__number {
@@ -234,14 +235,15 @@
   justify-content: center;
   font-size: var(--font-size-sm);
   font-weight: 600;
+  z-index: 1
 }
 
 .flow-step::before {
   content: '';
   position: absolute;
+  top: 32px
   left: 16px;
-  top: var(--spacing-xl);
-  bottom: -var(--spacing-md);
+  bottom: 0
   width: 2px;
   background-color: var(--color-border);
 }
