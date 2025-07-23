@@ -71,10 +71,6 @@
   max-width: 300px;
 }
 
-.product-category {
-  padding: 0 var(--content-padding);
-}
-
 /* 製品アイテム（ゼオスキンのスタイルを拡張） */
 .product-item {
   display: flex;
@@ -82,7 +78,7 @@
   background: white;
   transition: all var(--transition-base);
   position: relative;
-  border: 2px solid var(--color-border);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
 }
 
@@ -99,11 +95,6 @@
   box-shadow: var(--shadow-md);
   z-index: 1;
   transform: translateY(-2px);
-}
-
-/* 右端のボーダーを削除 */
-.product-item:nth-child(2n) {
-  border-right: none;
 }
 
 /* 大きい商品アイテム（単一商品用） */
