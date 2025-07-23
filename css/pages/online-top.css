@@ -82,6 +82,8 @@
   background: white;
   transition: all var(--transition-base);
   position: relative;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
 }
 
 /* リンク全体をクリッカブルに */
