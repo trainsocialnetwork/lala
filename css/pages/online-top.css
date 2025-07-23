@@ -300,11 +300,11 @@
   background-color: var(--color-bg-light);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 #about-beauty-supplements .info-subsection {
   background-color: white;
-  box-shadow: var(--shadow-sm);
 }
 
 .info-subsection__title {
