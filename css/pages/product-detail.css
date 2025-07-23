@@ -38,13 +38,14 @@
 }
 
 .product-category-badge {
-  display: inline-block;
-  padding: var(--spacing-xs) var(--spacing-md);
-  background-color: var(--color-secondary);
-  color: white;
-  font-size: var(--font-size-sm);
-  border-radius: var(--radius-full);
-  margin-bottom: var(--spacing-md);
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-md);
+    color: white;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    font-size: var(--font-size-sm);
+    border-radius: var(--radius-full);
+    margin-bottom: var(--spacing-md);
 }
 
 .product-hero__title {
@@ -208,7 +209,6 @@
 
 .ingredient-item {
   padding-left: var(--spacing-md);
-  border-left: 3px solid var(--color-secondary);
 }
 
 .ingredient-item h3 {
@@ -236,17 +236,11 @@
   display: inline-block;
   padding: 6px 16px;
   background-color: transparent;
-  border: 1px solid var(--color-secondary);
+  border: 1px solid var(--color-primary);
   border-radius: var(--radius-sm);
   border-left: none;
-  color: var(--color-secondary);
+  color: var(--color-primary);
   transition: all var(--transition-base);
-   border-left: 1px solid var(--color-secondary) !important;
-}
-
-.ingredient-list--tags .ingredient-item:hover {
-  background-color: var(--color-secondary);
-  color: white;
 }
 
 .ingredient-list--tags .ingredient-item h3 {
