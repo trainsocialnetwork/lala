@@ -71,6 +71,10 @@
   max-width: 300px;
 }
 
+.product-category {
+  padding: 0 var(--content-padding);
+}
+
 /* 製品アイテム（ゼオスキンのスタイルを拡張） */
 .product-item {
   display: flex;
