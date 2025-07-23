@@ -60,7 +60,7 @@
 .products-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0;
+  gap: 0 var(--spacing-sm);
   max-width: 430px;
   margin: 0 auto;
 }
@@ -164,14 +164,14 @@
 
 /* CTAボタン */
 .product-cta {
-  display: inline-block;
-  padding: 6px 16px;
-  background-color: var(--color-primary);
-  color: white;
-  font-size: 11px;
-  border-radius: var(--radius-full);
-  text-decoration: none;
-  transition: all var(--transition-base);
+    display: inline-block;
+    padding: 6px 16px;
+    background-color: transparent;
+    font-size: 11px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-primary);
+    text-decoration: none;
+    transition: all var(--transition-base);
 }
 
 .product-item:hover .product-cta {
