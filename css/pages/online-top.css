@@ -213,6 +213,7 @@
   display: flex;
   flex-direction: column;
   gap: 0;
+  position: relative;
 }
 
 .flow-step {
@@ -220,7 +221,22 @@
   align-items: flex-start;
   gap: var(--spacing-md);
   position: relative;
-  padding-bottom: var(--spacing-lg)
+  padding-bottom: var(--spacing-xl);
+}
+
+.flow-step:last-child {
+  padding-bottom: 0;
+}
+
+/* 縦線のスタイル */
+.flow-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 16px;
+  top: 36px;
+  bottom: 4px;
+  width: 2px;
+  background-color: var(--color-border);
 }
 
 .flow-step__number {
@@ -235,27 +251,15 @@
   justify-content: center;
   font-size: var(--font-size-sm);
   font-weight: 600;
-  z-index: 1
-}
-
-.flow-step::before {
-  content: '';
-  position: absolute;
-  top: 32px
-  left: 16px;
-  bottom: 0
-  width: 2px;
-  background-color: var(--color-border);
-}
-
-.flow-step:last-child::before {
-  display: none;
+  z-index: 1;
+  position: relative;
 }
 
 .flow-step__text {
   flex: 1;
   font-size: var(--font-size-sm);
   line-height: var(--line-height-loose);
+  padding-top: 4px;
 }
 
 /* ===============================================
