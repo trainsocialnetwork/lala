@@ -232,9 +232,9 @@
 .flow-step:not(:last-child)::after {
   content: '';
   position: absolute;
-  left: 16px;
-  top: 36px;
-  bottom: 4px;
+  left: 15px;  
+  top: 32px;  
+  bottom: 0; 
   width: 2px;
   background-color: var(--color-border);
 }
