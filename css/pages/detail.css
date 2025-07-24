@@ -316,7 +316,7 @@
    症例ギャラリー
    =============================================== */
 .section--cases {
-  padding: var(--spacing-3xl) 0;
+   padding: 0 0 var(--spacing-3xl) 0;
 }
 
 .section--cases .voice-carousel {
