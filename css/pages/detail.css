@@ -38,7 +38,8 @@
    =============================================== */
 
 .page-hero {
-  height: 260px;
+  height: auto;
+  aspect-ratio: 3 / 2;
   align-items: center;
   overflow: hidden;
   width: 100%;
@@ -304,6 +305,15 @@
   height: 200px;
 }
 
+/* videoのみアスペクト比1:1に設定 */
+.strength-item__video {
+  aspect-ratio: 1 / 1;
+  height: auto;
+  width: 100%;
+  max-width: 300px;
+  margin: 0px auto 20px;
+}
+
 .strength-item__image img,
 .strength-item__video video {
   width: 100%;
@@ -548,7 +558,7 @@
   padding: var(--spacing-xl) 0;
   border-bottom: 1px solid var(--color-border);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   background: none;
   border-radius: 0;
@@ -568,17 +578,18 @@
 }
 
 .section--pricing .price-card__image {
-  width: 150px;
+  width: 100px;
   height: 150px;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: var(--radius-md);
   flex-shrink: 0;
   margin-bottom: var(--spacing-lg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .section--pricing .price-card__content {
-  text-align: center;
+  flex: 1;
+  text-align: left;
   width: 100%;
   padding: 0;
 }
@@ -586,12 +597,12 @@
 .section--pricing .price-card__text {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
 }
 
 .section--pricing .price-card__name {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-base);
   margin-bottom: var(--spacing-md);
   color: var(--color-text);
   font-weight: 600;
@@ -604,7 +615,7 @@
 .section--pricing .price-card__price {
   margin-bottom: 0;
   color: var(--color-primary);
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
   font-weight: normal;
 }
 
@@ -620,7 +631,7 @@
 }
 
 .section--pricing .price-card__price--additional {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
 }
 
 .section--pricing .price-card__info {
