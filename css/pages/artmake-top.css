@@ -253,7 +253,7 @@
 .price-card {
   max-width: 440px;
   width: 100%;
-  padding: 60px 40px;
+  padding: 40px;
   border-bottom: 1px solid #e0e0e0;
   display: flex;
   flex-direction: column;
@@ -271,12 +271,13 @@
 }
 
 .price-card__image {
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 50%;
-  flex-shrink: 0;
-  margin-bottom: 30px; /* 追加 */
+ width: 200px;
+ height: 150px;
+ overflow: hidden;
+ border-radius: var(--radius-lg);
+ flex-shrink: 0;
+ margin: 40px 0;
+ box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .price-card__image img {
@@ -287,7 +288,6 @@
 
 .price-card__content {
   text-align: center;
-  margin-bottom: 30px;
   width: 100%; /* 追加 */
   padding: 0; /* 変更 */
 }
