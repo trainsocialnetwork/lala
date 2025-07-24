@@ -7,11 +7,11 @@
     <meta name="description" content="LaLa Beauty Clinicの料金一覧。アートメイク（眉・リップ）、オンライン総合美容（ゼオスキン）の料金を掲載しています。">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/common-components.css">
-    <link rel="stylesheet" href="../css/themes/default.css">
-    <link rel="stylesheet" href="../css/pages/price-list.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/common-components.css">
+    <link rel="stylesheet" href="./css/themes/default.css">
+    <link rel="stylesheet" href="./css/pages/price-list.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,7 +22,7 @@
         <div class="header__inner">
             <div class="header__logo">
                 <a href="/">
-                    <img src="../assets/images/logo.png" alt="LaLa Beauty Clinicのロゴ">
+                    <img src="assets/images/logo.png" alt="LaLa Beauty Clinicのロゴ">
                 </a>
             </div>
             <nav class="header__nav">
@@ -43,7 +43,7 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu__header">
-            <img src="../assets/images/logo.png" alt="LaLa">
+            <img src="assets/images/logo.png" alt="LaLa">
             <button class="mobile-menu__close" aria-label="メニューを閉じる">
                 <i class="fas fa-times"></i>
             </button>
@@ -83,9 +83,9 @@
                     <span class="section__title-ja">アートメイク</span>
                 </h2>
 
-                <!-- 眉・リップ・除去料金テーブル -->
+                <!-- 眉アートメイク料金テーブル -->
                 <div class="price-table-wrapper">
-                    <h3 class="price-table__title">眉アートメイク・リップアートメイク・アートメイク除去</h3>
+                    <h3 class="price-table__title">眉アートメイク</h3>
                     <table class="price-table">
                         <thead>
                             <tr>
@@ -94,9 +94,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="category-row">
-                                <td colspan="2">眉アートメイク</td>
-                            </tr>
                             <tr>
                                 <td>毛並み眉</td>
                                 <td>¥55,000<span class="unit">/回</span></td>
@@ -109,48 +106,76 @@
                                 <td>ミックス眉（毛並み＋パウダー）<br><span class="sub-text">※オプション料金</span></td>
                                 <td>+¥11,000<span class="unit">/回</span></td>
                             </tr>
-                            
-                            <tr class="category-row">
-                                <td colspan="2">リップアートメイク</td>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- リップアートメイク料金テーブル -->
+                <div class="price-table-wrapper">
+                    <h3 class="price-table__title">リップアートメイク</h3>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>施術メニュー</th>
+                                <th>料金</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td>リップアートメイク</td>
                                 <td>¥66,000<span class="unit">/回</span></td>
                             </tr>
-                            
-                            <tr class="category-row">
-                                <td colspan="2">アートメイク除去</td>
-                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- アートメイク除去料金テーブル -->
+                <div class="price-table-wrapper">
+                    <h3 class="price-table__title">アートメイク除去</h3>
+                    <table class="price-table">
+                        <thead>
                             <tr>
-                                <td>片眉除去（通常価格）</td>
+                                <th>施術メニュー</th>
+                                <th>通常価格</th>
+                                <th>セット割価格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>片眉除去</td>
                                 <td>¥27,500<span class="unit">/回</span></td>
-                            </tr>
-                            <tr>
-                                <td>片眉除去（セット割価格）<br><span class="sub-text">※除去後に眉アートメイクを施術される方</span></td>
                                 <td class="highlight">¥19,800<span class="unit">/回</span></td>
                             </tr>
                             <tr>
-                                <td>両眉除去（通常価格）</td>
+                                <td>両眉除去</td>
                                 <td>¥55,000<span class="unit">/回</span></td>
-                            </tr>
-                            <tr>
-                                <td>両眉除去（セット割価格）<br><span class="sub-text">※除去後に眉アートメイクを施術される方</span></td>
                                 <td class="highlight">¥39,600<span class="unit">/回</span></td>
                             </tr>
-                            
-                            <tr class="category-row">
-                                <td colspan="2">LaLaレーザー除去保証</td>
+                        </tbody>
+                    </table>
+                    <ul class="price-notes">
+                        <li>※セット割価格は、除去後に眉アートメイクを施術される方が対象です。</li>
+                        <li>※ホームケア軟膏代が別途かかります。</li>
+                    </ul>
+                </div>
+
+                <!-- レーザー除去保証料金テーブル -->
+                <div class="price-table-wrapper">
+                    <h3 class="price-table__title">LaLaレーザー除去保証</h3>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>施術メニュー</th>
+                                <th>料金</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td>片眉レーザー除去<br><span class="sub-text">※LaLaで施術を受けた方限定（最終施術から3ヶ月以内）</span></td>
                                 <td class="highlight">¥19,800<span class="unit">/回</span></td>
                             </tr>
                         </tbody>
                     </table>
-                    <ul class="price-notes">
-                        <li>※ホームケア軟膏代が別途かかります。</li>
-                        <li>※価格は全て税込表示です。</li>
-                    </ul>
                 </div>
 
                 <!-- メラニンケア料金テーブル -->
@@ -170,9 +195,6 @@
                             </tr>
                         </tbody>
                     </table>
-                    <ul class="price-notes">
-                        <li>※価格は全て税込表示です。</li>
-                    </ul>
                 </div>
             </div>
         </section>
@@ -184,9 +206,9 @@
                     <span class="section__title-ja">オンライン総合美容</span>
                 </h2>
 
-                <!-- ゼオスキン料金テーブル -->
+                <!-- ゼオスキン洗顔料テーブル -->
                 <div class="price-table-wrapper">
-                    <h3 class="price-table__title">ゼオスキンヘルス</h3>
+                    <h3 class="price-table__title">ゼオスキンヘルス - 洗顔料</h3>
                     <table class="price-table">
                         <thead>
                             <tr>
@@ -196,9 +218,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="category-row">
-                                <td colspan="3">洗顔料</td>
-                            </tr>
                             <tr>
                                 <td>ジェントルクレンザー</td>
                                 <td>200ml</td>
@@ -219,10 +238,22 @@
                                 <td>200ml</td>
                                 <td>¥6,160</td>
                             </tr>
-                            
-                            <tr class="category-row">
-                                <td colspan="3">化粧水</td>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ゼオスキン化粧水テーブル -->
+                <div class="price-table-wrapper">
+                    <h3 class="price-table__title">ゼオスキンヘルス - 化粧水</h3>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>商品名</th>
+                                <th>内容量</th>
+                                <th>価格</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td>バランサートナー</td>
                                 <td>180ml</td>
@@ -243,10 +274,22 @@
                                 <td>50ml</td>
                                 <td>¥13,420</td>
                             </tr>
-                            
-                            <tr class="category-row">
-                                <td colspan="3">美容ジェル・美容クリーム</td>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ゼオスキン美容ジェル・クリームテーブル -->
+                <div class="price-table-wrapper">
+                    <h3 class="price-table__title">ゼオスキンヘルス - 美容ジェル・美容クリーム</h3>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>商品名</th>
+                                <th>内容量</th>
+                                <th>価格</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td>デイリーPD</td>
                                 <td>50ml</td>
@@ -267,10 +310,22 @@
                                 <td>50ml</td>
                                 <td>¥21,780</td>
                             </tr>
-                            
-                            <tr class="category-row">
-                                <td colspan="3">スペシャルケア</td>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ゼオスキンスペシャルケアテーブル -->
+                <div class="price-table-wrapper">
+                    <h3 class="price-table__title">ゼオスキンヘルス - スペシャルケア</h3>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>商品名</th>
+                                <th>内容量</th>
+                                <th>価格</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td>ARナイトリペア</td>
                                 <td>30ml</td>
@@ -301,10 +356,22 @@
                                 <td>15ml</td>
                                 <td>¥20,460</td>
                             </tr>
-                            
-                            <tr class="category-row">
-                                <td colspan="3">日焼け止め</td>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ゼオスキン日焼け止めテーブル -->
+                <div class="price-table-wrapper">
+                    <h3 class="price-table__title">ゼオスキンヘルス - 日焼け止め</h3>
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>商品名</th>
+                                <th>内容量</th>
+                                <th>価格</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td>BSサンスクリーン SPF50</td>
                                 <td>118ml</td>
@@ -398,7 +465,7 @@
             <div class="container">
                 <div class="footer__logo-section">
                     <div class="footer__logo">
-                        <img src="../assets/images/footer-logo.png" alt="LaLa Beauty Clinic">
+                        <img src="assets/images/footer-logo.png" alt="LaLa Beauty Clinic">
                     </div>
                 </div>
 
