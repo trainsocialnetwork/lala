@@ -19,6 +19,7 @@
 
 .section__lead {
    text-align: left;
+   margin: 0 auto var(--spacing-2xl);
 }
 
 .page-title-section {
@@ -547,7 +548,7 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 0;
   background: none;
   box-shadow: none;
 }
@@ -566,6 +567,7 @@
   box-shadow: none;
   position: relative;
   transition: none;
+  gap: var(--spacing-xl);
 }
 
 .section--pricing .price-card:last-child {
@@ -578,8 +580,8 @@
 }
 
 .section--pricing .price-card__image {
-  width: 100px;
-  height: 150px;
+  width: 150px;
+  height: 120px;
   overflow: hidden;
   border-radius: var(--radius-md);
   flex-shrink: 0;
