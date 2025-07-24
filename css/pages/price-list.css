@@ -1,0 +1,330 @@
+/* ===============================================
+   Price List Page CSS - 料金一覧ページ専用スタイル
+   =============================================== */
+
+/* ===============================================
+   ページタイトル
+   =============================================== */
+.page-price-list .breadcrumb {
+  margin-top: 60px;
+}
+
+.page-title-section {
+  padding: var(--spacing-xl) 0;
+  text-align: center;
+  background-color: var(--color-bg-light);
+}
+
+.page-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 400;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text);
+}
+
+.page-title__sub {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ===============================================
+   料金セクション
+   =============================================== */
+.section--price {
+  padding: var(--spacing-3xl) 0;
+}
+
+.section--price .section__title {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+/* ===============================================
+   料金テーブルラッパー
+   =============================================== */
+.price-table-wrapper {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.price-table-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.price-table__title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* ===============================================
+   料金テーブル（removal-tableベース）
+   =============================================== */
+.price-table {
+  width: 100%;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.price-table thead {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.price-table th,
+.price-table td {
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-md);
+  text-align: left;
+}
+
+.price-table th {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.price-table th:last-child,
+.price-table td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* 3列テーブル用の調整 */
+.price-table th:nth-child(2),
+.price-table td:nth-child(2) {
+  text-align: center;
+  width: 100px;
+}
+
+.price-table tbody tr {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.price-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* カテゴリ行 */
+.price-table .category-row {
+  background-color: var(--color-bg-light);
+  font-weight: 600;
+}
+
+.price-table .category-row td {
+  color: var(--color-primary);
+  font-size: var(--font-size-base);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+/* ハイライト価格 */
+.price-table .highlight {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* 単位 */
+.price-table .unit {
+  font-size: var(--font-size-ss);
+  color: var(--color-text-light);
+  font-weight: 400;
+  margin-left: 2px;
+}
+
+/* サブテキスト */
+.price-table .sub-text {
+  display: block;
+  font-size: var(--font-size-ss);
+  color: var(--color-text-light);
+  font-weight: 400;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* 料金備考 */
+.price-notes {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  padding-left: var(--spacing-md);
+}
+
+.price-notes li {
+  position: relative;
+}
+
+/* ===============================================
+   注意事項セクション
+   =============================================== */
+.section--notes {
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-3xl) 0;
+}
+
+.notes-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.notes-block {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.notes-block:last-child {
+  margin-bottom: 0;
+}
+
+.notes-block h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.notes-block ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.notes-block li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text);
+}
+
+.notes-block li::before {
+  content: "・";
+  position: absolute;
+  left: var(--spacing-sm);
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+/* ===============================================
+   CTAセクション
+   =============================================== */
+.section--cta {
+  padding: var(--spacing-3xl) 0;
+  text-align: center;
+}
+
+.section--cta .section__lead {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* ===============================================
+   レスポンシブ調整
+   =============================================== */
+@media (max-width: 430px) {
+  /* 小さい画面での横スクロール対応 */
+  .price-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .price-table {
+    min-width: 360px;
+  }
+  
+  /* パディング調整 */
+  .price-table th,
+  .price-table td {
+    padding: var(--spacing-sm);
+  }
+  
+  /* フォントサイズ調整 */
+  .price-table th,
+  .price-table td {
+    font-size: var(--font-size-ss);
+  }
+  
+  .price-table .category-row td {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* タブレット以上でも最大幅を維持 */
+@media (min-width: 431px) {
+  .price-table-wrapper {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ===============================================
+   ページナビゲーション（ヘッダー内）のスタイル
+   =============================================== */
+.page-price-list .header__nav-list a {
+  font-size: var(--font-size-sm);
+}
+
+/* モバイルメニュー内のリンク */
+.page-price-list .mobile-menu__nav a {
+  font-size: var(--font-size-base);
+}
+
+/* ===============================================
+   アニメーション
+   =============================================== */
+.price-table-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.price-table-wrapper:nth-child(1) { animation-delay: 0.1s; }
+.price-table-wrapper:nth-child(2) { animation-delay: 0.2s; }
+.price-table-wrapper:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================================
+   印刷用スタイル
+   =============================================== */
+@media print {
+  .header,
+  .footer,
+  .back-to-top,
+  .section--cta {
+    display: none !important;
+  }
+  
+  .price-table {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+  
+  .price-table th {
+    background-color: #f0f0f0 !important;
+    color: #000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
