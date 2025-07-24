@@ -45,7 +45,7 @@
    料金テーブルラッパー
    =============================================== */
 .price-table-wrapper {
-  margin-bottom: var(--spacing-3xl);
+  margin-bottom: var(--spacing-2xl);
 }
 
 .price-table-wrapper:last-child {
@@ -53,29 +53,27 @@
 }
 
 .price-table__title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: 600;
   color: var(--color-primary);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
   padding-bottom: var(--spacing-sm);
   border-bottom: 2px solid var(--color-primary);
 }
 
 /* ===============================================
-   料金テーブル（removal-tableベース）
+   料金テーブル（シンプル版）
    =============================================== */
 .price-table {
   width: 100%;
   background-color: var(--color-bg);
-  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
 }
 
 .price-table thead {
-  background-color: var(--color-primary);
-  color: white;
+  border-bottom: 2px solid var(--color-border);
+  border-top: 2px solid var(--color-border);
 }
 
 .price-table th,
@@ -87,7 +85,8 @@
 
 .price-table th {
   font-weight: 600;
-  letter-spacing: 0.05em;
+  background-color: transparent;
+  color: var(--color-text);
 }
 
 .price-table th:last-child,
@@ -103,6 +102,12 @@
   width: 100px;
 }
 
+/* 3列テーブルの場合の最後の列 */
+.price-table th:nth-child(3),
+.price-table td:nth-child(3) {
+  text-align: right;
+}
+
 .price-table tbody tr {
   border-bottom: 1px solid var(--color-border);
 }
@@ -111,19 +116,7 @@
   border-bottom: none;
 }
 
-/* カテゴリ行 */
-.price-table .category-row {
-  background-color: var(--color-bg-light);
-  font-weight: 600;
-}
-
-.price-table .category-row td {
-  color: var(--color-primary);
-  font-size: var(--font-size-base);
-  padding: var(--spacing-sm) var(--spacing-md);
-}
-
-/* ハイライト価格 */
+/* ハイライト価格（緑色のみ維持） */
 .price-table .highlight {
   color: var(--color-accent);
   font-weight: 600;
@@ -155,6 +148,7 @@
   flex-direction: column;
   gap: var(--spacing-xs);
   padding-left: var(--spacing-md);
+  margin-top: var(--spacing-sm);
 }
 
 .price-notes li {
@@ -259,8 +253,8 @@
     font-size: var(--font-size-ss);
   }
   
-  .price-table .category-row td {
-    font-size: var(--font-size-sm);
+  .price-table__title {
+    font-size: var(--font-size-base);
   }
 }
 
@@ -297,6 +291,8 @@
 .price-table-wrapper:nth-child(1) { animation-delay: 0.1s; }
 .price-table-wrapper:nth-child(2) { animation-delay: 0.2s; }
 .price-table-wrapper:nth-child(3) { animation-delay: 0.3s; }
+.price-table-wrapper:nth-child(4) { animation-delay: 0.4s; }
+.price-table-wrapper:nth-child(5) { animation-delay: 0.5s; }
 
 @keyframes fadeInUp {
   to {
@@ -306,25 +302,13 @@
 }
 
 /* ===============================================
-   印刷用スタイル
+   テーブルのボーダー調整
    =============================================== */
-@media print {
-  .header,
-  .footer,
-  .back-to-top,
-  .section--cta {
-    display: none !important;
-  }
-  
-  .price-table {
-    box-shadow: none;
-    border: 1px solid #000;
-  }
-  
-  .price-table th {
-    background-color: #f0f0f0 !important;
-    color: #000 !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
+.price-table {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.price-table thead tr {
+  background-color: var(--color-bg-light);
 }
