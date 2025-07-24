@@ -186,7 +186,43 @@
 }
 
 .section--about .content-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 中央揃えを追加 */
+  gap: var(--spacing-lg);
   max-width: 100%;
+}
+
+.section--about .content-grid__image {
+  width: 100%;
+  max-width: 300px; /* 画像の最大幅を制限 */
+  margin: 0 auto; /* 中央配置 */
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.section--about .content-grid__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section--about .content-grid__text {
+  width: 100%;
+  text-align: center; /* テキストを中央揃え */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ボタンも中央配置 */
+}
+
+.section--about .content-grid__text p {
+  margin-bottom: var(--spacing-lg);
+  text-align: left; /* 段落テキストは左揃え */
+}
+
+.section--about .button {
+  margin: 0 auto; /* ボタンを中央配置 */
 }
 
 /* ===============================================
