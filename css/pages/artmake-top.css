@@ -236,7 +236,7 @@
 
 .menu-category__description {
   line-height: var(--line-height-loose);
-  margin-bottom: var(--spacing-lg);
+  /*margin-bottom: var(--spacing-lg);*/
   max-width: 800px;
 }
 
