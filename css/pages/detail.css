@@ -334,7 +334,7 @@
 
 .section--cases .voice-carousel__track {
   display: flex;
-  gap: var(--spacing-md);
+  /* gap: var(--spacing-md);*/
   padding-bottom: var(--spacing-sm);
   scroll-snap-type: x mandatory;
 }
