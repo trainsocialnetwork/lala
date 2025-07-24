@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/pages/detail.css">
     <link rel="stylesheet" href="../css/themes/online.css">
     <link rel="stylesheet" href="../css/pages/zeoskin.css">
+    <link rel="stylesheet" href="../css/pages/zeoskin-update.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -66,7 +67,8 @@
     <nav class="breadcrumb" aria-label="パンくずリスト">
         <div class="container">
             <ul class="breadcrumb__list">
-                <li><a href="./online/">オンライン美容総合</a></li>
+                <li><a href="/">TOP</a></li>
+                <li><a href="../">オンライン美容総合</a></li>
                 <li>ゼオスキン</li>
             </ul>
         </div>
@@ -96,6 +98,12 @@
                     専門医が一人ひとりの肌を診察し、<br>
                     あなただけの最適なプログラムをご提案します。
                 </p>
+                <div class="quick-nav">
+                    <a href="#products" class="button button--primary">
+                        商品一覧を見る
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -141,13 +149,28 @@
                     <span class="section__subtitle-ja">カテゴリから探す</span>
                 </h3>
                 <!-- Product Category Navigation -->
-                <nav class="product-nav product-nav--zeoskin">
-                    <div class="product-nav__list">
-                        <a href="#cleanser" class="product-nav__link is-active">洗顔料</a>
-                        <a href="#toner" class="product-nav__link">化粧水</a>
-                        <a href="#cream" class="product-nav__link">美容ジェル・クリーム</a>
-                        <a href="#special" class="product-nav__link">スペシャルケア</a>
-                        <a href="#sunscreen" class="product-nav__link">日焼け止め</a>
+                <nav class="product-nav product-nav--grid">
+                    <div class="product-nav__grid">
+                        <a href="#cleanser" class="product-nav__item">
+                            <i class="fas fa-soap"></i>
+                            <span>洗顔料</span>
+                        </a>
+                        <a href="#toner" class="product-nav__item">
+                            <i class="fas fa-tint"></i>
+                            <span>化粧水</span>
+                        </a>
+                        <a href="#cream" class="product-nav__item">
+                            <i class="fas fa-jar"></i>
+                            <span>美容ジェル・クリーム</span>
+                        </a>
+                        <a href="#special" class="product-nav__item">
+                            <i class="fas fa-star"></i>
+                            <span>スペシャルケア</span>
+                        </a>
+                        <a href="#sunscreen" class="product-nav__item">
+                            <i class="fas fa-sun"></i>
+                            <span>日焼け止め</span>
+                        </a>
                     </div>
                 </nav>
                 
@@ -482,7 +505,5 @@
     <!-- JavaScript -->
     <script src="../js/main.js"></script>
     <script src="../js/components/navigation.js"></script>
-    <script src="../js/components/page-nav.js"></script>
-    <script src="../js/components/zeoskin-nav.js"></script>
 </body>
 </html>
