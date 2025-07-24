@@ -88,7 +88,6 @@
    =============================================== */
 .page-nav {
   background-color: var(--color-bg);
-  position: sticky;
   top: 60px; /* ヘッダーの高さ */
   z-index: 100;
   box-shadow: var(--shadow-sm);
