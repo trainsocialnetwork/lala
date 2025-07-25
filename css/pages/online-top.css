@@ -6,9 +6,9 @@
    ページヒーロー（オンライン用）
    =============================================== */
 .page-hero--online {
-  height: auto;
-  aspect-ratio: 2/3;
-  min-height: 400px;
+   height: 700px;
+   /* aspect-ratio: 2 / 3; */
+   /* min-height: 400px;
   margin-top: 60px; 
   margin-left: auto;
   margin-right: auto;
