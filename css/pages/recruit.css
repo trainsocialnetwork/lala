@@ -1,0 +1,501 @@
+/* ===============================================
+   Recruit Page CSS - 採用ページ専用スタイル
+   =============================================== */
+
+/* ===============================================
+   ページタイトルセクション
+   =============================================== */
+.section--title {
+  padding: var(--spacing-xl) 0 var(--spacing-2xl);
+  text-align: center;
+}
+
+.page-title {
+  margin-bottom: var(--spacing-lg);
+}
+
+.page-title__en {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-xs);
+  text-transform: uppercase;
+}
+
+.page-title__ja {
+  display: block;
+  font-size: var(--font-size-3xl);
+  font-weight: 400;
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+}
+
+.page-lead {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* ===============================================
+   LaLaで働くセクション
+   =============================================== */
+.section--about {
+  padding: var(--spacing-3xl) 0;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about-item {
+  padding: var(--spacing-xl) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.about-item h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-item p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+}
+
+/* ===============================================
+   募集職種セクション
+   =============================================== */
+.section--positions {
+  padding: var(--spacing-3xl) 0;
+}
+
+.positions-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3xl);
+}
+
+.position-item {
+  padding-bottom: var(--spacing-3xl);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.position-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.position-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xl);
+}
+
+.position-item__header h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.position-item__badge {
+  background-color: var(--color-accent);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.position-item__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.position-section {
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+}
+
+.position-section h4 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.position-section h4::before {
+  content: "";
+  width: 4px;
+  height: 1em;
+  background-color: var(--color-secondary);
+  border-radius: 2px;
+}
+
+.position-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.position-section li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+}
+
+.position-section li::before {
+  content: "・";
+  position: absolute;
+  left: var(--spacing-sm);
+  color: var(--color-secondary);
+}
+
+/* ===============================================
+   応募要項セクション
+   =============================================== */
+.section--requirements {
+  padding: var(--spacing-3xl) 0;
+}
+
+.requirements-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.requirement-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.requirement-item:last-child {
+  border-bottom: none;
+}
+
+.requirement-item__label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.requirement-item__content {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text);
+}
+
+.requirement-item__content small {
+  display: block;
+  margin-top: var(--spacing-xs);
+  color: var(--color-text-light);
+}
+
+.requirement-item__content ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin: 0;
+}
+
+.requirement-item__content li {
+  position: relative;
+  padding-left: var(--spacing-md);
+}
+
+.requirement-item__content li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: var(--color-secondary);
+}
+
+/* ===============================================
+   選考フローセクション
+   =============================================== */
+.section--flow {
+  padding: var(--spacing-3xl) 0;
+}
+
+.section--flow .flow-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.section--flow .flow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl) 0;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+.section--flow .flow-step:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.section--flow .flow-step::before {
+  display: none;
+}
+
+.section--flow .flow-step__number {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.section--flow .flow-step__content {
+  flex: 1;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.section--flow .flow-step__content h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+}
+
+.section--flow .flow-step__content p {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+}
+
+/* ===============================================
+   メッセージセクション
+   =============================================== */
+.section--message {
+  padding: var(--spacing-3xl) 0;
+}
+
+.message-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: var(--spacing-xl);
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.message-content__title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.message-content__text {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-loose);
+  color: var(--color-text);
+}
+
+/* ===============================================
+   応募セクション
+   =============================================== */
+.section--apply {
+  padding: var(--spacing-3xl) 0 var(--spacing-4xl);
+}
+
+.apply-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.apply-content__text {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-loose);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-xl);
+}
+
+.apply-methods {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.apply-method {
+  background-color: var(--color-bg-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+}
+
+.apply-method__icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-md);
+}
+
+.apply-method__icon i {
+  font-size: var(--font-size-2xl);
+}
+
+.apply-method h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+}
+
+.apply-method p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.apply-method__tel {
+  display: inline-block;
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  text-decoration: none;
+}
+
+.apply-method__tel:hover {
+  opacity: 0.8;
+}
+
+.apply-method__hours {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  line-height: var(--line-height-loose);
+}
+
+.apply-method__hours small {
+  display: block;
+  margin-top: var(--spacing-xs);
+}
+
+.apply-note {
+  background-color: #FFF9F0;
+  border: 1px solid #FFE0B2;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+.apply-note p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+}
+
+.apply-note i {
+  color: #FF9800;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ===============================================
+   レスポンシブ対応
+   =============================================== */
+@media (min-width: 768px) {
+  .requirement-item {
+    grid-template-columns: 150px 1fr;
+  }
+  
+  .apply-methods {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===============================================
+   ボタンスタイル（採用ページ用）
+   =============================================== */
+.page-recruit .button {
+  min-width: 200px;
+}
+
+/* ===============================================
+   アニメーション
+   =============================================== */
+.position-item,
+.about-item,
+.flow-step {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.position-item:nth-child(1) { animation-delay: 0.1s; }
+.position-item:nth-child(2) { animation-delay: 0.2s; }
+
+.about-item:nth-child(1) { animation-delay: 0.1s; }
+.about-item:nth-child(2) { animation-delay: 0.2s; }
+.about-item:nth-child(3) { animation-delay: 0.3s; }
+
+.flow-step:nth-child(1) { animation-delay: 0.1s; }
+.flow-step:nth-child(2) { animation-delay: 0.2s; }
+.flow-step:nth-child(3) { animation-delay: 0.3s; }
+.flow-step:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

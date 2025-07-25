@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>当院について | LaLa Beauty Clinic - 神戸のアートメイク・総合美容クリニック</title>
+    <meta name="description" content="神戸のLaLa Beauty Clinicは、アートメイクとオンライン総合美容を提供する美容クリニックです。お客様一人ひとりに寄り添い、自然で美しい仕上がりを実現します。">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/common-components.css">
+    <link rel="stylesheet" href="../css/pages/detail.css">
+    <link rel="stylesheet" href="../css/themes/default.css">
+    <link rel="stylesheet" href="../css/pages/about.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-default page-about">
+    <!-- Header Component -->
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="/">
+                    <img src="../assets/images/logo.png" alt="LaLa Beauty Clinicのロゴ">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="/">TOP</a></li>
+                    <li><a href="./artmake/">アートメイク</a></li>
+                    <li><a href="./online/">オンライン総合美容</a></li>
+                    <li><a href="#access">アクセス</a></li>
+                </ul>
+            </nav>
+            <button class="header__menu-toggle" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__header">
+            <img src="../assets/images/logo.png" alt="LaLa">
+            <button class="mobile-menu__close" aria-label="メニューを閉じる">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu__nav">
+            <ul>
+                <li><a href="/">TOP</a></li>
+                <li><a href="./artmake/">アートメイク</a></li>
+                <li><a href="./online/">オンライン総合美容</a></li>
+                <li><a href="#access">アクセス</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ul class="breadcrumb__list">
+                <li><a href="/">TOP</a></li>
+                <li>当院について</li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Page Title Section -->
+        <div class="page-title-section">
+            <h1 class="page-title fade-in">
+                美しさとは、<br>
+                あなたらしさの追求。
+            </h1>
+        </div>
+
+        <!-- Page Hero -->
+        <section class="page-hero page-hero--about">
+            <div class="page-hero__visual">
+                <img src="../assets/images/about_hero.webp" alt="LaLa Beauty Clinic">
+            </div>
+        </section>
+
+        <!-- Lead Section -->
+        <section class="section section--lead">
+            <div class="container">
+                <p class="lead-text">
+                    LaLa Beauty Clinicは、神戸の中心地に位置する美容クリニックです。<br>
+                    アートメイクとオンライン総合美容を通じて、<br>
+                    お客様一人ひとりの「なりたい自分」を実現するお手伝いをしています。<br><br>
+                    私たちは、単に外見を美しくするだけでなく、<br>
+                    お客様の内面から輝く自信と笑顔を引き出すことを大切にしています。
+                </p>
+            </div>
+        </section>
+
+        <!-- Clinic Info Section -->
+        <section class="section section--clinic-info" id="clinic">
+            <div class="container">
+                <h2 class="section__title">
+                    <span class="section__title-en">CLINIC INFORMATION</span>
+                    <span class="section__title-ja">クリニック案内</span>
+                </h2>
+                
+                <div class="clinic-gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../assets/images/08_armake_02.webp" alt="受付・待合室">
+                        <p class="gallery-item__caption">受付・待合室</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/08_artmake_flow03.webp" alt="カウンセリングルーム">
+                        <p class="gallery-item__caption">カウンセリングルーム</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/08_artmake_flow07.webp" alt="施術室">
+                        <p class="gallery-item__caption">施術室</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../assets/images/05_artmake_feature03.png" alt="外観">
+                        <p class="gallery-item__caption">外観</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Hours Section -->
+        <section class="section section--hours bg-light" id="hours">
+            <div class="container">
+                <h2 class="section__title">
+                    <span class="section__title-en">BUSINESS HOURS</span>
+                    <span class="section__title-ja">営業時間</span>
+                </h2>
+                
+                <div class="hours-content">
+                    <div class="hours-table">
+                        <table>
+                            <tr>
+                                <th>営業時間</th>
+                                <td>10:00 〜 17:00</td>
+                            </tr>
+                            <tr>
+                                <th>定休日</th>
+                                <td>不定休</td>
+                            </tr>
+                            <tr>
+                                <th>最終受付</th>
+                                <td>
+                                    アートメイク：15:00<br>
+                                    オンライン診療：16:30
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="hours-notes">
+                        <h3>ご予約について</h3>
+                        <ul>
+                            <li>完全予約制となっております</li>
+                            <li>LINEまたはお電話でご予約を承っております</li>
+                            <li>当日予約も空き状況により承ります</li>
+                            <li>キャンセル・変更は前日までにご連絡ください</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="hours-cta">
+                        <p>ご予約・お問い合わせはこちら</p>
+                        <div class="cta-buttons">
+                            <a href="https://line.me/R/ti/p/@lala_beauty" class="button button--primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-line"></i>
+                                LINEで予約
+                            </a>
+                            <a href="tel:078-123-4567" class="button button--outline">
+                                <i class="fas fa-phone"></i>
+                                電話で予約
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Access Section -->
+        <section class="section section--access" id="access">
+            <div class="container">
+                <h2 class="section__title">
+                    <span class="section__title-en">ACCESS</span>
+                    <span class="section__title-ja">アクセス</span>
+                </h2>
+                
+                <div class="access-content">
+                    <div class="access-content__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1639.9911085988833!2d135.19417408791634!3d34.70562846443731!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008fb46ee74291%3A0x65154ce2bb89a31b!2z44Op44Op44OT44Ol44O844OG44Kj44Kv44Oq44OL44OD44Kv5paw56We5oi477yI44Ki44O844OI44Oh44Kk44Kv77yJ56We5oi4!5e0!3m2!1sja!2sjp!4v1750145514852!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    
+                    <div class="access-info">
+                        <h3>LaLa Beauty Clinic</h3>
+                        <table class="info-table">
+                            <tr>
+                                <th><i class="fas fa-map-marker-alt"></i> 住所</th>
+                                <td>
+                                    〒650-0002<br>
+                                    兵庫県神戸市中央区北野町1丁目1<br>
+                                    コトノハコ神戸西館1F
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="fas fa-phone"></i> 電話番号</th>
+                                <td>078-123-4567</td>
+                            </tr>
+                            <tr>
+                                <th><i class="fas fa-train"></i> アクセス</th>
+                                <td>
+                                    JR三ノ宮駅 徒歩10分<br>
+                                    阪急神戸三宮駅 徒歩8分<br>
+                                    地下鉄三宮駅 徒歩7分
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="fas fa-car"></i> 駐車場</th>
+                                <td>
+                                    近隣にコインパーキングあり<br>
+                                    （提携駐車場はございません）
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__logo-section">
+                    <div class="footer__logo">
+                        <img src="../assets/images/footer-logo.png" alt="LaLa Beauty Clinic">
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <div class="footer__section">
+                        <h4>アートメイク</h4>
+                        <ul>
+                            <li><a href="#">眉アートメイク</a></li>
+                            <li><a href="#">リップアートメイク</a></li>
+                            <li><a href="#">メンズアートメイク</a></li>
+                            <li><a href="#">メラニンケア</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__section">
+                        <h4>オンライン総合美容</h4>
+                        <ul>
+                            <li><a href="#">スキンケア（ゼオスキン）</a></li>
+                            <li><a href="#">ヘアケア</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__section">
+                        <h4>クリニック情報</h4>
+                        <ul>
+                            <li><a href="#">当院について</a></li>
+                            <li><a href="#">アクセス</a></li>
+                            <li><a href="#">お知らせ一覧</a></li>
+                            <li><a href="#">採用情報</a></li>
+                            <li><a href="#">料金一覧</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__section footer__contact">
+                        <h4>お問い合わせ</h4>
+                        <p class="footer__address">
+                            〒650-0002<br>
+                            兵庫県神戸市中央区北野町1丁目1<br>
+                            コトノハコ神戸西館1F
+                        </p>
+                        <p class="footer__hours">
+                            <i class="fas fa-clock"></i>
+                            10:00〜17:00（不定休）
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <div class="footer__links">
+                        <a href="#">プライバシーポリシー</a>
+                    </div>
+                    <p class="copyright">&copy; 2025 LaLa Beauty Clinic. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="ページトップへ戻る">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+    <script src="./js/components/navigation.js"></script>
+</body>
+</html>

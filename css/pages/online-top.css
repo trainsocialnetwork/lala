@@ -7,9 +7,9 @@
    =============================================== */
 .page-hero--online {
   height: auto;
-  min-height: 250px;
-  max-height: 350px;
-  margin-top: 110px !important; 
+  aspect-ratio: 2/3;
+  min-height: 260px;
+  margin-top: 60px; 
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -18,8 +18,8 @@
 
 /* 動画スタイル */
 .page-hero--online .page-hero__visual video {
-  width: 100%;
   height: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -35,6 +35,29 @@
 }
 
 /* ===============================================
+   h2セクションタイトルをセンターに
+   =============================================== */
+
+.section__title {
+    text-align: center;
+}
+
+/* ===============================================
+   セクショントップの画像
+   =============================================== */
+.section__image {
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.section__image img {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    border-radius: var(--radius-md);
+}
+
+/* ===============================================
    製品セクション
    =============================================== */
 .section--products {
@@ -45,7 +68,7 @@
 .products-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0;
+  gap: 0 var(--spacing-sm);
   max-width: 430px;
   margin: 0 auto;
 }
@@ -63,6 +86,8 @@
   background: white;
   transition: all var(--transition-base);
   position: relative;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
 }
 
 /* リンク全体をクリッカブルに */
@@ -74,20 +99,9 @@
   color: inherit;
 }
 
-.product-item:hover {
-  box-shadow: var(--shadow-md);
-  z-index: 1;
-  transform: translateY(-2px);
-}
-
-/* 右端のボーダーを削除 */
-.product-item:nth-child(2n) {
-  border-right: none;
-}
-
 /* 大きい商品アイテム（単一商品用） */
 .product-item--large {
-  border: 1px solid #f0f0f0;
+  border: 1px solid var(--color-border);
 }
 
 .product-item--large .product-image {
@@ -115,10 +129,6 @@
   height: 80%;
   object-fit: cover;
   transition: transform var(--transition-slow);
-}
-
-.product-item:hover .product-image img {
-  transform: scale(1.05);
 }
 
 /* 製品コンテンツ */
@@ -152,19 +162,29 @@
 
 /* CTAボタン */
 .product-cta {
-  display: inline-block;
-  padding: 6px 16px;
-  background-color: var(--color-primary);
-  color: white;
-  font-size: 11px;
-  border-radius: var(--radius-full);
-  text-decoration: none;
-  transition: all var(--transition-base);
+    display: inline-block;
+    padding: 6px 16px;
+    background-color: transparent;
+    font-size: 11px;
+ /* border-radius: var(--radius-full); */
+ /* border: 1px solid var(--color-primary);*/
+    text-decoration: none;
+    transition: all var(--transition-base);
 }
 
+/*
+.product-item:hover .product-image img {
+  transform: scale(1.05);
+}
+.product-item:hover {
+  box-shadow: var(--shadow-md);
+  z-index: 1;
+  transform: translateY(-2px);
+}
 .product-item:hover .product-cta {
   background-color: var(--color-secondary);
 }
+*/
 
 /* ===============================================
    フローセクション
@@ -200,14 +220,42 @@
 .flow-steps {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: 0;
+  position: relative;
 }
 
 .flow-step {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--spacing-md);
   position: relative;
+  /* padding-bottom: var(--spacing-sm);*/
+}
+
+.flow-step:last-child {
+  padding-bottom: 0;
+}
+
+/*common-componentsの上書き*/
+.flow-step::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0px;
+    bottom: -40px;
+    width: 2px;
+    background-color: var(--color-border);
+}
+
+/* 縦線のスタイル */
+.flow-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 15px;  
+  top: 32px;  
+  bottom: 0; 
+  width: 2px;
+  background-color: var(--color-border);
 }
 
 .flow-step__number {
@@ -222,26 +270,15 @@
   justify-content: center;
   font-size: var(--font-size-sm);
   font-weight: 600;
-}
-
-.flow-step::before {
-  content: '';
-  position: absolute;
-  left: 16px;
-  top: var(--spacing-xl);
-  bottom: -var(--spacing-md);
-  width: 2px;
-  background-color: var(--color-border);
-}
-
-.flow-step:last-child::before {
-  display: none;
+  z-index: 1;
+  position: relative;
 }
 
 .flow-step__text {
   flex: 1;
   font-size: var(--font-size-sm);
   line-height: var(--line-height-loose);
+  padding-top: 4px;
 }
 
 /* ===============================================
@@ -263,6 +300,11 @@
   background-color: var(--color-bg-light);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+#about-beauty-supplements .info-subsection {
+  background-color: white;
 }
 
 .info-subsection__title {
