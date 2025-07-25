@@ -16,6 +16,10 @@
   position: relative;
 }
 
+.page-hero--online .page-hero__visual {
+    position: relative;
+}
+
 /* 動画スタイル */
 .page-hero--online .page-hero__visual video {
   height: 100%;
