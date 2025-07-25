@@ -10,6 +10,7 @@
   aspect-ratio: 2/3;
   min-height: 260px;
   margin-top: 60px; 
+  max-width: 430px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
