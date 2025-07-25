@@ -17,7 +17,7 @@
 }
 
 .page-hero--online .page-hero__visual {
-    position: relative;
+    position: relative !important;
 }
 
 /* 動画スタイル */
