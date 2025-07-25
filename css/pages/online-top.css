@@ -7,9 +7,10 @@
    =============================================== */
 .page-hero--online {
   height: auto;
+  aspect: 2/3
   min-height: 250px;
-  max-height: 350px;
-  margin-top: 110px !important; 
+  max-height: 400px;
+  margin-top: 60px; 
   margin-left: auto;
   margin-right: auto;
   display: flex;
