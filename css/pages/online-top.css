@@ -7,8 +7,8 @@
    =============================================== */
 .page-hero--online {
   height: auto;
-  aspect: 2/3
-  min-height: 250px;
+  aspect-ratio: 2/3;
+  min-height: 260px;
   max-height: 400px;
   margin-top: 60px; 
   margin-left: auto;
