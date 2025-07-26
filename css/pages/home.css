@@ -2,52 +2,68 @@
    Home Page CSS - ホームページ固有スタイル
    =============================================== */
 /* ===============================================
-   ヒーローセクション
+   ヒーローセクション - 新しいレイアウト
    =============================================== */
-/* Hero */
 .hero {
-    position: relative;
-    height: 600px;
-    background-image: url('assets/images/top-hero.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: visible;
+  position: relative;
+  height: 600px; /* 固定高さ */
+  overflow: visible; /* タイトルがはみ出せるように */
+  margin-top: 60px; /* ヘッダーの高さ分 */
 }
 
-.hero__video-container {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 0;
-    overflow: hidden;
-    height: calc(100% - 20px);
+/* 背景画像 */
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 動画ラッパー */
+.hero__video-wrapper {
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* 動画要素 */
 .hero__video {
-    width: 100%;
-    height: calc(100% / 0.7);
-    object-fit: cover;
-    object-position: top;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* 上部70%のみ表示 */
+  transform: scale(1.43); /* 100% / 70% = 1.43 で高さ70%表示を実現 */
+  transform-origin: top center;
 }
 
+/* タイトル */
 .hero__title {
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 3rem;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 30px 60px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    width: max-content;
-    max-width: 90%;
+  position: absolute;
+  bottom: -50%; /* タイトルの高さの半分程度を下にはみ出す */
+  left: 0;
+  right: 0;
+  z-index: 2;
+  font-size: var(--font-size-3xl);
+  font-weight: 300;
+  line-height: 1.4;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 var(--content-padding);
 }
 
 /* ===============================================
