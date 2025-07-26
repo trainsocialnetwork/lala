@@ -6,7 +6,7 @@
    ページヒーロー（当院について用）
    =============================================== */
 .page-hero--about {
-  height: 40vh;
+  height: 300px;
   min-height: 300px;
 }
 
@@ -14,7 +14,7 @@
    リードセクション
    =============================================== */
 .section--lead {
-  padding: var(--spacing-2xl) 0;
+      padding: var(--spacing-xl) 0;
 }
 
 .lead-text {
