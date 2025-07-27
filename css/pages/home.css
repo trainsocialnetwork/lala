@@ -11,40 +11,45 @@
   backdrop-filter: none !important;
 }
 
-/* ===============================================
+* ===============================================
    ヒーローセクション - 新しいレイアウト
    =============================================== */
 .hero {
   position: relative;
-  height: 660px; /* 固定高さ */
-  max-width:430ox;
+  height: 660px;
+  max-width: 430px;  /* ox → px に修正 */
   overflow: hidden;
 }
 
 /* 背景画像 */
 .hero::before {
+  content: '';  /* 擬似要素には必須 */
   position: absolute;
   top: 0;
   left: 0;
-　height: 100%;
-　background-image: url('../assets/images/reception.webp'); 
+  width: 100%;  /* 追加 */
+  height: 100%;
+  background-image: url('../assets/images/reception.webp'); 
+  background-size: cover;  /* 推奨：画像サイズの指定 */
+  background-position: center;  /* 推奨：画像位置の指定 */
   background-repeat: no-repeat;
   z-index: 0;
 }
 
 .hero__bg {
- position: absolute;
- width: 484px;
- height: 400px;
- top: 70px;
- left: 20px;
- border-radius: 150px;
- overflow: hidden;
+  position: absolute; 
+  width: 484px;
+  height: 400px;
+  top: 70px;
+  left: 20px;
+  border-radius: 150px;
+  overflow: hidden;
 }
 
 .hero__bg img {
+  width: 100%;
+  height: 100%;  /* 追加：高さも100%に */
   object-fit: cover;
-　width: 100%;
 }
 
 /* タイトル */
