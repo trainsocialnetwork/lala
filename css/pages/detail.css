@@ -90,7 +90,6 @@
    =============================================== */
 /* ページナビゲーション全体の調整 */
 .page-nav {
-  position: sticky;
   top: 60px;
   background-color: var(--color-bg);
   z-index: 100;
