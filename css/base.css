@@ -287,7 +287,7 @@ h6 { font-size: var(--font-size-base); }
 
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(100px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
