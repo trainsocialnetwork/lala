@@ -862,11 +862,7 @@
   border-radius: var(--radius-md);
   margin-bottom: var(--spacing-sm);
   box-shadow: var(--shadow-sm);
-  overflow: hidden; /* 閉じている時はhidden */
-}
-
-.faq-item.is-open {
-  overflow: visible; /* 開いている時はvisible */
+  overflow: hidden;
 }
 
 .faq-item__question {
@@ -881,6 +877,8 @@
   font-weight: 500;
   transition: all var(--transition-base);
   cursor: pointer;
+  border: none;
+  font-family: inherit;
 }
 
 .faq-item__question:hover {
@@ -926,9 +924,7 @@
   transition: max-height 0.5s ease;
 }
 
-/* 重要: is-openの時のmax-heightは削除またはnoneに */
 .faq-item.is-open .faq-item__answer {
-  /* max-height: 1000px; ← この行を削除 */
   overflow: visible;
 }
 
