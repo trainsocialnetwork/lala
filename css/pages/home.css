@@ -15,7 +15,8 @@
 * ===============================================
    ヒーローセクション - 新しいレイアウト
    =============================================== */
-.hero {
+.hero-top {
+  align-items: center;
   position: relative;
   height: 660px !important;
   max-width: 430px !important;  /* ox → px に修正 */
@@ -24,7 +25,7 @@
 }
 
 /* 背景画像 */
-.hero::before {
+.hero-top::before {
   content: '';  /* 擬似要素には必須 */
   position: absolute;
   top: 0;
@@ -57,7 +58,7 @@
 .hero__title {
   position: absolute;
   left: 30px;
-  top: 500px;
+  top: 420px;
   z-index: 1;
   font-size: 28px;
   font-weight: 500;
