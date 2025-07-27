@@ -53,73 +53,73 @@
       }
     }
     
-openItem(item) {
-  item.classList.add('is-open');
-  
-  const answer = item.querySelector('.faq-item__answer');
-  const answerInner = item.querySelector('.faq-item__answer-inner');
-  
-  if (answer && answerInner) {
-    // 一時的に高さを auto にして実際の高さを取得
-    answer.style.maxHeight = 'none';
-    answer.style.display = 'block';
-    
-    // 実際のコンテンツの高さを取得
-    const contentHeight = answerInner.scrollHeight;
-    
-    // アニメーションのために一旦 0 に戻す
-    answer.style.display = '';
-    answer.style.maxHeight = '0';
-    
-    // 少し遅延させてからアニメーション開始
-    setTimeout(() => {
-      answer.style.maxHeight = contentHeight + 'px';
-    }, 10);
-    
-    // アニメーション完了後に max-height を none に設定
-    setTimeout(() => {
-      if (item.classList.contains('is-open')) {
+    openItem(item) {
+      item.classList.add('is-open');
+      
+      const answer = item.querySelector('.faq-item__answer');
+      const answerInner = item.querySelector('.faq-item__answer-inner');
+      
+      if (answer && answerInner) {
+        // 一時的に高さを auto にして実際の高さを取得
         answer.style.maxHeight = 'none';
+        answer.style.display = 'block';
+        
+        // 実際のコンテンツの高さを取得
+        const contentHeight = answerInner.scrollHeight;
+        
+        // アニメーションのために一旦 0 に戻す
+        answer.style.display = '';
+        answer.style.maxHeight = '0';
+        
+        // 少し遅延させてからアニメーション開始
+        setTimeout(() => {
+          answer.style.maxHeight = contentHeight + 'px';
+        }, 10);
+        
+        // アニメーション完了後に max-height を none に設定
+        setTimeout(() => {
+          if (item.classList.contains('is-open')) {
+            answer.style.maxHeight = 'none';
+          }
+        }, 500); // transition時間と同じ
       }
-    }, 500); // transition時間と同じ
-  }
-  
-  // アクセシビリティ
-  const question = item.querySelector('.faq-item__question');
-  if (question) {
-    question.setAttribute('aria-expanded', 'true');
-  }
-}
-
-// closeItem関数の修正版
-closeItem(item) {
-  const answer = item.querySelector('.faq-item__answer');
-  
-  if (answer) {
-    // 現在の高さを取得
-    const currentHeight = answer.scrollHeight;
+      
+      // アクセシビリティ
+      const question = item.querySelector('.faq-item__question');
+      if (question) {
+        question.setAttribute('aria-expanded', 'true');
+      }
+    }
     
-    // 一旦現在の高さを設定
-    answer.style.maxHeight = currentHeight + 'px';
-    
-    // リフローを強制
-    answer.offsetHeight;
-    
-    // 0にアニメーション
-    answer.style.maxHeight = '0';
+    closeItem(item) {
+      const answer = item.querySelector('.faq-item__answer');
+      
+      if (answer) {
+        // 現在の高さを取得
+        const currentHeight = answer.scrollHeight;
+        
+        // 一旦現在の高さを設定
+        answer.style.maxHeight = currentHeight + 'px';
+        
+        // リフローを強制
+        answer.offsetHeight;
+        
+        // 0にアニメーション
+        answer.style.maxHeight = '0';
+      }
+      
+      // アニメーション完了後にクラスを削除
+      setTimeout(() => {
+        item.classList.remove('is-open');
+      }, 500);
+      
+      // アクセシビリティ
+      const question = item.querySelector('.faq-item__question');
+      if (question) {
+        question.setAttribute('aria-expanded', 'false');
+      }
+    }
   }
-  
-  // アニメーション完了後にクラスを削除
-  setTimeout(() => {
-    item.classList.remove('is-open');
-  }, 500);
-  
-  // アクセシビリティ
-  const question = item.querySelector('.faq-item__question');
-  if (question) {
-    question.setAttribute('aria-expanded', 'false');
-  }
-}
   
   // ===============================================
   // キャンペーンカルーセル
@@ -153,24 +153,23 @@ closeItem(item) {
         this.initSwipeEvents();
         
         // スクロールイベント（デバウンス処理）
-        this.track.addEventListener('scroll', window.LaLaUtils.debounce(() => {
-            if (!this.isDragging) {
-                this.updateCurrentIndex();
-            }
+        this.track.addEventListener('scroll', this.debounce(() => {
+            this.updateCurrentIndex();
         }, 100));
+        
+        // 初期位置
+        this.updateDots();
     }
     
     createDots() {
         if (!this.dotsContainer) return;
         
-        this.slides.forEach((_, index) => {
+        this.slides.forEach((slide, index) => {
             const dot = document.createElement('button');
             dot.className = 'campaign-carousel__dot';
             dot.setAttribute('aria-label', `スライド ${index + 1}`);
             
-            if (index === 0) {
-                dot.classList.add('is-active');
-            }
+            if (index === 0) dot.classList.add('is-active');
             
             dot.addEventListener('click', () => this.goToSlide(index));
             
@@ -182,19 +181,14 @@ closeItem(item) {
     initSwipeEvents() {
         // タッチイベント
         this.track.addEventListener('touchstart', (e) => this.handleStart(e), { passive: true });
-        this.track.addEventListener('touchmove', (e) => this.handleMove(e), { passive: true });
+        this.track.addEventListener('touchmove', (e) => this.handleMove(e), { passive: false });
         this.track.addEventListener('touchend', (e) => this.handleEnd(e));
         
-        // マウスイベント（デスクトップ対応）
+        // マウスイベント
         this.track.addEventListener('mousedown', (e) => this.handleStart(e));
         this.track.addEventListener('mousemove', (e) => this.handleMove(e));
         this.track.addEventListener('mouseup', (e) => this.handleEnd(e));
-        this.track.addEventListener('mouseleave', (e) => {
-            if (this.isDragging) this.handleEnd(e);
-        });
-        
-        // スクロールスナップを一時的に無効化
-        this.track.style.scrollSnapType = 'none';
+        this.track.addEventListener('mouseleave', (e) => this.handleEnd(e));
     }
     
     handleStart(e) {
@@ -279,7 +273,19 @@ closeItem(item) {
         
         this.updateDots();
     }
-}
+    
+    debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+  }
   
   // ===============================================
   // 初期化
