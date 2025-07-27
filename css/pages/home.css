@@ -31,13 +31,14 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;  /* 追加 */
   height: 100%;
   background-image: url('../../assets/images/reception.webp'); 
   background-size: cover;
   background-position: center; 
   background-repeat: no-repeat;
   z-index: 0;
-  opacity: 0.1;
+  opacity: 0.1;  /* 全角スペースを半角に修正 */
 }
 
 .hero__bg {
