@@ -64,6 +64,13 @@
           }
         }
       });
+      
+      // セクションをDOM上の順序でソート
+      this.sections.sort((a, b) => {
+        const aTop = a.element.getBoundingClientRect().top + window.pageYOffset;
+        const bTop = b.element.getBoundingClientRect().top + window.pageYOffset;
+        return aTop - bTop;
+      });
     }
     
     initScrollBehavior() {
@@ -95,19 +102,44 @@
     }
     
     updateActiveLink() {
-      const scrollPosition = window.pageYOffset + this.headerHeight + this.navHeight + 50;
+      // ビューポートの中央位置を基準にする
+      const viewportHeight = window.innerHeight;
+      const scrollCenter = window.pageYOffset + viewportHeight / 3;
       
       let currentSection = null;
+      let minDistance = Infinity;
       
-      // 現在のセクションを判定
+      // 各セクションとの距離を計算して、最も近いセクションを選択
       this.sections.forEach(section => {
         const rect = section.element.getBoundingClientRect();
-        const top = rect.top + window.pageYOffset;
+        const sectionTop = rect.top + window.pageYOffset;
+        const sectionBottom = sectionTop + rect.height;
+        const sectionCenter = sectionTop + rect.height / 2;
         
-        if (scrollPosition >= top) {
-          currentSection = section;
+        // セクションの中心とスクロール中心の距離
+        const distance = Math.abs(sectionCenter - scrollCenter);
+        
+        // セクションが画面内にあり、最も中心に近い場合
+        if (scrollCenter >= sectionTop - 100 && scrollCenter <= sectionBottom + 100) {
+          if (distance < minDistance) {
+            minDistance = distance;
+            currentSection = section;
+          }
         }
       });
+      
+      // 最初のセクションより上にいる場合
+      if (!currentSection && this.sections.length > 0) {
+        const firstSectionTop = this.sections[0].element.getBoundingClientRect().top + window.pageYOffset;
+        if (scrollCenter < firstSectionTop) {
+          currentSection = this.sections[0];
+        }
+      }
+      
+      // 最後のセクションを過ぎた場合
+      if (!currentSection && this.sections.length > 0) {
+        currentSection = this.sections[this.sections.length - 1];
+      }
       
       // アクティブ状態を更新
       this.links.forEach(link => link.classList.remove('is-active'));
