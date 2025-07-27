@@ -28,13 +28,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;  /* 追加 */
   height: 100%;
   background-image: url('../../assets/images/reception.webp'); 
   background-size: cover;  /* 推奨：画像サイズの指定 */
   background-position: center;  /* 推奨：画像位置の指定 */
   background-repeat: no-repeat;
   z-index: 0;
+　opacity: 0.1;
 }
 
 .hero__bg {
