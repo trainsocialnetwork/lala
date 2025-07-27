@@ -17,9 +17,10 @@
    =============================================== */
 .hero {
   position: relative;
-  height: 660px;
-  max-width: 430px;  /* ox → px に修正 */
+  height: 660px !important;
+  max-width: 430px !important;  /* ox → px に修正 */
   overflow: hidden;
+  margin-top: 0px !important;
 }
 
 /* 背景画像 */
@@ -48,7 +49,6 @@
 }
 
 .hero__bg img {
-  width: 100%;
   height: 100%;  /* 追加：高さも100%に */
   object-fit: cover;
 }
@@ -57,7 +57,7 @@
 .hero__title {
   position: absolute;
   left: 30px;
-  top: 420px;
+  top: 500px;
   z-index: 1;
   font-size: 28px;
   font-weight: 500;
@@ -70,7 +70,7 @@
 .top_section__lead {
   position: absolute;
   left: 30px;
-  top: 500px;
+  top: 580px;
   z-index: 1;
   font-size: 14px;
   font-weight: 400;
