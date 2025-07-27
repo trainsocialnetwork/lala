@@ -19,21 +19,20 @@
   align-items: center;
   position: relative;
   height: 660px !important;
-  max-width: 430px !important;  /* ox → px に修正 */
+  max-width: 430px !important;
   overflow: hidden;
   margin-top: 0px !important;
 }
 
-/* 背景画像 */
 .hero-top::before {
-  content: '';  /* 擬似要素には必須 */
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   background-image: url('../../assets/images/reception.webp'); 
-  background-size: cover;  /* 推奨：画像サイズの指定 */
-  background-position: center;  /* 推奨：画像位置の指定 */
+  background-size: cover;
+  background-position: center; 
   background-repeat: no-repeat;
   z-index: 0;
 　opacity: 0.1;
@@ -50,11 +49,10 @@
 }
 
 .hero__bg img {
-  height: 100%;  /* 追加：高さも100%に */
+  height: 100%;
   object-fit: cover;
 }
 
-/* タイトル */
 .hero__title {
   position: absolute;
   left: 30px;
