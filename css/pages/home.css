@@ -22,6 +22,8 @@
   max-width: 430px !important;
   overflow: hidden;
   margin-top: 0px !important;
+  margin-left: auto;
+  margin-top: auto;
 }
 
 .hero-top::before {
@@ -46,11 +48,13 @@
   left: 20px;
   border-radius: 150px;
   overflow: hidden;
+  z-index: 1;
 }
 
 .hero__bg img {
   height: 100%;
   object-fit: cover;
+  z-index: 1;
 }
 
 .hero__title {
