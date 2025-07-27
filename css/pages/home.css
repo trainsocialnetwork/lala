@@ -36,7 +36,7 @@
  width: 484px;
  height: 400px;
  top: 70px;
- left: 20px
+ left: 20px;
  border-radius: 150px;
  overflow: hidden;
 }
@@ -60,7 +60,7 @@
   padding: 0;
 }
 
-. top_section__lead {
+.top_section__lead {
   position: absolute;
   left: 30px;
   top: 580px;
