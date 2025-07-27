@@ -160,6 +160,83 @@ function initFadeInAnimation() {
 }
 
 // ===============================================
+// 一文字ずつフェードイン機能
+// ===============================================
+
+// テキストを一文字ずつ分割してspanタグでラップする関数
+function wrapTextCharacters(element) {
+  const text = element.textContent;
+  const wrappedText = text.split('').map((char, index) => {
+    if (char === ' ') {
+      return `<span class="fade-in-char" style="animation-delay: ${index * 0.05}s">&nbsp;</span>`;
+    }
+    return `<span class="fade-in-char" style="animation-delay: ${index * 0.05}s">${char}</span>`;
+  }).join('');
+  element.innerHTML = wrappedText;
+}
+
+// BRタグを含むテキストを処理する関数
+function wrapTextWithBreaks(element, originalHTML) {
+  const parts = originalHTML.split('<br>');
+  const wrappedParts = parts.map((part, partIndex) => {
+    const tempDiv = document.createElement('div');
+    tempDiv.textContent = part.trim();
+    const chars = tempDiv.textContent.split('').map((char, charIndex) => {
+      const delay = (partIndex * 20 + charIndex) * 0.05;
+      if (char === ' ') {
+        return `<span class="fade-in-char" style="animation-delay: ${delay}s">&nbsp;</span>`;
+      }
+      return `<span class="fade-in-char" style="animation-delay: ${delay}s">${char}</span>`;
+    }).join('');
+    return chars;
+  });
+  element.innerHTML = wrappedParts.join('<br>');
+}
+
+// 一文字ずつフェードインアニメーションを初期化
+function initFadeInText() {
+  const elements = document.querySelectorAll('.fade-in-text');
+  if (!elements.length) return;
+
+  // Intersection Observerの設定
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  // 要素が画面に入ったときの処理
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+        const element = entry.target;
+        const originalHTML = element.innerHTML;
+        const hasBreak = originalHTML.includes('<br>');
+        
+        if (hasBreak) {
+          wrapTextWithBreaks(element, originalHTML);
+        } else {
+          wrapTextCharacters(element);
+        }
+        
+        element.classList.add('animated');
+        observer.unobserve(element);
+      }
+    });
+  }, observerOptions);
+
+  // fade-in-textクラスを持つ要素を監視
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+}
+
+// DOMContentLoaded時にフェードインテキストを初期化
+document.addEventListener('DOMContentLoaded', function() {
+  initFadeInText();
+});
+
+// ===============================================
 // エクスポート（モジュール化対応）
 // ===============================================
 window.LaLaUtils = {
@@ -168,5 +245,8 @@ window.LaLaUtils = {
   debounce,
   throttle,
   initLazyLoad,
-  initFadeInAnimation
+  initFadeInAnimation,
+  wrapTextCharacters,
+  wrapTextWithBreaks,
+  initFadeInText
 };
