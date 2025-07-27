@@ -102,43 +102,27 @@
     }
     
     updateActiveLink() {
-      // ビューポートの中央位置を基準にする
-      const viewportHeight = window.innerHeight;
-      const scrollCenter = window.pageYOffset + viewportHeight / 3;
+      // ビューポートの上部位置を基準にする（ヘッダーとナビゲーションの高さを考慮）
+      const scrollTop = window.pageYOffset;
+      const triggerPoint = scrollTop + this.headerHeight + this.navHeight + 30;
       
       let currentSection = null;
-      let minDistance = Infinity;
       
-      // 各セクションとの距離を計算して、最も近いセクションを選択
-      this.sections.forEach(section => {
-        const rect = section.element.getBoundingClientRect();
-        const sectionTop = rect.top + window.pageYOffset;
-        const sectionBottom = sectionTop + rect.height;
-        const sectionCenter = sectionTop + rect.height / 2;
+      // 各セクションを順番にチェック
+      for (let i = this.sections.length - 1; i >= 0; i--) {
+        const section = this.sections[i];
+        const sectionTop = section.element.getBoundingClientRect().top + window.pageYOffset;
         
-        // セクションの中心とスクロール中心の距離
-        const distance = Math.abs(sectionCenter - scrollCenter);
-        
-        // セクションが画面内にあり、最も中心に近い場合
-        if (scrollCenter >= sectionTop - 100 && scrollCenter <= sectionBottom + 100) {
-          if (distance < minDistance) {
-            minDistance = distance;
-            currentSection = section;
-          }
-        }
-      });
-      
-      // 最初のセクションより上にいる場合
-      if (!currentSection && this.sections.length > 0) {
-        const firstSectionTop = this.sections[0].element.getBoundingClientRect().top + window.pageYOffset;
-        if (scrollCenter < firstSectionTop) {
-          currentSection = this.sections[0];
+        // トリガーポイントがセクションの上部を超えている場合
+        if (triggerPoint >= sectionTop) {
+          currentSection = section;
+          break;
         }
       }
       
-      // 最後のセクションを過ぎた場合
+      // 最初のセクションより上にいる場合
       if (!currentSection && this.sections.length > 0) {
-        currentSection = this.sections[this.sections.length - 1];
+        currentSection = this.sections[0];
       }
       
       // アクティブ状態を更新
@@ -182,13 +166,27 @@
           const target = document.querySelector(href);
           
           if (target) {
+            // 即座にアクティブ状態を更新
+            this.links.forEach(l => l.classList.remove('is-active'));
+            link.classList.add('is-active');
+            
+            // アクティブなリンクを中央に表示
+            this.scrollToActiveLink(link);
+            
+            // スクロール位置の計算
             const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
             const offsetPosition = targetPosition - this.headerHeight - this.navHeight - 20;
             
+            // スムーズスクロール
             window.scrollTo({
               top: offsetPosition,
               behavior: 'smooth'
             });
+            
+            // スクロール完了後に再度状態を確認（念のため）
+            setTimeout(() => {
+              this.updateActiveLink();
+            }, 600);
           }
         });
       });
