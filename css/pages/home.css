@@ -33,6 +33,7 @@
 }
 
 .hero__bg {
+ position: absolute;
  width: 484px;
  height: 400px;
  top: 70px;
@@ -43,7 +44,7 @@
 
 .hero__bg img {
   object-fit: cover;
-　width:100%;
+　width: 100%;
 }
 
 /* タイトル */
