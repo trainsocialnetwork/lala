@@ -12,7 +12,7 @@
   box-shadow: none !important;
 }
 
-* ===============================================
+/* ===============================================
    ヒーローセクション - 新しいレイアウト
    =============================================== */
 .hero-top {
@@ -35,7 +35,7 @@
   background-position: center; 
   background-repeat: no-repeat;
   z-index: 0;
-　opacity: 0.1;
+  opacity: 0.1;
 }
 
 .hero__bg {
