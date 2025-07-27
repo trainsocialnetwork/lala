@@ -289,6 +289,12 @@ h6 { font-size: var(--font-size-base); }
   animation: fadeIn var(--transition-slow) ease-out;
 }
 
+/* 表示状態 */
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* フォーカス表示 */
 :focus-visible {
   outline: 2px solid var(--color-primary);
