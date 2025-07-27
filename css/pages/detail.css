@@ -88,51 +88,106 @@
 /* ===============================================
    ページナビゲーション
    =============================================== */
+/* ページナビゲーション全体の調整 */
 .page-nav {
+  position: sticky;
+  top: 60px;
   background-color: var(--color-bg);
-  top: 60px; /* ヘッダーの高さ */
   z-index: 100;
   box-shadow: var(--shadow-sm);
 }
 
+/* ナビゲーションリストの調整 */
 .page-nav__list {
   display: flex;
-  padding: var(--spacing-md) 0;
+  padding: var(--spacing-sm) 0; /* 上下パディングを24px→16pxに減少 */
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  justify-content: space-between; /* アイテムを均等配置 */
+  gap: var(--spacing-xs); /* アイテム間の隙間を8pxに設定 */
 }
 
-/* 最初のアイテムに左パディングを追加 */
-.page-nav__link:first-child {
- margin-left: var(--spacing-sm);
-}
-
-/* 最後のアイテムに右パディングを追加 */
-.page-nav__link:last-child {
- margin-right: var(--spacing-sm);
-}
-
+/* スクロールバーを非表示 */
 .page-nav__list::-webkit-scrollbar {
   display: none;
 }
 
+/* リンクアイテムの調整 */
 .page-nav__link {
-  font-size: var(--font-size-sm);
+  font-size: 13px; /* 14px→13pxに縮小 */
   font-weight: 500;
   color: var(--color-text);
   white-space: nowrap;
-  padding: var(--spacing-xs) var(--spacing-sm);
+  padding: 6px 12px; /* パディングを8px 16px → 6px 12pxに減少 */
   border-radius: var(--radius-full);
   transition: all var(--transition-base);
+  flex-shrink: 0; /* テキストの縮小を防ぐ */
 }
 
+/* アクティブ状態のスタイル */
 .page-nav__link.is-active {
   background-color: var(--color-primary);
   color: white;
   opacity: 1;
   font-weight: 600;
+}
+
+/* 最初と最後のアイテムのマージン調整 */
+.page-nav__list li:first-child .page-nav__link {
+  margin-left: var(--spacing-xs); /* 16px→8pxに減少 */
+}
+
+.page-nav__list li:last-child .page-nav__link {
+  margin-right: var(--spacing-xs); /* 16px→8pxに減少 */
+}
+
+/* ホバー効果 */
+.page-nav__link:hover:not(.is-active) {
+  background-color: var(--color-bg-light);
+  opacity: 1;
+}
+
+/* モバイルビューでの追加調整（390px以下） */
+@media (max-width: 390px) {
+  .page-nav__link {
+    font-size: 12px; /* さらに小さく */
+    padding: 5px 10px; /* パディングをさらに減少 */
+  }
+  
+  .page-nav__list {
+    gap: 4px; /* 隙間を4pxに減少 */
+  }
+}
+
+/* コンテナの調整 */
+.page-nav .container {
+  padding: 0 var(--spacing-xs); /* 左右のパディングを8pxに設定 */
+}
+
+/* 横スクロールが必要な場合のインジケーター（オプション） */
+.page-nav__list {
+  position: relative;
+}
+
+/* 右端にグラデーションを追加してスクロール可能であることを示す（オプション） */
+.page-nav__list::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(to right, transparent, var(--color-bg));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+/* スクロール可能な時のみグラデーションを表示 */
+.page-nav__list.is-scrollable::after {
+  opacity: 1;
 }
 
 /* ===============================================
