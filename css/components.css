@@ -862,11 +862,11 @@
   border-radius: var(--radius-md);
   margin-bottom: var(--spacing-sm);
   box-shadow: var(--shadow-sm);
-  overflow: hidden; /* 閉じている時のオーバーフローを隠す */
+  overflow: hidden; /* 閉じている時はhidden */
 }
 
 .faq-item.is-open {
-  overflow: visible;
+  overflow: visible; /* 開いている時はvisible */
 }
 
 .faq-item__question {
@@ -926,10 +926,9 @@
   transition: max-height 0.5s ease;
 }
 
+/* 重要: is-openの時のmax-heightは削除またはnoneに */
 .faq-item.is-open .faq-item__answer {
-  display: flex;
-  gap: var(--spacing-md);
-  align-items: flex-start;
+  /* max-height: 1000px; ← この行を削除 */
   overflow: visible;
 }
 
