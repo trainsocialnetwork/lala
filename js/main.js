@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // バックトゥトップボタン
   initBackToTop();
+   
+  // フェードインアニメーションを追加
+  initFadeInAnimation();  
   
   // ローディング解除
   setTimeout(() => {
