@@ -335,7 +335,7 @@
 
 .price-card__price .unit {
   font-size: 16px; /* 変更 */
-  color: var(--color-text-light);
+  color: var(--color-text);
 }
 
 .price-card__price--additional {
@@ -366,7 +366,7 @@
     line-height: var(--line-height-loose);
     margin-bottom: var(--spacing-md);
     font-size: 14px; /* 追加：フォントサイズ指定 */
-    color: var(--color-text-light); /* 追加：色指定 */
+    color: var(--color-text); /* 追加：色指定 */
 }
 
 .guarantee-box__price {
@@ -379,7 +379,7 @@
 
 .guarantee-box__price .label {
     font-size: 14px;
-    color: var(--color-text-light);
+    color: var(--color-text);
 }
 
 .guarantee-box__price .price {
@@ -390,12 +390,12 @@
 
 .guarantee-box__price .unit {
     font-size: 14px; /* 追加：単位サイズ */
-    color: var(--color-text-light);
+    color: var(--color-text);
 }
 
 .guarantee-box__notes {
     font-size: 12px; /* 変更：サイズ縮小 */
-    color: var(--color-text-light);
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
@@ -474,7 +474,7 @@
   flex-direction: column;
   gap: var(--spacing-xs);
   font-size: var(--font-size-sm);
-  color: var(--color-text-light);
+  color: var(--color-text);
 }
 /* ===============================================
    除去料金テーブル
@@ -516,7 +516,7 @@
 .removal-notes {
   margin-top: var(--spacing-sm);
   font-size: var(--font-size-sm);
-  color: var(--color-text-light);
+  color: var(--color-text);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
@@ -617,7 +617,7 @@
 .flow-step__text p {
   font-size: var(--font-size-sm);
   line-height: var(--line-height-loose);
-  color: var(--color-text-light);
+  color: var(--color-text);
   text-align: left;
 }
 
@@ -673,7 +673,7 @@
 .flow-step--cardless .flow-step__text p {
   font-size: var(--font-size-sm);
   line-height: var(--line-height-loose);
-  color: var(--color-text-light);
+  color: var(--color-text);
 }
 
 /* ===============================================
@@ -793,7 +793,7 @@
 
 .news-card__date {
   font-size: var(--font-size-sm);
-  color: var(--color-text-light);
+  color: var(--color-text);
 }
 
 .news-card__title {
@@ -806,7 +806,7 @@
 .news-card__excerpt {
   font-size: var(--font-size-sm);
   line-height: var(--line-height-loose);
-  color: var(--color-text-light);
+  color: var(--color-text);
 }
 
 @media (min-width: 430px) {
@@ -898,12 +898,12 @@
 
 .hours-grid--cardless .hours-item p {
   font-size: var(--font-size-sm);
-  color: var(--color-text-light);
+  color: var(--color-text);
   margin: 0;
 }
 
 .hours-grid--cardless .hours-item small {
-  color: var(--color-text-light);
+  color: var(--color-text);
   font-size: var(--font-size-sss);
 }
 
@@ -948,7 +948,7 @@
 .supervisor-info h3 {
   font-size: var(--font-size-lg);
   margin-bottom: var(--spacing-md);
-  color: var(--color-text-light);
+  color: var(--color-text);
 }
 
 .supervisor-info h4 {
@@ -958,12 +958,12 @@
 
 .supervisor-info__role {
   font-size: var(--font-size-base);
-  color: var(--color-text-light);
+  color: var(--color-text);
   margin-bottom: var(--spacing-sm);
 }
 
 .supervisor-info__qualification {
   font-size: var(--font-size-sm);
   line-height: var(--line-height-loose);
-  color: var(--color-text-light);
+  color: var(--color-text);
 }
