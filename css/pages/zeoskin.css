@@ -11,7 +11,7 @@
    リードセクション（新規追加）
    =============================================== */
 .section--lead {
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-xl) 0 0 0;
 }
 
 .lead-text {
@@ -400,10 +400,6 @@
 /* ===============================================
    セクション間の余白調整
    =============================================== */
-.section--lead {
-  padding-bottom: var(--spacing-2xl);
-}
-
 .section--about {
   padding: var(--spacing-3xl) 0;
 }
