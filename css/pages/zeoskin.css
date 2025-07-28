@@ -413,24 +413,6 @@
 }
 
 /* ===============================================
-   レスポンシブ調整
-   =============================================== */
-/* タブレット以上でのグリッド調整 */
-@media (min-width: 768px) {
-  .product-nav__grid {
-    grid-template-columns: repeat(5, 1fr);
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .products-grid {
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 1200px;
-    gap: var(--spacing-lg);
-  }
-}
-
-/* ===============================================
    アニメーション最適化
    =============================================== */
 /* reduced motionの対応 */
