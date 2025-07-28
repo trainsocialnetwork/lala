@@ -39,6 +39,8 @@
   background-repeat: no-repeat;
   z-index: 0;
   opacity: 0.1;  /* 全角スペースを半角に修正 */
+  margin-left: auto;
+  margin-top: auto;
 }
 
 .hero__bg {
