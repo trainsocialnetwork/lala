@@ -11,560 +11,324 @@
 }
 
 /* ===============================================
-   プロセスタイムライン（カードレス版）
+   ページタイトル
    =============================================== */
-.section--process .section__title {
-  margin-bottom: var(--spacing-2xl); /* 60px */
+.page-price-list .breadcrumb {
+  margin-top: 60px;
 }
 
-.process-timeline--cardless {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  max-width: 100%;
-  margin: 0 auto;
+.page-title-section {
+  padding: var(--spacing-xl) 0;
+  text-align: center;
+  background-color: var(--color-bg-light);
 }
 
-.process-timeline--cardless .process-phase {
-  background-color: transparent;
-  border-radius: 0;
-  overflow: visible;
-  box-shadow: none;
-  padding-bottom: var(--spacing-2xl); /* 60pxに変更 */
-  margin-bottom: var(--spacing-2xl); /* 60pxに変更 */
-  border-bottom: 1px solid var(--color-border);
-  transition: none;
+.page-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 400;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text);
 }
 
-.process-timeline--cardless .process-phase:last-child {
-  padding-bottom: 0;
+.page-title__sub {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ===============================================
+   料金セクション
+   =============================================== */
+.section--price {
+  padding: var(--spacing-3xl) 0;
+}
+
+.section--price .section__title {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+/* ===============================================
+   料金テーブルラッパー
+   =============================================== */
+.price-table-wrapper {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.price-table-wrapper:last-child {
   margin-bottom: 0;
+}
+
+.price-table__title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* ===============================================
+   料金テーブル（シンプル版）
+   =============================================== */
+.price-table {
+  width: 100%;
+  background-color: var(--color-bg);
+  overflow: hidden;
+  margin-bottom: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.price-table thead {
+  border-bottom: 2px solid var(--color-border);
+  border-top: 2px solid var(--color-border);
+}
+
+.price-table thead tr {
+  background-color: var(--color-bg-light);
+}
+
+.price-table th,
+.price-table td {
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-md);
+  text-align: left;
+}
+
+.price-table th {
+  font-weight: 600;
+  background-color: transparent;
+  color: var(--color-text);
+}
+
+.price-table th:last-child,
+.price-table td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* 3列テーブル用の調整 */
+.price-table th:nth-child(2),
+.price-table td:nth-child(2) {
+  text-align: center;
+  width: 100px;
+}
+
+/* 3列テーブルの場合の最後の列 */
+.price-table th:nth-child(3),
+.price-table td:nth-child(3) {
+  text-align: right;
+}
+
+.price-table tbody tr {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.price-table tbody tr:last-child {
   border-bottom: none;
 }
 
-.process-timeline--cardless .process-phase:hover {
-  box-shadow: none;
-  transform: none;
+/* ハイライト価格（緑色のみ維持） */
+.price-table .highlight {
+  color: var(--color-accent);
+  font-weight: 600;
 }
 
-.process-timeline--cardless .process-phase__header {
-  background-color: transparent;
-  color: var(--color-text);
-  padding: 0 0 var(--spacing-md) 0; /* 24pxに変更 */
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xs); /* 8px */
-  border-bottom: 2px solid var(--color-primary);
-  margin-bottom: var(--spacing-lg); /* 32px */
+/* 単位 */
+.price-table .unit {
+  font-size: var(--font-size-ss);
+  color: var(--color-text-light);
+  font-weight: 400;
+  margin-left: 2px;
 }
 
-.process-timeline--cardless .process-phase__period {
+/* サブテキスト */
+.price-table .sub-text {
+  display: block;
+  font-size: var(--font-size-ss);
+  color: var(--color-text-light);
+  font-weight: 400;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* 料金備考 */
+.price-notes {
   font-size: var(--font-size-sm);
   color: var(--color-text-light);
-}
-
-.process-timeline--cardless .process-phase__title {
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-  margin: 0;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
+  padding-left: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+}
+
+.price-notes li {
+  position: relative;
+}
+
+/* ===============================================
+   注意事項セクション
+   =============================================== */
+.section--notes {
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-3xl) 0;
+}
+
+.notes-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.notes-block {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.notes-block:last-child {
+  margin-bottom: 0;
+}
+
+.notes-block h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
   color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
 }
 
-.process-timeline--cardless .phase-number {
-  font-size: var(--font-size-sm);
-  font-weight: 400;
-  color: var(--color-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.process-timeline--cardless .process-phase__content {
-  padding: 0;
+.notes-block ul {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg); /* 32px */
+  gap: var(--spacing-sm);
 }
 
-.process-phase__description {
+.notes-block li {
+  position: relative;
+  padding-left: var(--spacing-lg);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-loose);
   color: var(--color-text);
 }
 
-.process-phase__symptoms {
-  background-color: var(--color-bg-light);
-  border-radius: var(--radius-md);
-  padding: var(--spacing-lg); /* 32pxに変更 */
-}
-
-.process-phase__symptoms h4 {
-  font-size: var(--font-size-base);
-  font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-md); /* 24px */
-}
-
-.process-phase__symptoms ul {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm); /* 16px */
-}
-
-.process-phase__symptoms li {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-light);
-  padding-left: var(--spacing-md);
-  position: relative;
-}
-
-.process-phase__symptoms li::before {
+.notes-block li::before {
   content: "・";
   position: absolute;
-  left: 0;
+  left: var(--spacing-sm);
   color: var(--color-secondary);
   font-weight: bold;
 }
 
 /* ===============================================
-   製品セット
+   CTAセクション
    =============================================== */
-.section--products .section__title {
-  margin-bottom: var(--spacing-lg); /* 32px */
-}
-
-.section--products .section__lead {
-  margin-bottom: var(--spacing-2xl); /* 60px */
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-loose);
-  color: var(--color-text-light);
+.section--cta {
+  padding: var(--spacing-3xl) 0;
   text-align: center;
 }
 
-.product-set {
-  margin-bottom: var(--spacing-2xl); /* 60pxに変更 */
-}
-
-.product-set:last-child {
-  margin-bottom: 0;
-}
-
-.product-set__title {
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-lg);
-  padding-bottom: var(--spacing-sm);
-  border-bottom: 2px solid var(--color-primary);
-}
-
-.product-set__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-md);
-}
-
-/* シンプルな製品カード */
-.product-card--simple {
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--spacing-md);
-  text-align: center;
-  transition: all var(--transition-base);
-}
-
-.product-card--simple:hover {
-  box-shadow: var(--shadow-sm);
-  transform: translateY(-2px);
-}
-
-.product-card--simple .product-card__image {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto var(--spacing-sm);
-}
-
-.product-card--simple .product-card__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.product-card--simple .product-card__info h4 {
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  color: var(--color-text);
-  margin-bottom: var(--spacing-xs);
-}
-
-.product-card--simple .product-card__info p {
-  font-size: var(--font-size-ss);
-  color: var(--color-text-light);
-  margin: 0;
-}
-
-/* ===============================================
-   効果グリッド
-   =============================================== */
-.section--results .section__title {
-  margin-bottom: var(--spacing-2xl); /* 60px */
-}
-
-.results-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-md); /* 24px */
-}
-
-.result-item {
-  text-align: center;
-  padding: var(--spacing-lg); /* 32px */
-  background-color: var(--color-bg);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base);
-}
-
-.result-item:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-
-.result-item__icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto var(--spacing-md); /* 下部マージン24px */
-  background-color: var(--color-bg-light);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.result-item__icon i {
-  font-size: var(--font-size-2xl);
-  color: var(--color-primary);
-}
-
-.result-item h3 {
+.section--cta .section__lead {
   font-size: var(--font-size-base);
-  font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-sm); /* 16px */
-  line-height: var(--line-height-tight);
-}
-
-.result-item p {
-  font-size: var(--font-size-sm);
   line-height: var(--line-height-loose);
   color: var(--color-text-light);
-  margin: 0;
+  margin-bottom: var(--spacing-xl);
 }
 
 /* ===============================================
-   基本セットセクション
+   ページナビゲーション（ヘッダー内）のスタイル
    =============================================== */
-.section--basic-set {
-    padding: var(--spacing-3xl) 0;
+.page-price-list .header__nav-list a {
+  font-size: var(--font-size-sm);
 }
 
-.basic-set-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-2xl);
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-/* 基本セットの画像 - アスペクト比 600:176 (約 3.4:1) */
-.basic-set__image {
-    width: 100%;
-    aspect-ratio: 600 / 176;
-    overflow: hidden;
-    border-radius: var(--radius-lg);
-}
-
-.basic-set__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: var(--radius-lg);
-}
-
-.basic-set__details {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-}
-
-.basic-set__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.basic-set__list li {
-    padding: var(--spacing-sm) 0;
-    padding-left: var(--spacing-lg);
-    position: relative;
-    font-size: var(--font-size-base);
-    line-height: 1.8;
-}
-
-.basic-set__list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: var(--color-primary);
-    font-weight: bold;
-}
-
-.basic-set__price {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    flex-wrap: wrap;
-    padding: var(--spacing-md) 0;
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-}
-
-.price-label {
-    background-color: var(--color-secondary);
-    color: white;
-    padding: 4px 12px;
-    border-radius: var(--border-radius-sm);
-    font-size: var(--font-size-sm);
-    font-weight: 600;
-}
-
-.price-amount {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    color: var(--color-primary);
-}
-
-.price-shipping {
-    color: var(--color-text-light);
-    font-size: var(--font-size-sm);
+/* モバイルメニュー内のリンク */
+.page-price-list .mobile-menu__nav a {
+  font-size: var(--font-size-base);
 }
 
 /* ===============================================
-   サポートセクション
+   アニメーション
    =============================================== */
-.section--support {
-    background-color: #F0F0F0;
-    padding: var(--spacing-3xl) 0;
+.price-table-wrapper {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
 }
 
-.bg-light-gray {
-    background-color: #F0F0F0;
-}
+.price-table-wrapper:nth-child(1) { animation-delay: 0.1s; }
+.price-table-wrapper:nth-child(2) { animation-delay: 0.2s; }
+.price-table-wrapper:nth-child(3) { animation-delay: 0.3s; }
+.price-table-wrapper:nth-child(4) { animation-delay: 0.4s; }
+.price-table-wrapper:nth-child(5) { animation-delay: 0.5s; }
 
-.support-intro {
-    max-width: 800px;
-    margin: 0 auto var(--spacing-2xl);
-    text-align: center;
-}
-
-.support-intro p {
-    font-size: var(--font-size-base);
-    line-height: 1.8;
-    color: var(--color-text);
-}
-
-.support-subtitle {
-    text-align: center;
-    font-size: var(--font-size-lg);
-    font-weight: 600;
-    margin-bottom: var(--spacing-xl);
-    color: var(--color-primary);
-}
-
-/* 横スクロールコンテナ */
-.support-cases {
-    position: relative;
-    margin: 0 calc(-1 * var(--spacing-md));
-    padding: 0 var(--spacing-md);
-}
-
-.support-cases__scroll {
-    display: flex;
-    gap: var(--spacing-md);
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: var(--spacing-md);
-}
-
-/* スクロールバーのスタイリング */
-.support-cases__scroll::-webkit-scrollbar {
-    height: 6px;
-}
-
-.support-cases__scroll::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 3px;
-}
-
-.support-cases__scroll::-webkit-scrollbar-thumb {
-    background: var(--color-primary);
-    border-radius: 3px;
-}
-
-.support-case {
-    flex: 0 0 280px;
-    background: white;
-    border-radius: var(--border-radius-md);
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* サポートケースの画像 - アスペクト比 7:12 */
-.support-case__image {
-    width: 100%;
-    aspect-ratio: 7 / 12;
-    overflow: hidden;
-}
-
-.support-case__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.support-case h4 {
-    padding: var(--spacing-md);
-    font-size: var(--font-size-sm);
-    font-weight: 600;
-    text-align: center;
-    line-height: 1.6;
-}
-
-/* 横スクロールのインジケーター */
-.support-cases::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: var(--spacing-md);
-    width: 40px;
-    background: linear-gradient(to right, transparent, #F0F0F0);
-    pointer-events: none;
-}
-
-/* ===============================================
-   FAQセクション
-   =============================================== */
-.faq-list {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    border-bottom: 1px solid var(--color-border);
-    padding: var(--spacing-md) 0;
-}
-
-.faq-item:last-child {
-    border-bottom: none;
-}
-
-.faq-item__question {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: var(--spacing-sm) 0;
-    font-size: var(--font-size-base);
-    font-weight: 600;
-    text-align: left;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--spacing-md);
-    transition: color 0.3s ease;
-}
-
-.faq-item__question:hover {
-    color: var(--color-primary);
-}
-
-.faq-item__question i {
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.faq-item.is-open .faq-item__question i {
-    transform: rotate(180deg);
-}
-
-.faq-item__answer {
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-}
-
-.faq-item.is-open .faq-item__answer {
-    max-height: 500px;
-    padding: var(--spacing-sm) 0 var(--spacing-md);
-}
-
-.faq-item__answer p {
-    font-size: var(--font-size-base);
-    line-height: 1.8;
-    color: var(--color-text);
-    margin: 0;
-}
-
-/* ===============================================
-   レスポンシブ調整
-   =============================================== */
-@media (min-width: 430px) {
-  /* PCでもスマホレイアウトを維持 */
-  .process-timeline--cardless,
-  .product-set__grid,
-  .results-grid,
-  .important-list--cardless {
-    max-width: 430px;
-    margin: 0 auto;
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 /* ===============================================
-   セクション余白の統一
+   料金テーブルのアクションボタン
    =============================================== */
-.section--process,
-.section--products,
-.section--results,
-.section--important {
-  padding: var(--spacing-3xl) 0; /* 他ページと同じ80px */
-}
-.process-phase--reaction .process-phase__header {
-  border-bottom-color: #E53E3E;
+.price-table__action {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-top: var(--spacing-lg);
 }
 
-.process-phase--reaction .process-phase__title {
-  color: #E53E3E;
+/* 縦並びボタン用 */
+.price-table__action--vertical {
+  flex-direction: column;
+  align-items: center;
 }
 
-.process-phase--tolerance .process-phase__header {
-  border-bottom-color: #38B2AC;
+.price-table__action--vertical .button {
+  width: 100%;
+  max-width: 300px;
 }
 
-.process-phase--tolerance .process-phase__title {
-  color: #38B2AC;
+/* 背景色付きセクション */
+.section--bg-light {
+  background-color: var(--color-bg-light);
 }
 
-.process-phase--completion .process-phase__header {
-  border-bottom-color: #48BB78;
+/* ===============================================
+   CTAボタンセクション
+   =============================================== */
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.process-phase--completion .process-phase__title {
-  color: #48BB78;
+/* ===============================================
+   rowspan のスタイリング
+   =============================================== */
+td[rowspan] {
+  vertical-align: top;
+  font-weight: 500;
+  background-color: var(--color-bg-light);
+}
+
+/* ===============================================
+   料金サブセクションタイトル（ゼオスキン用）
+   =============================================== */
+.price-subsection-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  padding-left: var(--spacing-sm);
+  border-left: 3px solid var(--color-secondary);
 }
