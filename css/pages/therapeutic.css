@@ -143,19 +143,10 @@
 }
 
 .basic-set__list li {
-  padding: var(--spacing-sm) 0;
   padding-left: var(--spacing-lg);
   position: relative;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   line-height: 1.8;
-}
-
-.basic-set__list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: var(--color-primary);
-  font-weight: bold;
 }
 
 .basic-set__price {
