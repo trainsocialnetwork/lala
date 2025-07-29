@@ -69,11 +69,17 @@
   background-color: var(--color-bg);
   overflow: hidden;
   margin-bottom: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
 }
 
 .price-table thead {
   border-bottom: 2px solid var(--color-border);
   border-top: 2px solid var(--color-border);
+}
+
+.price-table thead tr {
+  background-color: var(--color-bg-light);
 }
 
 .price-table th,
@@ -262,13 +268,93 @@
 }
 
 /* ===============================================
-   テーブルのボーダー調整
+   料金テーブルのアクションボタン
    =============================================== */
-.price-table {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+.price-table__action {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin-top: var(--spacing-lg);
 }
 
-.price-table thead tr {
+/* 背景色付きセクション */
+.section--bg-light {
+  background-color: var(--color-bg-light);
+}
+
+/* ===============================================
+   ボタンのoutlineスタイル（既存のbtn--outlineを拡張）
+   =============================================== */
+.btn--outline {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  display: inline-block;
+  transition: all var(--transition-base);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.btn--outline:hover {
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===============================================
+   CTAボタンセクション
+   =============================================== */
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn--large {
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-base);
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: white;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-secondary-dark);
+  transform: translateY(-2px);
+}
+
+/* ===============================================
+   rowspan のスタイリング
+   =============================================== */
+td[rowspan] {
+  vertical-align: top;
+  font-weight: 500;
   background-color: var(--color-bg-light);
 }
