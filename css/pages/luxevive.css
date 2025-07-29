@@ -245,7 +245,7 @@
 
 /* 小さな注記 */
 .product-note-small {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
     color: var(--color-text-light);
     margin: 0;
 }
@@ -267,24 +267,32 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.product-note h4 {
-    font-size: var(--font-size-base);
-    font-weight: 500;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-primary);
-}
-
-.product-note h4 i {
-    margin-right: var(--spacing-xs);
+    text-align: center;
 }
 
 .product-note p {
     font-size: var(--font-size-sm);
     line-height: var(--line-height-loose);
     color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
 }
+
+.product-note .button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+}
+
+.product-note .button i {
+    font-size: var(--font-size-xs);
+    transition: transform var(--transition-base);
+}
+
+.product-note .button:hover i {
+    transform: translateX(4px);
+}
+
 
 /* ===============================================
    成分セクション
