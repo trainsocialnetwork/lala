@@ -1,0 +1,652 @@
+/* ===============================================
+   レスポンシブ対応
+   =============================================== */
+@media (min-width: 768px) {
+    .page-hero--luxevive .page-hero__title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* 価格セクションの商品グリッド - PC版は4カラム */
+    .section--pricing .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1000px;
+        gap: var(--spacing-md);
+    }
+
+    .ingredients-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .usage-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .caution-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .cta-buttons .button {
+        width: auto;
+    }
+
+    /* PC版では製品名の高さ調整 */
+    .product-name-jp {
+        min-height: 3em;
+    }
+}
+
+@media (min-width: 431px) and (max-width: 767px) {
+    .features-grid,
+    .section--pricing .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}/* ===============================================
+   Luxevive Page CSS - ルグゼバイブページ専用スタイル
+   =============================================== */
+
+/* ===============================================
+   ページヒーロー
+   =============================================== */
+.page-hero--luxevive {
+    padding: var(--spacing-3xl) 0 var(--spacing-xl);
+    background: linear-gradient(to bottom, #faf8f5 0%, #ffffff 100%);
+}
+
+.page-hero--luxevive .page-hero__title {
+    font-size: var(--font-size-2xl);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    line-height: var(--line-height-tight);
+    color: var(--color-text);
+}
+
+.page-hero--luxevive .page-hero__visual {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.page-hero--luxevive .page-hero__visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+/* ===============================================
+   フィーチャーグリッド
+   =============================================== */
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-2xl);
+}
+
+.feature-card {
+    background-color: var(--color-bg);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-card__icon {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto var(--spacing-md);
+}
+
+.feature-card__icon img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-md);
+}
+
+.feature-card h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+}
+
+.feature-card p {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-loose);
+    color: var(--color-text-light);
+}
+
+/* ===============================================
+   価格セクション（zeoskin.htmlスタイル準拠）
+   =============================================== */
+.section--pricing .products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 430px;
+    gap: var(--spacing-sm);
+    margin: 0 auto var(--spacing-xl);
+}
+
+/* 製品アイテム */
+.product-item {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #f0f0f0;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+.product-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* おすすめ商品 */
+.product-item--featured {
+    border: 2px solid var(--color-accent);
+    transform: scale(1.02);
+}
+
+/* 製品バッジ */
+.product-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-accent);
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    z-index: 1;
+}
+
+/* 製品画像エリア */
+.product-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform var(--transition-slow);
+}
+
+.product-item:hover .product-image img {
+    transform: scale(1.05);
+}
+
+/* 製品コンテンツエリア */
+.product-content {
+    padding: var(--spacing-md);
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 製品名 */
+.product-name-jp {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+    min-height: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 製品説明 */
+.product-description {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* 製品価格 */
+.product-price {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* 小さな注記 */
+.product-note-small {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+/* 割引表示 */
+.product-discount {
+    color: var(--color-accent);
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+/* 製品ノート */
+.product-note {
+    background-color: var(--color-bg-light);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-note h4 {
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+}
+
+.product-note h4 i {
+    margin-right: var(--spacing-xs);
+}
+
+.product-note p {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-loose);
+    color: var(--color-text-light);
+}
+
+/* ===============================================
+   成分セクション
+   =============================================== */
+.ingredients-intro {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.ingredients-intro img {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+.ingredient-card {
+    background-color: var(--color-bg);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-base);
+}
+
+.ingredient-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.ingredient-card h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.ingredient-card p {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-loose);
+    color: var(--color-text-light);
+}
+
+.ingredient-card--featured {
+    background-color: #fef9f3;
+    border: 2px solid var(--color-accent);
+}
+
+/* ===============================================
+   FAGAセクション
+   =============================================== */
+.faga-intro {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.faga-intro img {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.info-section {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.info-section h3 {
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+}
+
+.info-section p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-loose);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+/* 症状タイプ */
+.symptom-types {
+    margin-top: var(--spacing-lg);
+}
+
+.symptom-type {
+    background-color: white;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.symptom-type h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.symptom-type p {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-loose);
+    color: var(--color-text-light);
+}
+
+/* 原因リスト */
+.cause-list {
+    margin-top: var(--spacing-md);
+}
+
+.cause-item {
+    background-color: var(--color-bg);
+    border-left: 3px solid var(--color-primary);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.cause-item h5 {
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.cause-item p {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-loose);
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+/* ===============================================
+   使用方法セクション
+   =============================================== */
+.usage-intro {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.usage-intro img {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.usage-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+.usage-card {
+    background-color: var(--color-bg);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+}
+
+.usage-card h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.usage-card h3::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-sm);
+}
+
+.usage-card p {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-loose);
+    color: var(--color-text-light);
+}
+
+/* ===============================================
+   注意事項セクション
+   =============================================== */
+.caution-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+.caution-card {
+    background-color: white;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    border: 1px solid #ffc107;
+    background-image: linear-gradient(135deg, #fffaf0 0%, #ffffff 100%);
+}
+
+.caution-card h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.caution-card h3::before {
+    content: "⚠️";
+    font-size: var(--font-size-xl);
+}
+
+.caution-card p {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-loose);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.caution-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.caution-list li {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-loose);
+    color: var(--color-text-light);
+    padding: var(--spacing-xs) 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.caution-list li i {
+    color: #dc3545;
+    font-size: var(--font-size-base);
+}
+
+/* ===============================================
+   FAQセクション
+   =============================================== */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: var(--color-bg);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    border: 1px solid var(--color-border);
+}
+
+.faq-item__question,
+.faq-item__answer {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+}
+
+.faq-item__question {
+    margin-bottom: var(--spacing-md);
+}
+
+.faq-item__q,
+.faq-item__a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: var(--font-size-base);
+    flex-shrink: 0;
+}
+
+.faq-item__a {
+    background-color: var(--color-secondary);
+}
+
+.faq-item__question h3 {
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    color: var(--color-text);
+    margin: 0;
+    line-height: var(--line-height-loose);
+}
+
+.faq-item__answer p {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-loose);
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+/* ===============================================
+   CTAセクション（ルグゼバイブ用）
+   =============================================== */
+.section--cta {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    color: white;
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+}
+
+.section--cta .section__title-ja {
+    color: white;
+    margin-bottom: var(--spacing-md);
+}
+
+.section--cta .section__lead {
+    color: white;
+    opacity: 0.95;
+    margin-bottom: var(--spacing-xl);
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.cta-buttons .button {
+    width: 100%;
+    max-width: 300px;
+}
+
+.button--large {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-base);
+}
+
+.button--outline {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.button--outline:hover {
+    background-color: white;
+    color: var(--color-primary);
+}
