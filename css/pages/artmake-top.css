@@ -273,7 +273,7 @@
 }
 
 .price-card__image {
- width: 200px;
+ width: 300px;
  height: 150px;
  overflow: hidden;
  border-radius: var(--radius-lg);
