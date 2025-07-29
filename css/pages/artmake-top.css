@@ -255,7 +255,7 @@
 .price-card {
   max-width: 440px;
   width: 100%;
-  padding: 40px;
+  padding: 40px 0 40px 0;
   border-bottom: 1px solid #e0e0e0;
   display: flex;
   flex-direction: column;
@@ -291,7 +291,7 @@
 .price-card__content {
   text-align: center;
   width: 100%; /* 追加 */
-  padding: 0; /* 変更 */
+  padding: 0 40px; /* 変更 */
 }
 
 .price-card__text {
