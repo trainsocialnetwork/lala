@@ -97,7 +97,7 @@
 .section--instagram {
   position: relative;
   padding: var(--spacing-2xl) 14px; 
-  overflow: visible;
+  overflow: hidden;
   max-width: 430px;
   margin: 0 auto;
 }
