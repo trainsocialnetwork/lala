@@ -265,66 +265,251 @@
 }
 
 /* ===============================================
-   重要事項リスト（カードレス版）
+   基本セットセクション
    =============================================== */
-.important-list--cardless {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+.section--basic-set {
+    padding: var(--spacing-3xl) 0;
 }
 
-.important-item {
-  background-color: transparent;
-  border-radius: 0;
-  padding: var(--spacing-xl) 0;
-  border-bottom: 1px solid var(--color-border);
-  border-left: none;
+.basic-set-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.important-item:last-child {
-  border-bottom: none;
+.basic-set__image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-lg);
 }
 
-.important-item__title {
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-md);
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
+.basic-set__details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
 }
 
-.important-item__title i {
-  color: var(--color-secondary);
+.basic-set__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.important-item p {
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-loose);
-  color: var(--color-text-light);
-  margin: 0;
+.basic-set__list li {
+    padding: var(--spacing-sm) 0;
+    padding-left: var(--spacing-lg);
+    position: relative;
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+}
+
+.basic-set__list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.basic-set__price {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.price-label {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 4px 12px;
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+
+.price-amount {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.price-shipping {
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
 }
 
 /* ===============================================
-   CTAセクション
+   サポートセクション
    =============================================== */
-.section--cta {
-  background-color: var(--color-bg-light);
-  text-align: center;
-  padding: var(--spacing-3xl) 0;
+.section--support {
+    background-color: #F0F0F0;
+    padding: var(--spacing-3xl) 0;
 }
 
-.section--cta .section__lead {
-  max-width: 600px;
-  margin: 0 auto var(--spacing-xl);
+.bg-light-gray {
+    background-color: #F0F0F0;
 }
 
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-md);
-  flex-wrap: wrap;
+.support-intro {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-2xl);
+    text-align: center;
+}
+
+.support-intro p {
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+.support-subtitle {
+    text-align: center;
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-primary);
+}
+
+/* 横スクロールコンテナ */
+.support-cases {
+    position: relative;
+    margin: 0 calc(-1 * var(--spacing-md));
+    padding: 0 var(--spacing-md);
+}
+
+.support-cases__scroll {
+    display: flex;
+    gap: var(--spacing-md);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--spacing-md);
+}
+
+/* スクロールバーのスタイリング */
+.support-cases__scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.support-cases__scroll::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.support-cases__scroll::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 3px;
+}
+
+.support-case {
+    flex: 0 0 280px;
+    background: white;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.support-case__image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.support-case__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.support-case h4 {
+    padding: var(--spacing-md);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* 横スクロールのインジケーター */
+.support-cases::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: var(--spacing-md);
+    width: 40px;
+    background: linear-gradient(to right, transparent, #F0F0F0);
+    pointer-events: none;
+}
+
+/* ===============================================
+   FAQセクション
+   =============================================== */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--spacing-md) 0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item__question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: var(--spacing-sm) 0;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+    transition: color 0.3s ease;
+}
+
+.faq-item__question:hover {
+    color: var(--color-primary);
+}
+
+.faq-item__question i {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.is-open .faq-item__question i {
+    transform: rotate(180deg);
+}
+
+.faq-item__answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.is-open .faq-item__answer {
+    max-height: 500px;
+    padding: var(--spacing-sm) 0 var(--spacing-md);
+}
+
+.faq-item__answer p {
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+    color: var(--color-text);
+    margin: 0;
 }
 
 /* ===============================================
