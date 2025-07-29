@@ -336,18 +336,37 @@
   color: var(--color-text);
 }
 
-.section--faq .faq-item__question span {
-  flex: 1;
-}
-
-.section--faq .faq-item__question i {
+/* QとAのバッジ */
+.section--faq .faq-item__q,
+.section--faq .faq-item__a {
   flex-shrink: 0;
-  color: var(--color-primary);
-  transition: transform var(--transition-base);
+  width: 28px;
+  height: 28px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
   font-size: var(--font-size-sm);
 }
 
-.section--faq .faq-item.is-open .faq-item__question i {
+.section--faq .faq-item__a {
+  background-color: var(--color-secondary);
+}
+
+.section--faq .faq-item__text {
+  flex: 1;
+}
+
+.section--faq .faq-item__icon {
+  flex-shrink: 0;
+  color: var(--color-primary);
+  transition: transform var(--transition-base);
+}
+
+.section--faq .faq-item.is-open .faq-item__icon {
   transform: rotate(45deg);
 }
 
@@ -365,11 +384,18 @@
 }
 
 .section--faq .faq-item__answer-inner {
-  padding: 0 var(--spacing-md) var(--spacing-md);
+  padding: var(--spacing-md);
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+}
+
+.section--faq .faq-item__content {
+  flex: 1;
   line-height: var(--line-height-loose);
 }
 
-.section--faq .faq-item__answer-inner p {
+.section--faq .faq-item__content p {
   margin: 0;
   word-wrap: break-word;
   font-size: var(--font-size-base);
