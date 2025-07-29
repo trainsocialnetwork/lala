@@ -95,10 +95,11 @@
    =============================================== */
 .section--instagram {
   position: relative;
-  padding: var(--spacing-2xl) 0 0 0 !important; 
+  padding: var(--spacing-2xl) 0;
   overflow: visible;
   max-width: 430px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* タイトル - セクション直下に配置 */
@@ -107,6 +108,12 @@
   padding: 0 6px; /* 変更: 実質的に20pxのパディング（14px + 6px） */
   position: relative;
   z-index: 3;
+}
+
+/* セクション内のコンテンツに左右パディングを追加 */
+.section--instagram > * {
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 /* 動画部分 */
