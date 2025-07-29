@@ -514,11 +514,6 @@
     gap: var(--spacing-sm);
 }
 
-.caution-card h3::before {
-    content: "⚠️";
-    font-size: var(--font-size-xl);
-}
-
 .caution-card p {
     font-size: var(--font-size-sm);
     line-height: var(--line-height-loose);
