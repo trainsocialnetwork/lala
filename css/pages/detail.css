@@ -379,6 +379,14 @@
   object-position: center;
 }
 
+.case-item__header {
+  margin-top: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
 /* ===============================================
    症例ギャラリー
    =============================================== */
@@ -441,6 +449,14 @@
 .section--cases .instagram-link {
   text-align: center;
   margin-top: var(--spacing-lg);
+}
+
+.case-item__header {
+  margin-top: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
 }
 
 /* ===============================================
