@@ -815,7 +815,7 @@
 
 /* リード文 */
 .section__lead {
-  text-align: center;
+  text-align: left;
   max-width: 800px;
   margin: 0 auto var(--spacing-xl);
   line-height: var(--line-height-loose);
