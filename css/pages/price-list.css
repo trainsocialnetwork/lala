@@ -161,6 +161,23 @@
   position: relative;
 }
 
+.price-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background-color: #FFF9F0;
+    border: 1px solid #FFE0B2;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.purchase-notice p {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-loose);
+    color: var(--color-text);
+}
+
 /* ===============================================
    注意事項セクション
    =============================================== */
