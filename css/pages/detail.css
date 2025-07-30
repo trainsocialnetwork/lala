@@ -367,6 +367,7 @@
   width: 100%;
   max-width: 300px;
   margin: 0px auto 20px;
+  transform: rotate(-90deg);
 }
 
 .strength-item__image img,
