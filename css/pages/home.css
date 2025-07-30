@@ -309,6 +309,43 @@
 }
 
 /* ===============================================
+   クリニック紹介セクション
+   =============================================== */
+.section--clinic {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--color-bg-light);
+}
+
+/* クリニックギャラリーグリッド（2カラム） */
+.clinic-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-2xl);
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  aspect-ratio: 3 / 4; /* 縦長の比率 */
+}
+
+.gallery-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===============================================
    アクセスセクション - カードレスデザイン
    =============================================== */
 .section--access--cardless {
