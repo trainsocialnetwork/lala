@@ -121,23 +121,27 @@
 }
 
 /* ===============================================
-   営業時間セクション
+   Business Hours Section - Cardless Design
    =============================================== */
-.section--hours--cardless {
-  padding: var(--spacing-3xl) 0;
+.section--hours {
+  padding: 60px 0;
 }
 
-.hours-content--cardless {
+.section--hours.bg-light {
+  background-color: #f8f9fa;
+}
+
+.hours-content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-3xl);
+  gap: 48px;
   max-width: 600px;
   margin: 0 auto;
 }
 
 .hours-table-wrapper {
-  border-bottom: 2px solid var(--color-border);
-  padding-bottom: var(--spacing-2xl);
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 32px;
 }
 
 .hours-table-wrapper:last-child {
@@ -146,42 +150,43 @@
 }
 
 .hours-service-title {
-  font-size: var(--font-size-xl);
+  font-size: 1.25rem;
   font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-lg);
+  color: #333;
+  margin-bottom: 24px;
   text-align: center;
 }
 
-.section--hours--cardless .hours-table {
+.hours-table {
   width: 100%;
   margin: 0 auto;
+  border-collapse: collapse;
 }
 
-.section--hours--cardless .hours-table th,
-.section--hours--cardless .hours-table td {
-  padding: var(--spacing-md) 0;
-  font-size: var(--font-size-base);
+.hours-table th,
+.hours-table td {
+  padding: 16px 0;
+  font-size: 1rem;
   vertical-align: top;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid #e9ecef;
 }
 
-.section--hours--cardless .hours-table tr:last-child th,
-.section--hours--cardless .hours-table tr:last-child td {
+.hours-table tr:last-child th,
+.hours-table tr:last-child td {
   border-bottom: none;
 }
 
-.section--hours--cardless .hours-table th {
+.hours-table th {
   font-weight: 600;
-  color: var(--color-text);
+  color: #333;
   text-align: left;
   width: 35%;
-  padding-right: var(--spacing-md);
+  padding-right: 16px;
 }
 
-.section--hours--cardless .hours-table td {
-  line-height: var(--line-height-base);
-  color: var(--color-text-light);
+.hours-table td {
+  line-height: 1.6;
+  color: #666;
 }
 /* ===============================================
    アクセスセクション
