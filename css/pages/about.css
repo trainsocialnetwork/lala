@@ -301,10 +301,6 @@
   padding-bottom: var(--spacing-xl);
 }
 
-.section--clinic-info {
-  padding: var(--spacing-3xl) 0;
-}
-
 .section--hours {
   padding: var(--spacing-3xl) 0;
 }
