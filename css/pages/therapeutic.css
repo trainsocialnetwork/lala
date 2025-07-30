@@ -200,7 +200,7 @@
 .support-intro {
   max-width: 800px;
   margin: 0 auto var(--spacing-2xl);
-  text-align: center;
+  text-align: left;
 }
 
 .support-intro p {
