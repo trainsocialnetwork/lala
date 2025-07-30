@@ -623,7 +623,7 @@
   box-shadow: none;
   position: relative;
   transition: none;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-md);
 }
 
 .section--pricing .price-card:last-child {
@@ -636,8 +636,8 @@
 }
 
 .section--pricing .price-card__image {
-  width: 150px;
-  height: 120px;
+  width: 200px;
+  height: 100px;
   overflow: hidden;
   border-radius: var(--radius-md);
   flex-shrink: 0;
