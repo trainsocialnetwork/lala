@@ -123,90 +123,65 @@
 /* ===============================================
    営業時間セクション
    =============================================== */
-.section--hours {
-  background-color: var(--color-bg-light);
+.section--hours--cardless {
   padding: var(--spacing-3xl) 0;
 }
 
-.hours-content {
+.hours-content--cardless {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-2xl);
-  max-width: 100%;
+  gap: var(--spacing-3xl);
+  max-width: 600px;
   margin: 0 auto;
 }
 
-/* 営業時間テーブル */
-.hours-table {
-  background-color: var(--color-bg);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
-  box-shadow: var(--shadow-sm);
+.hours-table-wrapper {
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: var(--spacing-2xl);
 }
 
-.hours-table table {
+.hours-table-wrapper:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.hours-service-title {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.section--hours--cardless .hours-table {
   width: 100%;
+  margin: 0 auto;
 }
 
-.hours-table th,
-.hours-table td {
+.section--hours--cardless .hours-table th,
+.section--hours--cardless .hours-table td {
   padding: var(--spacing-md) 0;
   font-size: var(--font-size-base);
   vertical-align: top;
   border-bottom: 1px solid var(--color-border);
 }
 
-.hours-table tr:last-child th,
-.hours-table tr:last-child td {
+.section--hours--cardless .hours-table tr:last-child th,
+.section--hours--cardless .hours-table tr:last-child td {
   border-bottom: none;
 }
 
-.hours-table th {
+.section--hours--cardless .hours-table th {
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-text);
   text-align: left;
-  width: 30%;
+  width: 35%;
+  padding-right: var(--spacing-md);
 }
 
-.hours-table td {
-  line-height: var(--line-height-loose);
-}
-
-/* 予約について */
-.hours-notes {
-  background-color: var(--color-bg);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
-  box-shadow: var(--shadow-sm);
-}
-
-.hours-notes h3 {
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-md);
-}
-
-.hours-notes ul {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-}
-
-.hours-notes li {
-  position: relative;
-  padding-left: var(--spacing-lg);
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-loose);
+.section--hours--cardless .hours-table td {
+  line-height: var(--line-height-base);
   color: var(--color-text-light);
-}
-
-.hours-notes li::before {
-  content: "•";
-  position: absolute;
-  left: var(--spacing-sm);
-  color: var(--color-secondary);
-  font-weight: bold;
 }
 /* ===============================================
    アクセスセクション
