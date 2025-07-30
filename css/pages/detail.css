@@ -15,6 +15,7 @@
 
 .section__title_detail {
    text-align: left;
+   margin-bottom: var(--spacing-xl);
 }
 
 .section__lead {
