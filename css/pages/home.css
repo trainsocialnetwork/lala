@@ -175,6 +175,7 @@
 }
 
 .service-item--cardless .service-item__content p {
+  text-align: left;
   font-size: var(--font-size-sm);
   line-height: var(--line-height-loose);
   color: var(--color-text-light);
