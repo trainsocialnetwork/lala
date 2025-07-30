@@ -47,6 +47,7 @@
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-base);
+  aspect-ratio: 3 / 4;
 }
 
 .gallery-item:hover {
@@ -56,7 +57,7 @@
 
 .gallery-item img {
   width: 100%;
-  height: 150px;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
