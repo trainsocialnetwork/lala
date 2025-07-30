@@ -100,6 +100,18 @@
   margin-top: var(--spacing-lg);
 }
 
+.button--outline--online {
+  background-color: transparent;
+  color: #404d6a;
+  border-color: #404d6a;
+}
+
+.button--outline--online:hover {
+  background-color: #404d6a;
+  color: white;
+  opacity: 1;
+}
+
 /* ===============================================
    サービスリスト - カードレスデザイン
    =============================================== */
