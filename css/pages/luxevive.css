@@ -7,7 +7,6 @@
    =============================================== */
 .page-hero--luxevive {
     padding: var(--spacing-3xl) 0 var(--spacing-xl);
-    background: linear-gradient(to bottom, #faf8f5 0%, #ffffff 100%);
 }
 
 .page-hero--luxevive .page-hero__title {
@@ -33,28 +32,8 @@
 }
 
 /* ===============================================
-   フィーチャーグリッド
+   フィーチャーグリッド拡張
    =============================================== */
-.features-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-2xl);
-}
-
-.feature-card {
-    background-color: var(--color-bg);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
-    box-shadow: var(--shadow-sm);
-    transition: all var(--transition-base);
-}
-
-.feature-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
-
 .feature-card__icon {
     width: 100%;
     max-width: 200px;
@@ -66,20 +45,6 @@
     height: auto;
     display: block;
     border-radius: var(--radius-md);
-}
-
-.feature-card h3 {
-    font-size: var(--font-size-lg);
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: var(--spacing-md);
-    color: var(--color-primary);
-}
-
-.feature-card p {
-    font-size: var(--font-size-sm);
-    line-height: var(--line-height-loose);
-    color: var(--color-text-light);
 }
 
 /* ===============================================
@@ -110,11 +75,6 @@
     box-shadow: var(--shadow-md);
 }
 
-/* おすすめ商品 */
-.product-item--featured {
-    border: 2px solid var(--color-accent);
-    transform: scale(1.02);
-}
 
 /* 製品バッジ */
 .product-badge {
@@ -194,7 +154,7 @@
 
 /* 小さな注記 */
 .product-note-small {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     color: var(--color-text-light);
     margin: 0;
 }
@@ -203,7 +163,7 @@
 .product-discount {
     color: var(--color-accent);
     font-weight: 500;
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
     margin-bottom: var(--spacing-xs);
 }
 
@@ -219,6 +179,11 @@
     text-align: center;
 }
 
+.product-note .product-item {
+    max-width: 300px;
+    margin: 0 auto var(--spacing-lg);
+}
+
 .product-note p {
     font-size: var(--font-size-sm);
     line-height: var(--line-height-loose);
@@ -226,22 +191,11 @@
     margin-bottom: var(--spacing-md);
 }
 
-.product-note .button {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    font-size: var(--font-size-sm);
+.product-note strong {
+    display: block;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
 }
-
-.product-note .button i {
-    font-size: var(--font-size-xs);
-    transition: transform var(--transition-base);
-}
-
-.product-note .button:hover i {
-    transform: translateX(4px);
-}
-
 
 /* ===============================================
    成分セクション
@@ -340,6 +294,7 @@
     border-radius: var(--radius-md);
     padding: var(--spacing-lg);
     margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
 }
 
 .symptom-type h4 {
@@ -446,21 +401,25 @@
 }
 
 .caution-card {
-    background-color: white;
+    background-color: #fff9f0;
+    border: 1px solid #ffcc66;
     border-radius: var(--radius-md);
     padding: var(--spacing-lg);
-    border: 1px solid #ffc107;
-    background-image: linear-gradient(135deg, #fffaf0 0%, #ffffff 100%);
 }
 
 .caution-card h3 {
     font-size: var(--font-size-lg);
     font-weight: 500;
-    color: var(--color-text);
+    color: #cc8800;
     margin-bottom: var(--spacing-md);
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
+}
+
+.caution-card h3::before {
+    content: "⚠";
+    font-size: var(--font-size-xl);
 }
 
 .caution-card p {
@@ -477,67 +436,94 @@
 }
 
 .caution-list li {
+    position: relative;
+    padding-left: var(--spacing-lg);
     font-size: var(--font-size-sm);
     line-height: var(--line-height-loose);
     color: var(--color-text-light);
-    padding: var(--spacing-xs) 0;
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
 }
 
-.caution-list li i {
-    color: #dc3545;
-    font-size: var(--font-size-base);
+.caution-list li::before {
+    content: "・";
+    position: absolute;
+    left: var(--spacing-sm);
+    color: #cc8800;
+    font-weight: bold;
 }
 
 /* ===============================================
-   CTAセクション（ルグゼバイブ用）
+   FAQセクション
    =============================================== */
-.section--cta {
-    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
-    color: white;
-    padding: var(--spacing-3xl) 0;
-    text-align: center;
-}
-
-.section--cta .section__title-ja {
-    color: white;
-    margin-bottom: var(--spacing-md);
-}
-
-.section--cta .section__lead {
-    color: white;
-    opacity: 0.95;
-    margin-bottom: var(--spacing-xl);
-}
-
-.cta-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-    align-items: center;
-    max-width: 400px;
+.faq-accordion {
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.cta-buttons .button {
+.faq-question {
     width: 100%;
-    max-width: 300px;
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg);
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    transition: all var(--transition-base);
 }
 
-.button--large {
-    padding: var(--spacing-md) var(--spacing-lg);
+.faq-q,
+.faq-a {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
     font-size: var(--font-size-base);
 }
 
-.button--outline {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
+.faq-a {
+    background-color: var(--color-secondary);
 }
 
-.button--outline:hover {
-    background-color: white;
-    color: var(--color-primary);
+.faq-text {
+    flex: 1;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.faq-question i {
+    color: var(--color-text-light);
+    transition: transform var(--transition-base);
+}
+
+.faq-question[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+    background-color: var(--color-bg);
+    display: none;
+}
+
+.faq-answer p {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-loose);
+    color: var(--color-text-light);
+    margin: 0;
+    padding-left: calc(30px + var(--spacing-md));
+}
+
+.faq-item.is-open .faq-answer {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
 }
