@@ -37,12 +37,12 @@
    フィーチャーグリッド拡張
    =============================================== */
 .feature-card {
-    /* background-color: var(--color-bg-light); */
+    background-color: transparent;
     border-radius: var(--radius-lg);
     padding: var(--spacing-sm);
 }
 
-.feature-card .h3 {
+.feature-card h3 {
     margin-bottom: var(--spacing-xs);
 }
 
