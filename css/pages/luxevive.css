@@ -245,11 +245,6 @@
     color: var(--color-text-light);
 }
 
-.ingredient-card--featured {
-    background-color: #fef9f3;
-    border: 2px solid var(--color-accent);
-}
-
 /* ===============================================
    FAGAセクション
    =============================================== */
@@ -415,11 +410,6 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
-}
-
-.caution-card h3::before {
-    content: "⚠";
-    font-size: var(--font-size-xl);
 }
 
 .caution-card p {
