@@ -3,23 +3,22 @@
    =============================================== */
 
 /* ===============================================
+   ページタイトル
+   =============================================== */
+
+.page-title {
+    font-size: var(--font-size-2xl);
+}
+
+/* ===============================================
    ページヒーロー
    =============================================== */
 .page-hero--luxevive {
     padding: var(--spacing-3xl) 0 var(--spacing-xl);
 }
 
-.page-hero--luxevive .page-hero__title {
-    font-size: var(--font-size-2xl);
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: var(--spacing-lg);
-    line-height: var(--line-height-tight);
-    color: var(--color-text);
-}
-
 .page-hero--luxevive .page-hero__visual {
-    max-width: 300px;
+    max-width: 430px;
     margin: 0 auto;
 }
 
@@ -27,8 +26,11 @@
     width: 100%;
     height: auto;
     display: block;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
+}
+
+
+.section__title {
+   text-align: left;
 }
 
 /* ===============================================
@@ -48,7 +50,7 @@
 }
 
 /* ===============================================
-   価格セクション（zeoskin.htmlスタイル準拠）
+   価格セクション
    =============================================== */
 .section--pricing .products-grid {
     display: grid;
