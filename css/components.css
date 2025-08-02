@@ -495,6 +495,10 @@
    フッターコンポーネント
    =============================================== */
 
+/* ===============================================
+   フッターコンポーネント - 修正版
+   =============================================== */
+
 .footer {
   background-color: var(--color-primary);
   color: white;
@@ -505,25 +509,38 @@
   padding-bottom: var(--spacing-xl);
 }
 
+/* コンテナの中央配置 */
+.footer__top .container {
+  max-width: var(--content-width-max);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+}
+
+/* ロゴセクションの中央配置 */
 .footer__logo-section {
   text-align: center;
   margin-bottom: var(--spacing-xl);
 }
 
-.footer__logo img {
-  height: var(--spacing-4xl);
-  margin: 0 auto;
+.footer__logo {
+  display: inline-block;
 }
 
+.footer__logo img {
+  height: var(--spacing-4xl);
+  display: block;
+}
+
+/* footer__contentの中央配置 */
 .footer__content {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-lg);
   max-width: var(--content-width-max);
   margin: 0 auto;
-  padding: 0 var(--content-padding);
 }
 
+/* 各セクション内のテキストは左寄せ */
 .footer__section {
   text-align: left;
 }
@@ -539,53 +556,75 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__section li {
+  text-align: left;
 }
 
 .footer__section a {
   font-size: var(--font-size-sm);
   opacity: 0.8;
   transition: opacity var(--transition-base);
+  color: white;
+  text-decoration: none;
 }
 
 .footer__section a:hover {
   opacity: 1;
 }
 
+/* お問い合わせセクション */
 .footer__contact {
   font-size: var(--font-size-sm);
-  text-align: center;
+}
+
+.footer__contact h4 {
+  text-align: left;
 }
 
 .footer__address {
   margin-bottom: var(--spacing-sm);
   line-height: var(--line-height-loose);
+  text-align: left;
 }
 
 .footer__hours {
   display: flex;
   align-items: center;
   gap: var(--spacing-xs);
+  justify-content: flex-start;
 }
 
+/* フッター下部 */
 .footer__bottom {
   background-color: rgba(0, 0, 0, 0.2);
   padding: var(--spacing-md) 0;
 }
 
 .footer__bottom-content {
-  text-align: center !important;
+  text-align: center;
   max-width: var(--content-width-max);
   margin: 0 auto;
   padding: 0 var(--content-padding);
 }
 
 .footer__links {
-  margin-bottom: var(--spacing-xs)
+  margin-bottom: var(--spacing-xs);
 }
 
 .footer__links a {
   font-size: var(--font-size-sm);
   opacity: 0.8;
+  color: white;
+  text-decoration: none;
+}
+
+.footer__links a:hover {
+  opacity: 1;
 }
 
 .copyright {
