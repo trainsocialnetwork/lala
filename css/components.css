@@ -499,6 +499,10 @@
    フッターコンポーネント - 修正版
    =============================================== */
 
+/* ===============================================
+   フッターコンポーネント - 修正版
+   =============================================== */
+
 .footer {
   background-color: var(--color-primary);
   color: white;
@@ -533,11 +537,22 @@
 
 /* footer__contentの中央配置 */
 .footer__content {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-lg);
   max-width: var(--content-width-max);
   margin: 0 auto;
+}
+
+/* 2カラムレイアウト用のラッパー */
+.footer__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* カラム内のセクション間隔 */
+.footer__column-left .footer__section:not(:last-child),
+.footer__column-right .footer__section:not(:last-child) {
+  margin-bottom: var(--spacing-xl);
 }
 
 /* 各セクション内のテキストは左寄せ */
@@ -547,7 +562,7 @@
 
 .footer__section h4 {
   font-size: var(--font-size-base);
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: var(--spacing-sm);
   color: white;
 }
@@ -580,6 +595,9 @@
 /* お問い合わせセクション */
 .footer__contact {
   font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer__contact h4 {
