@@ -659,7 +659,7 @@
   right: var(--spacing-md);
   width: 48px;
   height: 48px;
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   color: white;
   border-radius: 50%;
   display: flex;
