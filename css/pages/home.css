@@ -166,7 +166,7 @@
 
 .service-item--cardless .service-item__content h4 {
   font-size: var(--font-size-base);
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: var(--spacing-xs);
   color: var(--color-primary);
   letter-spacing: 0.5px;
