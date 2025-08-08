@@ -436,6 +436,16 @@
   text-align: center;
 }
 
+
+.section--online-beauty .container
+.service-item--cardless .service-item__content h4 {
+   color: #404d6a
+}
+
+.section--online-beauty .container .section__subtitle .section__subtitle-en {
+   color: #404d6a
+}
+
 /* ===============================================
    セクション間隔調整
    =============================================== */
@@ -451,15 +461,6 @@
   padding-top: var(--spacing-3xl);
   padding-bottom: var(--spacing-3xl);
 }
-
-.section--online-beauty .ection__subtitle-en {
-   color: #404d6a
-}
-
-.section--online-beauty .h4 {
-   color: #404d6a
-}
-
 
 .section--why-lala {
   padding-top: var(--spacing-3xl);
