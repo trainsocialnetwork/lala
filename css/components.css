@@ -98,12 +98,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-md);
+  padding: var(--spacing-xs);
   border-bottom: 1px solid var(--color-border);
 }
 
 .mobile-menu__header img {
-  height: 32px;
+  height: 42px;
 }
 
 .mobile-menu__close {
