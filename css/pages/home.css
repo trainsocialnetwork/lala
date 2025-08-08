@@ -452,6 +452,15 @@
   padding-bottom: var(--spacing-3xl);
 }
 
+.section--online-beauty .ection__subtitle-en {
+   color: #404d6a
+}
+
+.section--online-beauty .h4 {
+   color: #404d6a
+}
+
+
 .section--why-lala {
   padding-top: var(--spacing-3xl);
   padding-bottom: var(--spacing-3xl);
