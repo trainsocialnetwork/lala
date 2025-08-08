@@ -124,9 +124,6 @@
 .service-list--cardless {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-md);
-  margin: 0 -var(--content-padding);
-  padding: 0 var(--content-padding);
 }
 
 .service-item--cardless {
