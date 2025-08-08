@@ -172,6 +172,15 @@
   letter-spacing: 0.5px;
 }
 
+/* Online Beauty セクションのカラーテーマ */
+.section--online-beauty .section__subtitle-en {
+  color: #404d6a;
+}
+
+.section--online-beauty .service-item__content h4 {
+  color: #404d6a;
+}
+
 /* ===============================================
    強みリスト - カードレスデザイン
    =============================================== */
@@ -434,16 +443,6 @@
 .access-buttons {
   margin-top: var(--spacing-xl);
   text-align: center;
-}
-
-
-.section--online-beauty .container
-.service-item--cardless .service-item__content h4 {
-   color: #404d6a
-}
-
-.section--online-beauty .container .section__subtitle .section__subtitle-en {
-   color: #404d6a
 }
 
 /* ===============================================
