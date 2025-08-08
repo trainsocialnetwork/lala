@@ -134,38 +134,10 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: var(--spacing-lg);
-  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,249,250,0.9) 100%);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: var(--spacing-sm) 0;
   transition: all var(--transition-base);
-  border: 1px solid rgba(230, 230, 230, 0.5);
   position: relative;
   overflow: hidden;
-}
-
-/* ホバーエフェクト */
-.service-item--cardless::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(237,176,139,0.05) 0%, rgba(139,171,237,0.05) 100%);
-  opacity: 0;
-  transition: opacity var(--transition-base);
-  z-index: 0;
-}
-
-.service-item--cardless:hover::before {
-  opacity: 1;
-}
-
-.service-item--cardless:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  border-color: rgba(237,176,139,0.3);
 }
 
 /* 画像スタイル */
@@ -174,10 +146,9 @@
   width: 100%;
   max-width: 160px;
   aspect-ratio: 16 / 10;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   overflow: hidden;
   margin-bottom: var(--spacing-md);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
 
@@ -186,10 +157,6 @@
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-slow);
-}
-
-.service-item--cardless:hover .service-item__image img {
-  transform: scale(1.05);
 }
 
 /* コンテンツスタイル */
@@ -206,52 +173,6 @@
   margin-bottom: var(--spacing-xs);
   color: var(--color-primary);
   letter-spacing: 0.5px;
-}
-
-.service-item--cardless .service-item__content p {
-  text-align: center;
-  font-size: 13px;
-  line-height: 1.6;
-  color: var(--color-text-light);
-  margin-bottom: var(--spacing-md);
-  min-height: 2.4em;
-}
-
-/* リンクスタイル */
-.service-item--cardless .service-item__link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-xs);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--color-primary);
-  transition: all var(--transition-base);
-  padding: 6px 12px;
-  border-radius: var(--radius-full);
-  background-color: rgba(237,176,139,0.08);
-  text-decoration: none;
-}
-
-.service-item--cardless .service-item__link:hover {
-  gap: var(--spacing-sm);
-  background-color: var(--color-primary);
-  color: white;
-  transform: scale(1.02);
-}
-
-.service-item--cardless .service-item__link i {
-  font-size: 10px;
-  transition: transform var(--transition-base);
-}
-
-.service-item--cardless:hover .service-item__link i {
-  transform: translateX(2px);
-}
-
-/* 偶数番目のアイテムにアクセントカラー */
-.service-item--cardless:nth-child(even) {
-  background: linear-gradient(135deg, rgba(248,249,250,0.9) 0%, rgba(255,255,255,0.9) 100%);
 }
 
 /* ===============================================
