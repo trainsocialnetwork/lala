@@ -87,6 +87,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0 auto;
 }
 
 body {
@@ -97,6 +98,7 @@ body {
   background-color: var(--color-bg);
   overflow-x: hidden;
   min-height: 100vh;
+  margin: 0 auto;
 }
 
 /* リンク */
